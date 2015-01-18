@@ -20,7 +20,6 @@ class ExchangeAdvanced
     static void Main()
     {
         Console.Write("Enter positive number: ");
-        Console.WriteLine(uint.MaxValue);
         long number = long.Parse(Console.ReadLine());
         CheckNumber(number);
 

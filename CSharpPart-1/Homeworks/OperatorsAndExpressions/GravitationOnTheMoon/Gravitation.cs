@@ -15,11 +15,12 @@ class Gravitation
     static void Main(string[] args)
     {
         double percent = (double)17 / (double)100;
+        Console.Write("Enter weight of a man on the Earth: ");
         string num = Console.ReadLine();
         num = num.Replace(",", ".");
         double weight = double.Parse(num);
 
-        Console.WriteLine(weight * percent);
+        Console.WriteLine("The weight of that man on the moon is: {0}",weight * percent);
     }
 }
 

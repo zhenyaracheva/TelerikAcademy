@@ -16,6 +16,7 @@ class OddOrEven
 {
     static void Main()
     {
+        Console.Write("Enter number: ");
         int number = int.Parse(Console.ReadLine());
         bool isOdd = false;
 
@@ -24,7 +25,7 @@ class OddOrEven
             isOdd = true;
         }
 
-        Console.WriteLine(isOdd);
+        Console.WriteLine("Is number {0} odd? {1}", number, isOdd);
     }
 }
 

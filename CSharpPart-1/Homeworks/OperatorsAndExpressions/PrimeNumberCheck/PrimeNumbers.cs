@@ -21,6 +21,7 @@ class PrimeNumbers
 {
     static void Main()
     {
+        Console.WriteLine("Check if given positive integer number n (n = 100) is prime");
         Console.Write("Enter number: ");
         int n = int.Parse(Console.ReadLine());
         int number = Math.Abs(n);
@@ -46,7 +47,7 @@ class PrimeNumbers
         }
 
 
-        Console.WriteLine("Prime? {0}", isPrime);
+        Console.WriteLine(isPrime);
     }
 }
 

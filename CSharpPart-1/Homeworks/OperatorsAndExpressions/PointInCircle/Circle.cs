@@ -21,6 +21,7 @@ class Circle
 {
     static void Main()
     {
+        Console.WriteLine("Check if given point (x, y) is inside a circle K({0, 0}, 2)");
         Console.Write("Enter coordinate x: ");
         string firstPoint = Console.ReadLine();
         firstPoint = firstPoint.Replace(",", ".");
@@ -34,7 +35,7 @@ class Circle
         double radius = 2;
         double result = x * x + y * y;
 
-        Console.Write("Is point ({1}, {2}) inside a circle K(({0}, {0}), 2)? ", 0, x, y);
+        
 
         if (result <= radius * radius)
         {

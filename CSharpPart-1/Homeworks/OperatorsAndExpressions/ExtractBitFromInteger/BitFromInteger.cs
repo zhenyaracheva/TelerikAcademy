@@ -16,6 +16,7 @@ class BitFromInteger
 {
     static void Main()
     {
+        Console.WriteLine("Extract from given integer the value of given bit at index");
         Console.Write("Enter number: ");
         int number = int.Parse(Console.ReadLine());
         string binary = Convert.ToString(number, 2).PadLeft(16, '0');

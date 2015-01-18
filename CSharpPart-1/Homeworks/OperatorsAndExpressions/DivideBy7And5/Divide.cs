@@ -17,6 +17,8 @@ class Divide
 {
     static void Main()
     {
+        Console.WriteLine("Check if integer can be divided (without remainder) by 7 and 5 at the same time");
+        Console.Write("Enter number: ");
         int number = int.Parse(Console.ReadLine());
         bool isDivided = false;
 

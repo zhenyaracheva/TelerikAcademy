@@ -16,6 +16,7 @@ class Trapezoid
 {
     static void Main()
     {
+        Console.WriteLine("Calculate trapezoid's area by given sides \"a\" and \"b\" and height \"h\"");
         Console.Write("Enter side a: ");
         string firstSide = Console.ReadLine();
         firstSide = firstSide.Replace(",", ".");

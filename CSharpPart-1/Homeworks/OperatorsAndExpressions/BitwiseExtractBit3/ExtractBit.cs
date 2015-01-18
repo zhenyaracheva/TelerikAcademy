@@ -18,6 +18,7 @@ class ExtractBit
 {
     static void Main()
     {
+        Console.WriteLine("Find the value of the bit #3 of a given unsigned integer");
         Console.Write("Enter number: ");
         uint number = uint.Parse(Console.ReadLine());
         string binary = Convert.ToString(number, 2).PadLeft(16, '0');

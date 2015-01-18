@@ -17,12 +17,11 @@ class ThirdDigitIs7
 {
     static void Main()
     {
+        Console.WriteLine("Check for given integer if its third digit from right-to-left is 7");
         Console.Write("Enter number: ");
         string number = Console.ReadLine();
         bool isSeven = false;
-
-        Console.Write("Is the third digit from right-to-left 7: ");
-
+        
         if (number.Length >= 3 && number[number.Length - 3] == '7')
         {
             isSeven = true;
