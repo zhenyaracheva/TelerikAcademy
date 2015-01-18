@@ -1,0 +1,3 @@
+.NET is an application development framework - it contains numerous libraries containing a range of functionality. The .NET libraries can run on the CLR and thus any language which can run on the CLR can also use the .NET libraries.
+C# is a strong Object Oriented programming language that is mostly built on the .NET framework.
+In .NET you don't find only C#. You can find Visual Basic for example. If a job requires .NET knowledge, probably it need a programmer who knows the entire set of languages provided by the .NET framework.
