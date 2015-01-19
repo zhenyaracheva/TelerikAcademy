@@ -18,13 +18,14 @@ class SumOf3
 
         Console.WriteLine("Enter 3 numbers: ");
 
-        for (int i = 0; i < 3; i++)
+        for (int i = 1; i <= 3; i++)
         {
+            Console.Write("Number {0}: ", i);
             double number = double.Parse(Console.ReadLine());
             result += number;
         }
 
-        Console.WriteLine(result);
+        Console.WriteLine("Their sum is {0}",result);
     }
 }
 
