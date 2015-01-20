@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.PrintCompanyInformation"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.CirclePerimeterAndArea", "CirclePerimeterAndArea\03.CirclePerimeterAndArea.csproj", "{F4413BBF-7C56-4E27-BF54-280875EFF1F4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumberComparer", "NumberComparer\NumberComparer.csproj", "{AADE9A36-6491-4B01-A44E-9F0987286A77}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{F4413BBF-7C56-4E27-BF54-280875EFF1F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F4413BBF-7C56-4E27-BF54-280875EFF1F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F4413BBF-7C56-4E27-BF54-280875EFF1F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AADE9A36-6491-4B01-A44E-9F0987286A77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AADE9A36-6491-4B01-A44E-9F0987286A77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AADE9A36-6491-4B01-A44E-9F0987286A77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AADE9A36-6491-4B01-A44E-9F0987286A77}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
