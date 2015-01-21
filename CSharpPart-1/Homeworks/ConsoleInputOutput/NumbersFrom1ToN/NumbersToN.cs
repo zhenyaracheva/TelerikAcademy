@@ -4,7 +4,7 @@
 
 using System;
 
-class Program
+class NumbersToN
 {
     static void Main()
     {

@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7C89EA27-6E91-4769-9336-420E92DF1F24}</ProjectGuid>
+    <ProjectGuid>{8147E7E6-DF10-4CDB-9FD9-33282D5A9A23}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>NumbersFrom1ToN</RootNamespace>
-    <AssemblyName>NumbersFrom1ToN</AssemblyName>
+    <RootNamespace>NumbersInIntervalDividableByGivenNumber</RootNamespace>
+    <AssemblyName>NumbersInIntervalDividableByGivenNumber</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -41,7 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="NumbersToN.cs" />
+    <Compile Include="NumbersInInterval.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
