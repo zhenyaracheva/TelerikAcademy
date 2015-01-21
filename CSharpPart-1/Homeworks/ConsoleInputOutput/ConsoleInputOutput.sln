@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.QuadraticEquation", "Qua
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07.SumOf5Numbers", "SumOf5Numbers\07.SumOf5Numbers.csproj", "{9891A399-845A-4FE7-B50B-679FCCACE6D4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumbersFrom1ToN", "NumbersFrom1ToN\NumbersFrom1ToN.csproj", "{7C89EA27-6E91-4769-9336-420E92DF1F24}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{9891A399-845A-4FE7-B50B-679FCCACE6D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9891A399-845A-4FE7-B50B-679FCCACE6D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9891A399-845A-4FE7-B50B-679FCCACE6D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C89EA27-6E91-4769-9336-420E92DF1F24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C89EA27-6E91-4769-9336-420E92DF1F24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C89EA27-6E91-4769-9336-420E92DF1F24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C89EA27-6E91-4769-9336-420E92DF1F24}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
