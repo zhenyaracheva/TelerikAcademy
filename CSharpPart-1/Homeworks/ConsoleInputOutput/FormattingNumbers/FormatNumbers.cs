@@ -22,7 +22,7 @@ class FormatNumbers
 {
     static void Main()
     {
-        Console.Write("Enter first number: ");
+        Console.Write("Enter first integer /0-500/: ");
         int firstNumber = CheckNumber();
 
         Console.Write("Enter second number: ");
@@ -31,11 +31,10 @@ class FormatNumbers
         Console.Write("Enter third number: ");
         float thirdNumber = float.Parse(Console.ReadLine());
 
-        string firstColumn = firstNumber.ToString("X").PadRight(10, ' ');
-        string secondColumn = Convert.ToString(firstNumber,2).PadLeft(10, '0');
-        
+        string secondColumn = Convert.ToString(firstNumber, 2).PadLeft(10, '0');
 
-        Console.WriteLine("{0}|{1}|{2,10:F2}|{3,-10:F3}|", firstColumn,secondColumn, secondNumber, thirdNumber);
+
+        Console.WriteLine("{0,-10:X}|{1}|{2,10:0.00}|{3,-10:0.000}|", firstNumber, secondColumn, secondNumber, thirdNumber);
     }
 
     private static int CheckNumber()

@@ -16,7 +16,7 @@ class SumOf3
     {
         double result = 0;
 
-        Console.WriteLine("Enter 3 numbers: ");
+        Console.WriteLine("Enter 3 real numbers and see their sum. ");
 
         for (int i = 1; i <= 3; i++)
         {

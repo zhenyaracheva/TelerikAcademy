@@ -9,6 +9,7 @@ class SumOfN
 {
     static void Main()
     {
+        Console.WriteLine("Enter a positive integer and after that enters more numbers and see their sum.");
         Console.Write("Enter number: ");
         int n = FindNumber();
         double sum = 0;
@@ -16,7 +17,9 @@ class SumOfN
         for (int i = 1; i <= n; i++)
         {
             Console.Write("Number {0} is: ", i);
-            sum += double.Parse(Console.ReadLine());
+            string number = Console.ReadLine();
+            number = number.Replace(",", ".");
+            sum += double.Parse(number);
         }
 
         Console.WriteLine("Their sum is {0}", sum);

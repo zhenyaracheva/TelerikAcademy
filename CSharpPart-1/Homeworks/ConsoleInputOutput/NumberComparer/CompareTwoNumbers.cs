@@ -17,6 +17,7 @@ class CompareTwoNumbers
 {
     static void Main()
     {
+        Console.WriteLine("Find greater number.");
         Console.Write("Enter first number: ");
         double firstNumber = double.Parse(Console.ReadLine());
 
