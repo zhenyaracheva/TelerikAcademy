@@ -21,7 +21,7 @@ class Exchange
         Console.Write("Enter second number: ");
         double second = double.Parse(Console.ReadLine());
 
-        if (second < first)
+        if (first > second)
         {
             Console.WriteLine("{0} {1}", second, first);
         }
