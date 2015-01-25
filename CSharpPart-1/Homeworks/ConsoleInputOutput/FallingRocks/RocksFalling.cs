@@ -95,14 +95,14 @@ class RocksFalling
                 }
                 else if (pressedKey.Key == ConsoleKey.RightArrow)
                 {
-                    if (dwarf.Col < GameFieldWidth - 1)
+                    if (dwarf.Col < GameFieldWidth + 1)
                     {
                         dwarf.Col++;
                     }
                 }
             }
 
-            int rockCol = rand.Next(1, GameFieldWidth + 1);
+            int rockCol = rand.Next(1, GameFieldWidth + 2);
             int rockSymbol = rand.Next(0, symbols.Count);
             int rockColor = rand.Next(0, colors.Count);
 
@@ -160,7 +160,7 @@ class RocksFalling
             PrintStringOnPosition(WindowHeight / 2 - 2, GameFieldWidth + 2 + (InfoPanelWidth / 2 - "Lives:".Length / 2), "Lives:", ConsoleColor.Cyan);
             PrintStringOnPosition(WindowHeight / 2 - 1, GameFieldWidth + 2 + (InfoPanelWidth / 2 - lives.ToString().Length / 2), lives.ToString(), ConsoleColor.Magenta);
             PrintStringOnPosition(WindowHeight / 2 + 3, GameFieldWidth + 2 + (InfoPanelWidth / 2 - "Controls:".Length / 2), "Controls:", ConsoleColor.Cyan);
-            PrintStringOnPosition(WindowHeight - 4, GameFieldWidth + 2 + (InfoPanelWidth / 2 - "   <   >   ".Length / 2), "   <   >   ", ConsoleColor.Cyan);
+            PrintStringOnPosition(WindowHeight - 4, GameFieldWidth + 2 + (InfoPanelWidth / 2 - "   <   >   ".Length / 2), "   <   >   ", ConsoleColor.Blue);
 
             Thread.Sleep(150);
         }

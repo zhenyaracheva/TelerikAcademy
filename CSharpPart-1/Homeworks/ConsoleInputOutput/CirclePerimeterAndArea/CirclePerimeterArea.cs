@@ -13,7 +13,7 @@ class CirclePerimeterArea
 {
     static void Main()
     {
-        Console.WriteLine("Find circle area and perimetet by given radius.");
+        Console.WriteLine("Find circle area and perimeter by given radius.");
         Console.Write("Enter circle radius: ");
         double r = double.Parse(Console.ReadLine());
 

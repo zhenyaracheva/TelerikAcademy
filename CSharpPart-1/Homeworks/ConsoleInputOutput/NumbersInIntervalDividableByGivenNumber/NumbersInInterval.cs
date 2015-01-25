@@ -25,7 +25,7 @@ class NumbersInInterval
         {
             if (i % 5 == 0)
             {
-                result.AppendFormat("{0} ", i);
+                result.AppendFormat("{0}, ", i);
                 counter++;
             }
         }
@@ -34,6 +34,7 @@ class NumbersInInterval
 
         if (counter > 1)
         {
+            result.Length -= 2;
             Console.WriteLine("Numbers are: " + result.ToString());
         }
         else if (counter == 0)
@@ -42,6 +43,7 @@ class NumbersInInterval
         }
         else
         {
+            result.Length -= 2;
             Console.WriteLine("Number is: " + result.ToString());
         }
     }
