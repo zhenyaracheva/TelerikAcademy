@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.CheckForAPlayCard", "Che
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.MultiplicationSign", "MultiplicationSign\04.MultiplicationSign.csproj", "{E474FA29-58EC-460B-ABD5-9E60154F86D2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.TheBiggestOf3Numbers", "TheBiggestOf3Numbers\05.TheBiggestOf3Numbers.csproj", "{088F2141-20B0-4480-A55D-0968E7096048}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{E474FA29-58EC-460B-ABD5-9E60154F86D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E474FA29-58EC-460B-ABD5-9E60154F86D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E474FA29-58EC-460B-ABD5-9E60154F86D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{088F2141-20B0-4480-A55D-0968E7096048}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{088F2141-20B0-4480-A55D-0968E7096048}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{088F2141-20B0-4480-A55D-0968E7096048}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{088F2141-20B0-4480-A55D-0968E7096048}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
