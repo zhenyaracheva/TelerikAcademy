@@ -19,7 +19,7 @@ public class Dwarf
 
     public int Col { get; set; }
 
-    public char Face { get; set; }
+    public string Face { get; set; }
 
     public ConsoleColor Color { get; set; }
 
@@ -27,7 +27,7 @@ public class Dwarf
     {
         this.Row = row;
         this.Col = col;
-        this.Face = 'O';
+        this.Face = "(0)";
         this.Color = ConsoleColor.Green;
     }
 }
@@ -56,7 +56,7 @@ public class Rock
 
 class RocksFalling
 {
-    const char Dwarf = 'O';
+    const string Dwarf = "(O)";
     const int WindowWidth = 30;
     const int WindowHeight = 20;
     const int GameFieldWidth = WindowWidth / 2;
@@ -70,6 +70,7 @@ class RocksFalling
     static List<char> symbols = new List<char> { '^', '@', '+', '*', '&', '%', '$', '#', '!', '.', ';', '-' };
     static List<ConsoleColor> colors = new List<ConsoleColor> { ConsoleColor.Yellow, ConsoleColor.Magenta, ConsoleColor.DarkRed,
         ConsoleColor.Blue, ConsoleColor.DarkGray, ConsoleColor.DarkMagenta };
+
     static List<Rock> rocks = new List<Rock>();
 
     static void Main()
@@ -98,13 +99,12 @@ class RocksFalling
                 }
                 else if (pressedKey.Key == ConsoleKey.RightArrow)
                 {
-                    if (dwarf.Col < GameFieldWidth + 1)
+                    if (dwarf.Col < GameFieldWidth - 1)
                     {
                         dwarf.Col++;
                     }
                 }
             }
-
 
             int lenght = rand.Next(1, 4);
             int rockCol;
@@ -167,7 +167,7 @@ class RocksFalling
 
             Console.Clear();
             PrintBorders();
-            Print(dwarf.Row, dwarf.Col, dwarf.Face, dwarf.Color);
+            PrintStringOnPosition(dwarf.Row, dwarf.Col, dwarf.Face, dwarf.Color);
 
             foreach (Rock currentRock in rocks)
             {
@@ -202,16 +202,20 @@ class RocksFalling
 
         if (dwarf.Row == newRock.Row)
         {
-            for (int rockCol = newRock.Col; rockCol <= newRock.Col + newRock.Lenght - 1; rockCol++)
+            for (int dwarfCol = dwarf.Col; dwarfCol <= dwarf.Col + dwarf.Face.Length - 1; dwarfCol++)
             {
-                if (dwarf.Col == rockCol)
+                for (int rockCol = newRock.Col; rockCol <= newRock.Col + newRock.Lenght - 1; rockCol++)
                 {
-                    isCrashed = true;
+                    if (dwarfCol == rockCol)
+                    {
+                        isCrashed = true;
+                    }
                 }
             }
         }
 
         return isCrashed;
+
     }
 
     static void PrintBorders()
