@@ -12,7 +12,7 @@ class PrintZeroSubset
 
     static void Main()
     {
-        string[] num = Console.ReadLine().Split(' ');
+        string[] num = Console.ReadLine().Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
         List<string> solutions = new List<string>();
         StringBuilder result = new StringBuilder();
 
