@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10.OddAndEvenProduct", "Odd
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11.RandomNumbersInGivenRange", "RandomNumbersInGivenRange\11.RandomNumbersInGivenRange.csproj", "{3550B551-4EAC-4448-9EC7-B38D723F6B8E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12.RandomizeTheNumbers1-N", "RandomizeTheNumbers1-N\12.RandomizeTheNumbers1-N.csproj", "{AA18A1AF-B6C7-4342-8B04-F681D4A05551}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{3550B551-4EAC-4448-9EC7-B38D723F6B8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3550B551-4EAC-4448-9EC7-B38D723F6B8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3550B551-4EAC-4448-9EC7-B38D723F6B8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA18A1AF-B6C7-4342-8B04-F681D4A05551}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA18A1AF-B6C7-4342-8B04-F681D4A05551}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA18A1AF-B6C7-4342-8B04-F681D4A05551}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA18A1AF-B6C7-4342-8B04-F681D4A05551}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
