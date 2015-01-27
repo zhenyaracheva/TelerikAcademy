@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09.MatrixOfNumbers", "Matri
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10.OddAndEvenProduct", "OddAndEvenProduct\10.OddAndEvenProduct.csproj", "{79D4D3D1-8799-46D5-838B-232D5DBA3955}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11.RandomNumbersInGivenRange", "RandomNumbersInGivenRange\11.RandomNumbersInGivenRange.csproj", "{3550B551-4EAC-4448-9EC7-B38D723F6B8E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{79D4D3D1-8799-46D5-838B-232D5DBA3955}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{79D4D3D1-8799-46D5-838B-232D5DBA3955}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{79D4D3D1-8799-46D5-838B-232D5DBA3955}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3550B551-4EAC-4448-9EC7-B38D723F6B8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3550B551-4EAC-4448-9EC7-B38D723F6B8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3550B551-4EAC-4448-9EC7-B38D723F6B8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3550B551-4EAC-4448-9EC7-B38D723F6B8E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
