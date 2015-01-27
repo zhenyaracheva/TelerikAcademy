@@ -24,15 +24,15 @@ class Expression
 
         for (int i = 1; i <= n; i++)
         {
-            double numFactoriel = Factoriel(i);
+            double numFactorial = Factorial(i);
 
-            sum += (numFactoriel / Math.Pow(x, i));
+            sum += (numFactorial / Math.Pow(x, i));
         }
 
         Console.WriteLine("Resylt is: {0:F5}",sum);
     }
 
-    static double Factoriel(int n)
+    static double Factorial(int n)
     {
         double result = 1;
 
