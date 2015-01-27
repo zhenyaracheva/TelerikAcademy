@@ -29,9 +29,10 @@ class FactorialExpression
         double KFactorial = Factorial(k);
         double NMinusKFactorial = Factorial(n - k);
 
-        Console.WriteLine(NFactorial/(KFactorial*NMinusKFactorial));
+        Console.WriteLine(NFactorial / (KFactorial * NMinusKFactorial));
 
     }
+
     private static int CheckValidN()
     {
         int n = int.Parse(Console.ReadLine());
