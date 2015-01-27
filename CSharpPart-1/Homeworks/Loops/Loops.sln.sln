@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.MinMaxSumAndAverageOfNNu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.PrintADeckOf52Cards", "PrintADeckOf52Cards\04.PrintADeckOf52Cards.csproj", "{DA7CAC0E-9733-45C5-BE27-56F86202262D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.CalculateExpression", "CalculateExpression\05.CalculateExpression.csproj", "{DAF8965F-C03B-45F8-8D4B-638A0D9AB2A1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{DA7CAC0E-9733-45C5-BE27-56F86202262D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DA7CAC0E-9733-45C5-BE27-56F86202262D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DA7CAC0E-9733-45C5-BE27-56F86202262D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAF8965F-C03B-45F8-8D4B-638A0D9AB2A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAF8965F-C03B-45F8-8D4B-638A0D9AB2A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAF8965F-C03B-45F8-8D4B-638A0D9AB2A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAF8965F-C03B-45F8-8D4B-638A0D9AB2A1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
