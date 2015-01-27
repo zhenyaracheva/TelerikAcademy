@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.NumbersNotDivisibleBy3An
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.MinMaxSumAndAverageOfNNumbers", "MinMaxSumAndAverageOfNNumbers\03.MinMaxSumAndAverageOfNNumbers.csproj", "{B2FA5752-D44F-440A-9A55-FEB5FD82DB65}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.PrintADeckOf52Cards", "PrintADeckOf52Cards\04.PrintADeckOf52Cards.csproj", "{DA7CAC0E-9733-45C5-BE27-56F86202262D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{B2FA5752-D44F-440A-9A55-FEB5FD82DB65}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B2FA5752-D44F-440A-9A55-FEB5FD82DB65}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B2FA5752-D44F-440A-9A55-FEB5FD82DB65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA7CAC0E-9733-45C5-BE27-56F86202262D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA7CAC0E-9733-45C5-BE27-56F86202262D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA7CAC0E-9733-45C5-BE27-56F86202262D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA7CAC0E-9733-45C5-BE27-56F86202262D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
