@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08.CatalanNumbers", "Catala
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09.MatrixOfNumbers", "MatrixOfNumbers\09.MatrixOfNumbers.csproj", "{A23EB91B-55E8-4882-B101-EC49756A4A70}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10.OddAndEvenProduct", "OddAndEvenProduct\10.OddAndEvenProduct.csproj", "{79D4D3D1-8799-46D5-838B-232D5DBA3955}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{A23EB91B-55E8-4882-B101-EC49756A4A70}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A23EB91B-55E8-4882-B101-EC49756A4A70}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A23EB91B-55E8-4882-B101-EC49756A4A70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79D4D3D1-8799-46D5-838B-232D5DBA3955}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79D4D3D1-8799-46D5-838B-232D5DBA3955}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79D4D3D1-8799-46D5-838B-232D5DBA3955}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79D4D3D1-8799-46D5-838B-232D5DBA3955}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
