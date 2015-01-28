@@ -12,7 +12,7 @@ class DecimalToBinary
     static void Main()
     {
         Console.Write("Please, enter an integer number: ");
-        int number = int.Parse(Console.ReadLine());
+        long number = long.Parse(Console.ReadLine());
         StringBuilder binary = new StringBuilder();
 
         while (number > 1)
