@@ -37,6 +37,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "16.DecimalToHexadecimalNumb
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "17.CalculateGCD", "CalculateGCD\17.CalculateGCD.csproj", "{54CA03F4-BA81-40CA-961F-992BABE91873}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "18.TrailingZeroesInNFactorial", "TrailingZeroesInNFactorial\18.TrailingZeroesInNFactorial.csproj", "{39DFB6D8-D7B1-4E61-AA99-AE02D71E4C3B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -111,6 +113,10 @@ Global
 		{54CA03F4-BA81-40CA-961F-992BABE91873}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{54CA03F4-BA81-40CA-961F-992BABE91873}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{54CA03F4-BA81-40CA-961F-992BABE91873}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39DFB6D8-D7B1-4E61-AA99-AE02D71E4C3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39DFB6D8-D7B1-4E61-AA99-AE02D71E4C3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39DFB6D8-D7B1-4E61-AA99-AE02D71E4C3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39DFB6D8-D7B1-4E61-AA99-AE02D71E4C3B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
