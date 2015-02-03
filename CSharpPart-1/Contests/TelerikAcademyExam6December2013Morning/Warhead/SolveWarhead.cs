@@ -11,44 +11,42 @@ class SolveWarhead
         while (true)
         {
             string command = Console.ReadLine();
-            int row;
-            int col;
 
-            if (command == "hover")
+            if (command == "hover" || command == "operate")
             {
-                row = int.Parse(Console.ReadLine());
-                col = int.Parse(Console.ReadLine());
 
-                if (matrix[row, col] == '1')
-                {
-                    Console.WriteLine("*");
-                }
-                else
-                {
-                    Console.WriteLine("-");
-                }
-            }
-            else if (command == "operate")
-            {
-                row = int.Parse(Console.ReadLine());
-                col = int.Parse(Console.ReadLine());
+                int row = int.Parse(Console.ReadLine());
+                int col = int.Parse(Console.ReadLine());
 
-                if (matrix[row, col] == '0')
+                if (command == "hover")
                 {
-                    if (CheckCapacitor(row, col, matrix))
+                    if (matrix[row, col] == '1')
                     {
-                        matrix = ClearBomb(row, col, matrix);
+                        Console.WriteLine("*");
+                    }
+                    else
+                    {
+                        Console.WriteLine("-");
                     }
                 }
-                else
+                else if (command == "operate")
                 {
-                    Console.WriteLine("missed");
-                    Console.WriteLine(CheckField(matrix));
-                    Console.WriteLine("BOOM");
-                    Environment.Exit(0);
+                    if (matrix[row, col] == '0')
+                    {
+                        if (CheckCapacitor(row, col, matrix))
+                        {
+                            matrix = ClearBomb(row, col, matrix);
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("missed");
+                        Console.WriteLine(CheckField(matrix));
+                        Console.WriteLine("BOOM");
+                        Environment.Exit(0);
+                    }
                 }
             }
-
             else if (command == "cut")
             {
                 string color = Console.ReadLine();
