@@ -7,7 +7,7 @@ class SolveWarhead
 
     static void Main()
     {
-        char[,] matrix = matrix = FillMatrix();
+        int[,] matrix = matrix = FillMatrix();
         while (true)
         {
             string command = Console.ReadLine();
@@ -20,7 +20,7 @@ class SolveWarhead
 
                 if (command == "hover")
                 {
-                    if (matrix[row, col] == '1')
+                    if (matrix[row, col] == 1)
                     {
                         Console.WriteLine("*");
                     }
@@ -31,7 +31,7 @@ class SolveWarhead
                 }
                 else if (command == "operate")
                 {
-                    if (matrix[row, col] == '0')
+                    if (matrix[row, col] == 0)
                     {
                         if (CheckCapacitor(row, col, matrix))
                         {
@@ -92,7 +92,7 @@ class SolveWarhead
         }
     }
 
-    private static int CheckBlueRed(int startCol, int endCol, char[,] matrix)
+    private static int CheckBlueRed(int startCol, int endCol, int[,] matrix)
     {
         int counter = 0;
 
@@ -100,7 +100,7 @@ class SolveWarhead
         {
             for (int col = startCol; col < endCol; col++)
             {
-                if (matrix[row, col] == '0' && CheckCapacitor(row, col, matrix))
+                if (matrix[row, col] == 0 && CheckCapacitor(row, col, matrix))
                 {
                     counter++;
                 }
@@ -110,7 +110,7 @@ class SolveWarhead
         return counter;
     }
 
-    private static int CheckField(char[,] matrix)
+    private static int CheckField(int[,] matrix)
     {
         int counter = 0;
 
@@ -118,7 +118,7 @@ class SolveWarhead
         {
             for (int col = 0; col < matrix.GetLength(1); col++)
             {
-                if (matrix[row, col] == '0' && CheckCapacitor(row, col, matrix))
+                if (matrix[row, col] == 0 && CheckCapacitor(row, col, matrix))
                 {
                     counter++;
                 }
@@ -128,15 +128,15 @@ class SolveWarhead
         return counter;
     }
 
-    private static char[,] ClearBomb(int row, int col, char[,] matrix)
+    private static int[,] ClearBomb(int row, int col, int[,] matrix)
     {
         for (int i = row - 1; i <= row + 1; i++)
         {
             for (int j = col - 1; j <= col + 1; j++)
             {
-                if (matrix[i, j] == '1')
+                if (matrix[i, j] == 1)
                 {
-                    matrix[i, j] = '0';
+                    matrix[i, j] = 0;
                 }
             }
         }
@@ -144,11 +144,11 @@ class SolveWarhead
         return matrix;
     }
 
-    private static bool CheckCapacitor(int row, int col, char[,] matrix)
+    private static bool CheckCapacitor(int row, int col, int[,] matrix)
     {
         int counter = 0;
 
-        if (matrix[row, col] == '0')
+        if (matrix[row, col] == 0)
         {
             for (int i = row - 1; i <= row + 1; i++)
             {
@@ -156,7 +156,7 @@ class SolveWarhead
                 {
                     if (row - 1 >= 0 && row + 1 < matrix.GetLength(0) && col - 1 >= 0 && col + 1 < matrix.GetLength(1))
                     {
-                        if (matrix[i, j] == '1')
+                        if (matrix[i, j] == 1)
                         {
                             counter++;
                         }
@@ -180,9 +180,9 @@ class SolveWarhead
         }
     }
 
-    private static char[,] FillMatrix()
+    private static int[,] FillMatrix()
     {
-        char[,] matrix = new char[Height, Width];
+        int[,] matrix = new int[Height, Width];
 
         for (int row = 0; row < matrix.GetLength(0); row++)
         {
@@ -190,7 +190,7 @@ class SolveWarhead
 
             for (int col = 0; col < line.Length; col++)
             {
-                matrix[row, col] = line[col];
+                matrix[row, col] = line[col] - '0';
             }
         }
 
