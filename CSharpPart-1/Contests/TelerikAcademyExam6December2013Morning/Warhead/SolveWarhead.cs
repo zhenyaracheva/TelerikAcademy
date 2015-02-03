@@ -11,42 +11,44 @@ class SolveWarhead
         while (true)
         {
             string command = Console.ReadLine();
+            int row;
+            int col;
 
-            if (command == "operate" || command == "hover")
+            if (command == "hover")
             {
+                row = int.Parse(Console.ReadLine());
+                col = int.Parse(Console.ReadLine());
 
-                int row = int.Parse(Console.ReadLine());
-                int col = int.Parse(Console.ReadLine());
-
-                if (command == "operate")
+                if (matrix[row, col] == '1')
                 {
-                    if (matrix[row, col] == '0')
-                    {
-                        if (CheckCapacitor(row, col, matrix))
-                        {
-                            matrix = ClearBomb(row, col, matrix);
-                        }
-                    }
-                    else
-                    {
-                        Console.WriteLine("missed");
-                        Console.WriteLine(CheckField(matrix));
-                        Console.WriteLine("BOOM");
-                        Environment.Exit(0);
-                    }
+                    Console.WriteLine("*");
                 }
-                else if (command == "hover")
+                else
                 {
-                    if (matrix[row, col] == '1')
-                    {
-                        Console.WriteLine("*");
-                    }
-                    else
-                    {
-                        Console.WriteLine("-");
-                    }
+                    Console.WriteLine("-");
                 }
             }
+            else if (command == "operate")
+            {
+                row = int.Parse(Console.ReadLine());
+                col = int.Parse(Console.ReadLine());
+
+                if (matrix[row, col] == '0')
+                {
+                    if (CheckCapacitor(row, col, matrix))
+                    {
+                        matrix = ClearBomb(row, col, matrix);
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("missed");
+                    Console.WriteLine(CheckField(matrix));
+                    Console.WriteLine("BOOM");
+                    Environment.Exit(0);
+                }
+            }
+
             else if (command == "cut")
             {
                 string color = Console.ReadLine();
@@ -179,7 +181,7 @@ class SolveWarhead
             return false;
         }
     }
-       
+
     private static char[,] FillMatrix()
     {
         char[,] matrix = new char[Height, Width];
