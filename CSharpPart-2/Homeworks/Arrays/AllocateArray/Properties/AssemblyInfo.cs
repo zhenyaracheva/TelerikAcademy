@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("KaspichanNumbers")]
+[assembly: AssemblyTitle("AllocateArray")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("KaspichanNumbers")]
+[assembly: AssemblyProduct("AllocateArray")]
 [assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("940be38a-683e-41cf-ae8a-fb5f188ef2b1")]
+[assembly: Guid("117c91c9-5466-4718-8272-643bbd0f4e22")]
 
 // Version information for an assembly consists of the following four values:
 //
