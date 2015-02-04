@@ -8,7 +8,7 @@ class CompareTwoArrays
 {
     static void Main()
     {
-        Console.Write("Please, enter the lenght of the first array: ");
+        Console.Write("Please, enter the lenght for the first array: ");
         int firstArrayLenght = int.Parse(Console.ReadLine());
         int[] array1 = new int[firstArrayLenght];
 
@@ -18,7 +18,7 @@ class CompareTwoArrays
             array1[i] = int.Parse(Console.ReadLine());
         }
 
-        Console.Write("Please, enter the lenght of the second array: ");
+        Console.Write("Please, enter the lenght for the second array: ");
         int secondArrayLenght = int.Parse(Console.ReadLine());
         int[] array2 = new int[secondArrayLenght];
 
