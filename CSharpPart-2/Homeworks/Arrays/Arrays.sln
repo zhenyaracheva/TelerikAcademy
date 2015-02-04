@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.MaximalSequence", "Maxim
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.MaximalIncreasingSequence", "MaximalIncreasingSequence\05.MaximalIncreasingSequence.csproj", "{C6239593-7CF4-4C05-BAE2-1DE53F1323D8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.MaximalKSum", "MaximalKSum\06.MaximalKSum.csproj", "{5FCB081F-CAE6-4C0A-81B6-4B87A058C23F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{C6239593-7CF4-4C05-BAE2-1DE53F1323D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C6239593-7CF4-4C05-BAE2-1DE53F1323D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C6239593-7CF4-4C05-BAE2-1DE53F1323D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FCB081F-CAE6-4C0A-81B6-4B87A058C23F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FCB081F-CAE6-4C0A-81B6-4B87A058C23F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FCB081F-CAE6-4C0A-81B6-4B87A058C23F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FCB081F-CAE6-4C0A-81B6-4B87A058C23F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
