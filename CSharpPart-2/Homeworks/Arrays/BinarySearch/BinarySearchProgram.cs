@@ -8,7 +8,6 @@ class BinarySearchProgram
 {
     static void Main()
     {
-
         Console.WriteLine("Please, enter numbers of array (separated by space or \",\"): ");
         string[] inputArray = Console.ReadLine().Split(new char[] { ' ', ',' }, StringSplitOptions.RemoveEmptyEntries);
 
