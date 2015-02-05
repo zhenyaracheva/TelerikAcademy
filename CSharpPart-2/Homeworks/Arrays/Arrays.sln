@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10.FindSumInArray", "FindSu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11.BinarySearch", "BinarySearch\11.BinarySearch.csproj", "{0FE7E6D2-668A-4CB1-9442-4F9B234A9143}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12.IndexOfLetters", "IndexOfLetters\12.IndexOfLetters.csproj", "{AE8BC670-3A07-44A6-83EF-60730E863762}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{0FE7E6D2-668A-4CB1-9442-4F9B234A9143}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0FE7E6D2-668A-4CB1-9442-4F9B234A9143}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0FE7E6D2-668A-4CB1-9442-4F9B234A9143}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE8BC670-3A07-44A6-83EF-60730E863762}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE8BC670-3A07-44A6-83EF-60730E863762}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE8BC670-3A07-44A6-83EF-60730E863762}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE8BC670-3A07-44A6-83EF-60730E863762}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
