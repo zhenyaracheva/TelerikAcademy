@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08.MaximalSum", "MaximalSum
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09.FrequentNumber", "FrequentNumber\09.FrequentNumber.csproj", "{295D7A49-361A-4FF6-80F5-77173ADA4132}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10.FindSumInArray", "FindSumInArray\10.FindSumInArray.csproj", "{64F9E1B8-FDC3-4399-8BD9-7892BEFF6D43}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{295D7A49-361A-4FF6-80F5-77173ADA4132}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{295D7A49-361A-4FF6-80F5-77173ADA4132}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{295D7A49-361A-4FF6-80F5-77173ADA4132}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64F9E1B8-FDC3-4399-8BD9-7892BEFF6D43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64F9E1B8-FDC3-4399-8BD9-7892BEFF6D43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64F9E1B8-FDC3-4399-8BD9-7892BEFF6D43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64F9E1B8-FDC3-4399-8BD9-7892BEFF6D43}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
