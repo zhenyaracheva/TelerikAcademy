@@ -4,7 +4,7 @@
 
 using System;
 
-class Program
+class BinarySearchProgram
 {
     static void Main()
     {
@@ -56,12 +56,12 @@ class Program
 
             if (mid < arr.Length)
             {
-                if (arr[mid] < value)//the element we search is located to the right from the mid point
+                if (arr[mid] < value)
                 {
                     lowBound = mid + 1;
                     continue;
                 }
-                else if (arr[mid] > value)//the element we search is located to the left from the mid point
+                else if (arr[mid] > value)
                 {
                     highBound = mid - 1;
                     continue;
@@ -75,16 +75,8 @@ class Program
             {
                 return -1;
             }
-
-
         }
         return -1;
     }
-
-
-
-
-
-
 }
 
