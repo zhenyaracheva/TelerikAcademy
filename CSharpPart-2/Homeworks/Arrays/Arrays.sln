@@ -37,6 +37,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "16.SubsetWithSumS", "Subset
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "17.SubsetKWithSumS", "SubsetKWithSumS\17.SubsetKWithSumS.csproj", "{A50DED89-7FDA-4674-85A8-97A37BA91DA8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "18.RemoveElementsFromArray", "RemoveElementsFromArray\18.RemoveElementsFromArray.csproj", "{5240D058-E934-4C3E-9203-F6C3E86538DE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -111,6 +113,10 @@ Global
 		{A50DED89-7FDA-4674-85A8-97A37BA91DA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A50DED89-7FDA-4674-85A8-97A37BA91DA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A50DED89-7FDA-4674-85A8-97A37BA91DA8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5240D058-E934-4C3E-9203-F6C3E86538DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5240D058-E934-4C3E-9203-F6C3E86538DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5240D058-E934-4C3E-9203-F6C3E86538DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5240D058-E934-4C3E-9203-F6C3E86538DE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
