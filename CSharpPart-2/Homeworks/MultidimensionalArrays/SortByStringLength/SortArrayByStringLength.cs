@@ -11,6 +11,16 @@ class SortArrayByStringLength
     {
         Console.WriteLine("Please, enter an array of strings (separate strings by space):");
         string[] words = CheckArray();
+
+        words =  SortStringArrayByLenght(words);
+
+        Console.WriteLine("Sorted array: ");
+        Console.WriteLine(string.Join(", ", words));
+
+    }
+
+    private static string[] SortStringArrayByLenght(string[] words)
+    {
         Array.Sort(words);
 
         int minLenght = words[0].Length;
@@ -32,9 +42,8 @@ class SortArrayByStringLength
 
             Array.Sort(words, i + 1, words.Length - i - 1);
         }
-        Console.WriteLine("Sorted array: ");
-        Console.WriteLine(string.Join(", ", words));
 
+        return words;
     }
 
     private static string[] CheckArray()
