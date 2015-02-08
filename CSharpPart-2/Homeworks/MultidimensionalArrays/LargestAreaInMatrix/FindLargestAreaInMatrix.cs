@@ -1,24 +1,21 @@
-﻿//Problem 3. Sequence n matrix
+﻿//Problem 7.* Largest area in matrix
 
-//We are given a matrix of strings of size N x M. Sequences in the matrix we define as 
-//sets of several neighbour elements located on the same line, column or diagonal.
-//Write a program that finds the longest sequence of equal strings in the matrix.
+//Write a program that finds the largest area of equal neighbour elements in a rectangular matrix and prints its size.
 //Example:
 
-//matrix	            result		    matrix	        result
-//ha  fifi  ho  hi      ha, ha, ha      s	qq	s       s, s, s
-//fo  ha	hi	xx                      pp	pp	s
-//xxx ho	ha	xx                      pp	qq	s
-
+//      matrix	            result
+//1	 3  2  2  2	 4            13
+//3	 3  3  2  4	 4
+//4	 3  1  2  3	 3
+//4	 3  1  3  3	 1
+//4	 3  3  3  1	 1
 
 using System;
-using System.Text;
 
-class PrintLongSequence
+class FindLargestAreaInMatrix
 {
-    static string maxMember = string.Empty;
-    static int maxCount = 1;
     static bool[,] visited;
+    static int maxCount = 0;
 
     static void Main()
     {
@@ -26,39 +23,25 @@ class PrintLongSequence
         string[] matrixSize = CheckMatrixSize();
         int heigth = int.Parse(matrixSize[0]);
         int width = int.Parse(matrixSize[1]);
-        string[,] matrix = FillStringMatrix(heigth, width);
+        int[,] matrix = FillMatrix(heigth, width);
         visited = new bool[heigth, width];
         int counter = 1;
 
-        for (int row = 0; row < matrix.GetLength(0); row++)
+        for (int i = 0; i < matrix.GetLength(0); i++)
         {
-            for (int col = 0; col < matrix.GetLength(1); col++)
+            for (int j = 0; j < matrix.GetLength(1); j++)
             {
-                FindSequence(row, col, matrix, counter);
+                FindLongNeighbours(i, i, matrix, counter);
             }
         }
 
-        PrintMaxSequence();
-
+        Console.Write("The largest area of equal neighbour elements is: ");
+        Console.WriteLine(maxCount);
     }
 
-    private static void PrintMaxSequence()
+    private static void FindLongNeighbours(int row, int col, int[,] matrix, int counter)
     {
-        StringBuilder result = new StringBuilder();
-
-        for (int i = 0; i < maxCount; i++)
-        {
-            result.AppendFormat("{0}, ", maxMember);
-        }
-
-        result.Length -= 2;
-        Console.WriteLine("Max sequense is:");
-        Console.WriteLine(result);
-    }
-
-    private static void FindSequence(int row, int col, string[,] matrix, int counter)
-    {
-        string member = matrix[row, col];
+        int currerntNumber = matrix[row, col];
         visited[row, col] = true;
 
         for (int i = row - 1; i <= row + 1; i++)
@@ -67,11 +50,11 @@ class PrintLongSequence
             {
                 if (InMatrix(i, j, matrix))
                 {
-                    if (matrix[i, j] == member && !visited[i, j])
+                    if (matrix[i, j] == currerntNumber && !visited[i, j])
                     {
                         counter++;
                         visited[i, j] = true;
-                        FindSequence(i, j, matrix, counter);
+                        FindLongNeighbours(i, j, matrix, counter);
                         counter--;
                         visited[i, j] = false;
                     }
@@ -80,7 +63,6 @@ class PrintLongSequence
                         if (counter > maxCount)
                         {
                             maxCount = counter;
-                            maxMember = member;
                         }
                     }
                 }
@@ -88,10 +70,7 @@ class PrintLongSequence
         }
     }
 
-
-    
-
-    private static bool InMatrix(int row, int col, string[,] matrix)
+    private static bool InMatrix(int row, int col, int[,] matrix)
     {
         if (row < 0 || row >= matrix.GetLength(0))
         {
@@ -106,10 +85,10 @@ class PrintLongSequence
         return true;
     }
 
-    private static string[,] FillStringMatrix(int height, int width)
+    private static int[,] FillMatrix(int height, int width)
     {
-        string[,] matrix = new string[height, width];
-        Console.WriteLine("Please, enter {0} lines with {1} members separate by space:", height, width);
+        int[,] matrix = new int[height, width];
+        Console.WriteLine("Please, enter {0} lines with {1} numbers separate by space:", height, width);
 
         for (int row = 0; row < matrix.GetLength(0); row++)
         {
@@ -117,7 +96,7 @@ class PrintLongSequence
 
             for (int col = 0; col < matrix.GetLength(1); col++)
             {
-                matrix[row, col] = line[col];
+                matrix[row, col] = int.Parse(line[col]);
             }
         }
 
@@ -130,7 +109,7 @@ class PrintLongSequence
 
         while (line.Length != width)
         {
-            Console.Write("Line must have {0} members! Try again: ", width);
+            Console.Write("Line must have {0} numbers! Try again: ", width);
             line = Console.ReadLine().Split(new char[] { ' ', ',', '\t' }, StringSplitOptions.RemoveEmptyEntries);
         }
 
