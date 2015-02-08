@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.BinarySearch", "BinarySe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.SortByStringLength", "SortByStringLength\05.SortByStringLength.csproj", "{2CC6F1DC-B3EE-4739-A4D7-6C0D82F38C5F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.MatrixClass", "MatrixClass\06.MatrixClass.csproj", "{700ECDD5-E2DF-4C60-89C0-5D7166D791CA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{2CC6F1DC-B3EE-4739-A4D7-6C0D82F38C5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2CC6F1DC-B3EE-4739-A4D7-6C0D82F38C5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2CC6F1DC-B3EE-4739-A4D7-6C0D82F38C5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{700ECDD5-E2DF-4C60-89C0-5D7166D791CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{700ECDD5-E2DF-4C60-89C0-5D7166D791CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{700ECDD5-E2DF-4C60-89C0-5D7166D791CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{700ECDD5-E2DF-4C60-89C0-5D7166D791CA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
