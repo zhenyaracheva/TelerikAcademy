@@ -114,7 +114,7 @@ class FindMaxSum
 
         while (line.Length != width)
         {
-            Console.Write("Line must have {0} numbers! Try again: ");
+            Console.Write("Line must have {0} numbers! Try again: ",width);
             line = Console.ReadLine().Split(new char[] { ' ', ',' }, StringSplitOptions.RemoveEmptyEntries);
         }
 
