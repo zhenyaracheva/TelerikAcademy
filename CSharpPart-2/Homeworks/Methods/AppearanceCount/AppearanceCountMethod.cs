@@ -10,14 +10,26 @@ class AppearanceCountMethod
     static void Main()
     {
         Console.WriteLine("Please, enter an array of integers (separate by space):");
-        int[] arrayOfNumbers = CheckArray();
+        string[] arrayOfStrings = CheckArray();
+        int[] arrayOfNumbers = ConvertArrayToInt(arrayOfStrings);
 
         Console.Write("Please, enter a number: ");
         int number = int.Parse(Console.ReadLine());
-
         int foundNumber = FoundNumberCountInArray(arrayOfNumbers, number);
 
         Console.WriteLine("Number {0} appears {1} times in this array.", number, foundNumber);
+    }
+
+    private static int[] ConvertArrayToInt(string[] arrayOfStrings)
+    {
+        int[] arrayOfNumbers = new int[arrayOfStrings.Length];
+
+        for (int i = 0; i < arrayOfStrings.Length; i++)
+        {
+            arrayOfNumbers[i] = int.Parse(arrayOfStrings[i]);
+        }
+
+        return arrayOfNumbers;
     }
 
     private static int FoundNumberCountInArray(int[] arrayOfNumbers, int number)
@@ -26,7 +38,7 @@ class AppearanceCountMethod
 
         for (int i = 0; i < arrayOfNumbers.Length; i++)
         {
-            if (arrayOfNumbers[i]==number)
+            if (arrayOfNumbers[i] == number)
             {
                 counter++;
             }
@@ -35,7 +47,7 @@ class AppearanceCountMethod
         return counter;
     }
 
-    private static int[] CheckArray()
+    private static string[] CheckArray()
     {
         string[] arrayOfStrings = Console.ReadLine().Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
 
@@ -45,14 +57,7 @@ class AppearanceCountMethod
             arrayOfStrings = Console.ReadLine().Split(new char[] { ' ', ',' }, StringSplitOptions.RemoveEmptyEntries);
         }
 
-        int[] arrayOfNumbers = new int[arrayOfStrings.Length];
-
-        for (int i = 0; i < arrayOfStrings.Length; i++)
-        {
-            arrayOfNumbers[i] = int.Parse(arrayOfStrings[i]);
-        }
-
-        return arrayOfNumbers;
+        return arrayOfStrings;
     }
 }
 
