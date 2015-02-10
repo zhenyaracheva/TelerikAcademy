@@ -27,7 +27,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11.AddingPolynomials", "Add
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12.SubtractingPolynomials", "SubtractingPolynomials\12.SubtractingPolynomials.csproj", "{A3CF1E51-69B9-4F13-BE9D-674342C557F3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolveTasks", "SolveTasks\SolveTasks.csproj", "{2114EA3D-31D5-4A12-85F8-C9C00543516F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "13.SolveTasks", "SolveTasks\13.SolveTasks.csproj", "{2114EA3D-31D5-4A12-85F8-C9C00543516F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

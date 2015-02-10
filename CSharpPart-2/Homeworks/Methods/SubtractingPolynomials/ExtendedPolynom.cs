@@ -1,4 +1,8 @@
-﻿namespace SubtractingPolynomials
+﻿//Problem 12. Subtracting polynomials
+
+//Extend the previous program to support also subtraction and multiplication of polynomials.
+
+namespace SubtractingPolynomials
 {
     using System;
     using System.Linq;
