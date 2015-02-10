@@ -33,21 +33,36 @@ namespace AddingPolynomials
 
             if (polynomString.Contains('x'))
             {
-                polynomString = polynomString.Replace("x^", " ");
-                string[] parts = polynomString.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+                if (polynomString.Contains('^'))
+                {
+                    polynomString = polynomString.Replace("x^", " ");
+                    string[] parts = polynomString.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
 
-                if (parts.Length == 1)
-                {
-                    polynom = new Polynom(1, int.Parse(parts[0]));
-                }
-                else if (parts.Length > 1 && parts[0] == "-")
-                {
-                    polynom = new Polynom(-1, int.Parse(parts[1]));
+                    if (parts.Length == 1)
+                    {
+                        polynom = new Polynom(1, int.Parse(parts[0]));
+                    }
+                    else if (parts.Length > 1 && parts[0] == "-")
+                    {
+                        polynom = new Polynom(-1, int.Parse(parts[1]));
+                    }
+                    else
+                    {
+                        polynom = new Polynom(int.Parse(parts[0]), int.Parse(parts[1]));
+
+                    }
                 }
                 else
                 {
-                    polynom = new Polynom(int.Parse(parts[0]), int.Parse(parts[1]));
-
+                    string[] parts = polynomString.Split(new char[] { 'x' }, StringSplitOptions.RemoveEmptyEntries);
+                    if (parts.Length == 0)
+                    {
+                        polynom = new Polynom(1, 1);
+                    }
+                    else
+                    {
+                        polynom = new Polynom(int.Parse(parts[0]), 1);
+                    }
                 }
 
             }
