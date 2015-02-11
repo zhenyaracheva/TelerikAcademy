@@ -10,8 +10,7 @@ class ConvertBinaryToHexadecimal
     {
         Console.Write("Please, enter binary number: ");
         string binary = Console.ReadLine();
-        Console.WriteLine("Hexademical represantation: {0}", Convert.ToString(Convert.ToInt64(binary, 2), 16).ToUpper());
-
+        Console.WriteLine("Hexademical represantation: {0}", Convert.ToInt64(binary, 2).ToString("X"));
     }
 }
 
