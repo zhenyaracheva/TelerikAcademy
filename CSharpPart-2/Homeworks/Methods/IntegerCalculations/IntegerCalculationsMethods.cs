@@ -12,17 +12,12 @@ class IntegerCalculationsMethods
     {
         Console.WriteLine("Please, enter an array of numbers (separate by space):");
         int[] numbers = CreateArrayOfNumbers();
-        int min = MinValue(numbers);
-        int max = MaxValue(numbers);
-        double average = AverageValue(numbers);
-        int sum = Sum(numbers);
-        long product = Product(numbers);
 
-        Console.WriteLine("Min number: {0}", min);
-        Console.WriteLine("Max number: {0}", max);
-        Console.WriteLine("Average: {0}",average);
-        Console.WriteLine("Sum: {0}", sum);
-        Console.WriteLine("Product: {0}", product);
+        Console.WriteLine("Min number: {0}", MinValue(numbers));
+        Console.WriteLine("Max number: {0}", MaxValue(numbers));
+        Console.WriteLine("Average: {0}",AverageValue(numbers));
+        Console.WriteLine("Sum: {0}", Sum(numbers));
+        Console.WriteLine("Product: {0}", Product(numbers));
     }
 
     private static long Product(int[] numbers)
