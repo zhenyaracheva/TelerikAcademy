@@ -25,13 +25,17 @@ class PrintBinaryFloatingPoint
 
     private static string ConvertFloatingPointToBynary(float number)
     {
+        char sign = number < 0 ? '1' : '0';
+
         if (number == 0)
         {
             return Convert.ToString(0, 2).PadLeft(32, '0');
         }
+        else if (number < 0)
+        {
+            number = number * (-1);
+        }
 
-        char sign = number < 0 ? '1' : '0';
-        number = Math.Abs(number);
         int temp = BitConverter.ToInt32(BitConverter.GetBytes(number), 0);
         return sign + Convert.ToString(temp, 2);
     }
