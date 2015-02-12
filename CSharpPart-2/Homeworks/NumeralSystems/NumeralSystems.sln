@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07.OneSystemToAnyOther", "O
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08.BinaryShort", "BinaryShort\08.BinaryShort.csproj", "{8EBD3AAB-6964-46B0-964B-0C32C80F97F7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09.BinaryFloating-Point", "BinaryFloating-Point\09.BinaryFloating-Point.csproj", "{A107C5E6-095A-4C59-AAD7-430A24CBABFE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{8EBD3AAB-6964-46B0-964B-0C32C80F97F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8EBD3AAB-6964-46B0-964B-0C32C80F97F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8EBD3AAB-6964-46B0-964B-0C32C80F97F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A107C5E6-095A-4C59-AAD7-430A24CBABFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A107C5E6-095A-4C59-AAD7-430A24CBABFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A107C5E6-095A-4C59-AAD7-430A24CBABFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A107C5E6-095A-4C59-AAD7-430A24CBABFE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
