@@ -11,18 +11,31 @@ namespace MatrixClass
     {
         static void Main()
         {
-            Matrix matrix = new Matrix(5, 6);
-
-            for (int row = 0; row < matrix.GetWidth(); row++)
+            double[,] firstInt = 
             {
-                for (int col = 0; col < matrix.GetHeight(); col++)
-                {
-                    matrix[row, col] = col * col + row;
-                }
-            }
+              {1, 2, 1},
+              {3, 4, 2},
+              {1, 2, 3}
+              
+            };
 
-            Console.WriteLine(matrix.ToString());
+            double[,] secondInt = 
+            {
+                {1, 2, 3},
+                {4, 5, 3},
+                {1, 2, 3}
+            };
+
+            Matrix first = new Matrix(firstInt);
+            Matrix second = new Matrix(secondInt);
+
+            Console.WriteLine(first + second);
+            Console.WriteLine();
+            Console.WriteLine(first - second);
+            Console.WriteLine();
+            Console.WriteLine(first * second);
         }
+
     }
 
 }

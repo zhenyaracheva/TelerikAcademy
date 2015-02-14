@@ -5,199 +5,77 @@
 
     class Matrix
     {
-        private int width;
-        private int height;
-        private readonly int[,] matrix;
-        private int row;
-        private int col;
+        private double[,] innerMatrix;
 
-        public int Col
+        public Matrix(double[,] matrix)
+        {
+            this.innerMatrix = matrix;
+        }
+
+        public double this[int currentRow, int currentCol]
         {
             get
             {
-                return this.col;
+                return this.innerMatrix[currentRow, currentCol];
             }
             set
             {
-                if (col < 0 || col >= this.Height)
-                {
-                    throw new ArgumentOutOfRangeException("Col must be bigger than 0 and smaller than matrix heigth!");
-                }
-
-                this.col = value;
-            }
-        }
-
-        public int Row
-        {
-            get
-            {
-                return this.row;
-            }
-            set
-            {
-                if (row < 0 || row >= this.Height)
-                {
-                    throw new ArgumentOutOfRangeException("Row cannot be smaler than 0 or bigger than matrix width!");
-                }
-
-                this.row = value;
-            }
-        }
-
-        private int Height
-        {
-            get
-            {
-                return this.height;
-            }
-
-            set
-            {
-                if (value <= 0)
-                {
-                    throw new ArgumentOutOfRangeException("Heigth must be bigger than 0!");
-                }
-
-                this.height = value;
-            }
-        }
-
-        private int Width
-        {
-            get
-            {
-                return this.width;
-            }
-            set
-            {
-                if (value <= 0)
-                {
-                    throw new ArgumentNullException("Width must be bigger than 0!");
-                }
-
-                this.width = value;
-            }
-        }
-
-        public Matrix(int width, int height)
-        {
-            this.Width = width;
-            this.Height = height;
-            this.matrix = new int[Width, Height];
-        }
-
-        public int this[int currentRow, int currentCol]
-        {
-            get
-            {
-                return this.matrix[currentRow, currentCol];
-            }
-            set
-            {
-                if (currentRow < 0 || currentRow >= this.Width)
+                if (currentRow < 0 || currentRow >= innerMatrix.GetLength(0))
                 {
                     throw new ArgumentOutOfRangeException("Row was outside the matrix!");
                 }
 
-                if (currentCol < 0 || currentCol >= this.Height)
+                if (currentCol < 0 || currentCol >= this.innerMatrix.GetLength(1))
                 {
                     throw new ArgumentOutOfRangeException("Col was outside the matrix!");
                 }
 
-                matrix[currentRow, currentCol] = value;
+                innerMatrix[currentRow, currentCol] = value;
             }
         }
 
-        public void SumMatrices(Matrix secondMatrix)
+        public int GetHeight()
         {
-            if (secondMatrix.GetWidth() != this.matrix.GetLength(0))
-            {
-                throw new ArgumentOutOfRangeException("Matrices don't have equal width!");
-            }
-
-            if (secondMatrix.GetHeight() != matrix.GetLength(1))
-            {
-                throw new ArgumentOutOfRangeException("Matrices don't have equal heigth!");
-
-            }
-
-            for (int i = 0; i < this.matrix.GetLength(0); i++)
-            {
-                for (int j = 0; j < this.matrix.GetLength(1); j++)
-                {
-                    matrix[i, j] += secondMatrix[i, j];
-                }
-            }
-
+            return this.innerMatrix.GetLength(0);
         }
-                
-        public Matrix SumMatrices(Matrix first,Matrix second)
+
+        public int GetWidth()
         {
-            if (first.GetWidth() != second.GetWidth())
+            return this.innerMatrix.GetLength(1);
+        }
+
+        public static Matrix operator +(Matrix first, Matrix second)
+        {
+            if (first.GetHeight() != second.GetHeight() || first.GetWidth() != second.GetWidth())
             {
-                throw new ArgumentOutOfRangeException("Matrices don't have equal width!");
+                Console.WriteLine("Cannot add matrixes!");
+                Environment.Exit(0);
             }
 
-            if (first.GetHeight() != second.GetHeight())
+            Matrix result = new Matrix(new double[first.GetHeight(), first.GetWidth()]);
+            for (int i = 0; i < first.GetHeight(); i++)
             {
-                throw new ArgumentOutOfRangeException("Matrices don't have equal heigth!");
-
-            }
-
-            Matrix result = new Matrix(first.Width, first.Height);
-
-            for (int i = 0; i < this.matrix.GetLength(0); i++)
-            {
-                for (int j = 0; j < this.matrix.GetLength(1); j++)
+                for (int j = 0; j < first.GetWidth(); j++)
                 {
-                   result[i,j]= first[i, j] + second[i, j];
+                    result[i, j] = first[i, j] + second[i, j];
                 }
             }
 
             return result;
         }
 
-        public void SubtractMatrices(Matrix second)
+        public static Matrix operator -(Matrix first, Matrix second)
         {
-            if (second.GetWidth() != this.matrix.GetLength(0))
+            if (first.GetHeight() != second.GetHeight() || first.GetWidth() != second.GetWidth())
             {
-                throw new ArgumentOutOfRangeException("Matrices don't have equal width!");
+                Console.WriteLine("Cannot add matrixes!");
+                Environment.Exit(0);
             }
+            Matrix result = new Matrix(new double[first.GetHeight(), first.GetWidth()]);
 
-            if (second.GetHeight() != matrix.GetLength(1))
+            for (int i = 0; i < first.GetHeight(); i++)
             {
-                throw new ArgumentOutOfRangeException("Matrices don't have equal heigth!");
-
-            }
-
-            for (int i = 0; i < this.matrix.GetLength(0); i++)
-            {
-                for (int j = 0; j < this.matrix.GetLength(1); j++)
-                {
-                    matrix[i, j] -= second[i, j];
-                }
-            }
-        }
-
-        public Matrix SubtractMatrices(Matrix first, Matrix second)
-        {
-            if (first.GetWidth() != second.GetWidth())
-            {
-                throw new ArgumentOutOfRangeException("Matrices don't have equal width!");
-            }
-
-            if (first.GetHeight() != second.GetHeight())
-            {
-                throw new ArgumentOutOfRangeException("Matrices don't have equal heigth!");
-
-            }
-
-            Matrix result = new Matrix(first.Width, first.Height);
-
-            for (int i = 0; i < this.matrix.GetLength(0); i++)
-            {
-                for (int j = 0; j < this.matrix.GetLength(1); j++)
+                for (int j = 0; j < first.GetWidth(); j++)
                 {
                     result[i, j] = first[i, j] - second[i, j];
                 }
@@ -206,79 +84,50 @@
             return result;
         }
 
-        public int GetWidth()
+        public static Matrix operator *(Matrix first, Matrix second)
         {
-            return this.Width;
-        }
-
-        public int GetHeight()
-        {
-            return this.Height;
-        }
-
-        public void MultiplyMatrices(Matrix second)
-        {
-            if (second.GetWidth() != this.matrix.GetLength(0))
+            if (first.GetWidth() != second.GetHeight())
             {
-                throw new ArgumentOutOfRangeException("Matrices don't have equal width!");
+                Console.WriteLine("Matrices cannot be multiplied!");
+                Environment.Exit(0);
             }
 
-            if (second.GetHeight() != matrix.GetLength(1))
-            {
-                throw new ArgumentOutOfRangeException("Matrices don't have equal heigth!");
+            Matrix result = new Matrix(new double[first.GetHeight(), second.GetWidth()]);
 
-            }
-
-            for (int i = 0; i < this.matrix.GetLength(0); i++)
+            for (int row = 0; row < result.GetHeight(); row++)
             {
-                for (int j = 0; j < this.matrix.GetLength(1); j++)
+                for (int col = 0; col < result.GetWidth(); col++)
                 {
-                    matrix[i, j] *= second[i, j];
-                }
-            }
-        }
 
-        public Matrix MultiplyMatrices(Matrix first, Matrix second)
-        {
-            if (first.GetWidth() != second.GetWidth())
-            {
-                throw new ArgumentOutOfRangeException("Matrices don't have equal width!");
-            }
+                    for (int i = 0; i < first.GetWidth(); i++)
+                    {
 
-            if (first.GetHeight() != second.GetHeight())
-            {
-                throw new ArgumentOutOfRangeException("Matrices don't have equal heigth!");
-
-            }
-
-            Matrix result = new Matrix(first.Width, first.Height);
-
-            for (int i = 0; i < this.matrix.GetLength(0); i++)
-            {
-                for (int j = 0; j < this.matrix.GetLength(1); j++)
-                {
-                    result[i, j] = first[i, j] * second[i, j];
+                        result[row, col] += first[row, i] * second[i, col];
+                    }
                 }
             }
 
             return result;
         }
 
+
+
+
         public override string ToString()
         {
             StringBuilder result = new StringBuilder();
 
-            for (int row = 0; row < Width; row++)
+            for (int row = 0; row < this.innerMatrix.GetLength(0); row++)
             {
-                for (int col = 0; col < Height; col++)
+                for (int col = 0; col < this.innerMatrix.GetLength(1); col++)
                 {
-                    result.AppendFormat("{0,3} ", this.matrix[row, col]);
+                    result.AppendFormat("{0,3} ", this.innerMatrix[row, col]);
                 }
 
-               result.Append("\n");
+                result.Append("\n");
             }
             result.Length--;
-            return  result.ToString();
+            return result.ToString();
         }
     }
 }
