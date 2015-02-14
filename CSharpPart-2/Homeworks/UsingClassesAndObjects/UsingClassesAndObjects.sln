@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.TriangleSurface", "Trian
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.Workdays", "Workdays\05.Workdays.csproj", "{A9790631-CA62-46CF-8495-3A57E63FDBFE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.SumIntegers", "SumIntegers\06.SumIntegers.csproj", "{49760BFE-A045-4980-8739-B1E8679D4139}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{A9790631-CA62-46CF-8495-3A57E63FDBFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A9790631-CA62-46CF-8495-3A57E63FDBFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A9790631-CA62-46CF-8495-3A57E63FDBFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49760BFE-A045-4980-8739-B1E8679D4139}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49760BFE-A045-4980-8739-B1E8679D4139}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49760BFE-A045-4980-8739-B1E8679D4139}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49760BFE-A045-4980-8739-B1E8679D4139}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
