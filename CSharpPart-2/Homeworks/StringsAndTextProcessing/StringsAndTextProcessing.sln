@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.SubStringInText", "SubSt
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.ParseTags", "ParseTags\05.ParseTags.csproj", "{793F7AA9-CD4D-46C9-AF36-4C9841C9FCD0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.StringLength", "StringLength\06.StringLength.csproj", "{3F853378-D935-4915-834D-6D4CE520A26A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{793F7AA9-CD4D-46C9-AF36-4C9841C9FCD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{793F7AA9-CD4D-46C9-AF36-4C9841C9FCD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{793F7AA9-CD4D-46C9-AF36-4C9841C9FCD0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F853378-D935-4915-834D-6D4CE520A26A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F853378-D935-4915-834D-6D4CE520A26A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F853378-D935-4915-834D-6D4CE520A26A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F853378-D935-4915-834D-6D4CE520A26A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
