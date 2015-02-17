@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11.FormatNumber", "FormatNu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12.ParseURL", "ParseURL\12.ParseURL.csproj", "{14607D49-5FEB-499F-8002-308FCF25F474}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "13.ReverseSentence", "ReverseSentence\13.ReverseSentence.csproj", "{2ED76D81-4E06-49B2-BFEE-8F689415132D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{14607D49-5FEB-499F-8002-308FCF25F474}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{14607D49-5FEB-499F-8002-308FCF25F474}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{14607D49-5FEB-499F-8002-308FCF25F474}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2ED76D81-4E06-49B2-BFEE-8F689415132D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2ED76D81-4E06-49B2-BFEE-8F689415132D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2ED76D81-4E06-49B2-BFEE-8F689415132D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2ED76D81-4E06-49B2-BFEE-8F689415132D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
