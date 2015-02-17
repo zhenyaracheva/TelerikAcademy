@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12.ParseURL", "ParseURL\12.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "13.ReverseSentence", "ReverseSentence\13.ReverseSentence.csproj", "{2ED76D81-4E06-49B2-BFEE-8F689415132D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "14.WordDictionary", "WordDictionary\14.WordDictionary.csproj", "{7D4616E9-501A-40A1-93C5-C715E5701D33}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +83,10 @@ Global
 		{2ED76D81-4E06-49B2-BFEE-8F689415132D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2ED76D81-4E06-49B2-BFEE-8F689415132D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2ED76D81-4E06-49B2-BFEE-8F689415132D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D4616E9-501A-40A1-93C5-C715E5701D33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D4616E9-501A-40A1-93C5-C715E5701D33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D4616E9-501A-40A1-93C5-C715E5701D33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D4616E9-501A-40A1-93C5-C715E5701D33}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
