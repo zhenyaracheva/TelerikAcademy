@@ -1,4 +1,8 @@
-﻿using System;
+﻿//Problem 20. Palindromes
+
+//Write a program that extracts from a given text all palindromes, e.g. ABBA, lamal, exe.
+
+using System;
 using System.Text.RegularExpressions;
 
 class FindPalindromes
