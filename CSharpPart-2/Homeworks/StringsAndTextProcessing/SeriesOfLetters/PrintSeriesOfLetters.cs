@@ -16,6 +16,13 @@ class PrintSeriesOfLetters
     {
         Console.Write("Please, enter a string: ");
         string input = Console.ReadLine();
+
+        if (input.Length == 0)
+        {
+            Console.WriteLine("Empty input!");
+            return;
+        }
+
         string newString = ClearRepeatedLetters(input);
         Console.WriteLine(newString);
     }
