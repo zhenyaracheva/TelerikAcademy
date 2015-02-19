@@ -14,16 +14,25 @@ class FindWordsCount
     {
         Console.Write("Please,enter text: ");
         string text = Console.ReadLine();
-        Dictionary<string, int> dict = new Dictionary<string, int>();
+        var dict = new SortedDictionary<string, int>();
 
-        var matches = Regex.Matches(text, @"\b\w+\b");
+        var words = Regex.Matches(text, @"\b\w+\b");
 
-        foreach (var word in matches)
+        foreach (var word in words)
         {
-            if (dict.Keys.Contains(word))
+            if (dict.Keys.Contains(word.ToString()))
             {
-                
+                dict[word.ToString()] += 1;
             }
+            else
+            {
+                dict[word.ToString()] = 1;
+            }
+        }
+
+        foreach (var word in dict)
+        {
+            Console.WriteLine("{0}- {1}", word.Key, word.Value);
         }
 
     }
