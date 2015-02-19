@@ -12,18 +12,31 @@ class PrintLettersCount
     static void Main()
     {
         Console.Write("Please, enter text: ");
-        string text = Console.ReadLine();
-        HashSet<char> chars = new HashSet<char>();
+        string text = Console.ReadLine().ToLower();
+        var dict = new SortedDictionary<char, int>();
 
         for (int i = 0; i < text.Length; i++)
         {
-            if (char.IsLetter(text[i]))
+            char currentLetter = text[i];
+            if (char.IsLetter(currentLetter))
             {
-                chars.Add(text[i]);
+                if (dict.ContainsKey(currentLetter))
+                {
+                    dict[currentLetter]++;
+                }
+                else
+                {
+                    dict.Add(currentLetter, 1);
+                }
             }
         }
 
-        Console.WriteLine(string.Join(", ", chars.OrderBy(x => x)));
+
+        foreach (var item in dict)
+        {
+            Console.WriteLine("{0}- {1}", item.Key, item.Value);
+        }
+
     }
 }
 
