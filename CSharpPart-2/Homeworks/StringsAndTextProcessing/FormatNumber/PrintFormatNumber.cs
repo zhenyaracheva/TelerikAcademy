@@ -14,7 +14,7 @@ class PrintFormatNumber
 
         Console.WriteLine("{0,15:D} --> Decimal;", number);
         Console.WriteLine("{0,15:X} --> Hexadecimal;", number);
-        Console.WriteLine("{0,15:P} --> Percentage;", number);
+        Console.WriteLine("{0,15:P} --> Percentage;", number/(decimal)100);
         Console.WriteLine("{0,15:E} --> Scientific notation.", number);
     }
 }
