@@ -22,8 +22,6 @@ class SolveEnterNumbers
             //int count = int.Parse(Console.ReadLine());
             //ReadNumbers(starIndex, endIndex, count);
 
-
-
             ReadNumbers(1, 100, 10);
         }
         catch (FormatException ex)
