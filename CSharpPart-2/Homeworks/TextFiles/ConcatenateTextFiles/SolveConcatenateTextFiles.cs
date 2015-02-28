@@ -1,4 +1,8 @@
-﻿using System;
+﻿//Problem 2. Concatenate text files
+
+//Write a program that concatenates two text files into another text file.
+
+using System;
 using System.IO;
 
 class SolveConcatenateTextFiles
@@ -6,11 +10,11 @@ class SolveConcatenateTextFiles
     static void Main()
     {
 
-        StreamWriter writer = new StreamWriter("thirdText.txt");
+        StreamWriter writer = new StreamWriter(@"..\..\thirdText.txt");
 
         using (writer)
         {
-            using (StreamReader firstReader = new StreamReader("firstText.txt"))
+            using (StreamReader firstReader = new StreamReader(@"..\..\firstText.txt"))
             {
                 string line = firstReader.ReadLine();
 
@@ -21,7 +25,7 @@ class SolveConcatenateTextFiles
                 }
             }
 
-            using (StreamReader secondReader = new StreamReader("secondText.txt"))
+            using (StreamReader secondReader = new StreamReader(@"..\..\secondText.txt"))
             {
                 string line = secondReader.ReadLine();
 
