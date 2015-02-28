@@ -1,0 +1,8 @@
+yellow - 28
+submarine - 28
+we - 14
+all - 11
+live - 10
+sea - 4
+green - 3
+beer - 0
