@@ -9,11 +9,11 @@ class PrintOddLines
 {
     static void Main()
     {
-        StreamReader reader = new StreamReader("text.txt");
+        StreamReader reader = new StreamReader(@"..\..\test.txt");
 
         using (reader)
         {
-            int lineCount = 0;
+            int lineCount = 1;
             string line = reader.ReadLine();
 
             while (line != null)
