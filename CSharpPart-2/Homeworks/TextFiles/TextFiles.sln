@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09.DeleteOddLines", "Delete
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10.ExtractTextFromXML", "ExtractTextFromXML\10.ExtractTextFromXML.csproj", "{84B7A3FD-8C18-4C88-B602-861397B8C6C6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11.PrefixTest", "PrefixTest\11.PrefixTest.csproj", "{4C939992-5AA4-4326-A992-1F069F4E6A39}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{84B7A3FD-8C18-4C88-B602-861397B8C6C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{84B7A3FD-8C18-4C88-B602-861397B8C6C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{84B7A3FD-8C18-4C88-B602-861397B8C6C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C939992-5AA4-4326-A992-1F069F4E6A39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C939992-5AA4-4326-A992-1F069F4E6A39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C939992-5AA4-4326-A992-1F069F4E6A39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C939992-5AA4-4326-A992-1F069F4E6A39}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

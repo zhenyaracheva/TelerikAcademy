@@ -1,0 +1,8 @@
+Some te_xt editors small and simple, while others offer broad and complex functions. 
+For example, Unix and Unix-like operating systems have the pico editor (or a variant), but many also include the 
+Emacs editor. Microsoft Windows systems come with the simple Notepad, though many people�especially programmers�prefer 
+other editors with more features. Under Macintosh's classic Mac OS there was the native SimpleText, which was 
+in Mac OS X by TextEdit, which combines features of a text editor with those typical of a word processor 
+such as rulers, margins and multiple font selection. These features are not available simultaneously, but must be 
+switched by user command, or through the program automatically determining the file testtype.
+
