@@ -1,0 +1,2 @@
+Replace all occurrences of the sub-string start with the sub-string finish in a text file
+Replace all occurrences of the sub-string startwith the sub-string finish in a text file
