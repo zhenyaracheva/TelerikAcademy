@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.CompareTextFiles", "Comp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.MaximalAreaSum", "MaximalAreaSum\05.MaximalAreaSum.csproj", "{A459FCA1-44F6-4491-BD3C-EAEF0C57B404}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.SaveSortedNames", "SaveSortedNames\06.SaveSortedNames.csproj", "{B00C9129-8D17-4F85-B0EE-E1431328D779}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{A459FCA1-44F6-4491-BD3C-EAEF0C57B404}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A459FCA1-44F6-4491-BD3C-EAEF0C57B404}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A459FCA1-44F6-4491-BD3C-EAEF0C57B404}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B00C9129-8D17-4F85-B0EE-E1431328D779}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B00C9129-8D17-4F85-B0EE-E1431328D779}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B00C9129-8D17-4F85-B0EE-E1431328D779}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B00C9129-8D17-4F85-B0EE-E1431328D779}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
