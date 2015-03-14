@@ -1,6 +1,7 @@
 ﻿namespace GenericClass
 {
     using System;
+    using System.Linq;
 
     public class GenericList<T> where T : IComparable
     {
@@ -139,17 +140,10 @@
                 throw new IndexOutOfRangeException("GenericList is empty");
             }
 
-            T min = this.elements[0];
+            T[] temp = this.GetTempValues();
 
-            for (int i = 0; i < this.Count; i++)
-            {
-                if (this.elements[i].CompareTo(min) < 0)
-                {
-                    min = this.elements[i];
-                }
-            }
-
-            return min;
+            var sorted = temp.OrderBy(x => x);
+            return sorted.First();
         }
 
         public T Max()
@@ -159,17 +153,21 @@
                 throw new IndexOutOfRangeException("GenericList is empty");
             }
 
-            T max = this.elements[0];
+            T[] temp = this.GetTempValues();
 
+            var sorted = temp.OrderByDescending(x => x);
+            return sorted.First();
+        }
+
+        private T[] GetTempValues()
+        {
+            T[] temp = new T[this.Count];
             for (int i = 0; i < this.Count; i++)
             {
-                if (this.elements[i].CompareTo(max) > 0)
-                {
-                    max = this.elements[i];
-                }
+                temp[i] = this.elements[i];
             }
 
-            return max;
+            return temp;
         }
 
         private void ResizeElements()
