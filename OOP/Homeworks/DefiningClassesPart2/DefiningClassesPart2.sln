@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Points3DTask", "DefiningClassesPart2\Points3DTask.csproj", "{3C01A449-D658-41A3-B5BC-8A34B294DD45}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1-4.Points3DTask", "DefiningClassesPart2\1-4.Points3DTask.csproj", "{3C01A449-D658-41A3-B5BC-8A34B294DD45}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5-7.GenericClass", "GenericClass\5-7.GenericClass.csproj", "{C5087A64-7EB1-4A41-8800-0BCB95E4B497}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{3C01A449-D658-41A3-B5BC-8A34B294DD45}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3C01A449-D658-41A3-B5BC-8A34B294DD45}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3C01A449-D658-41A3-B5BC-8A34B294DD45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5087A64-7EB1-4A41-8800-0BCB95E4B497}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5087A64-7EB1-4A41-8800-0BCB95E4B497}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5087A64-7EB1-4A41-8800-0BCB95E4B497}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5087A64-7EB1-4A41-8800-0BCB95E4B497}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
