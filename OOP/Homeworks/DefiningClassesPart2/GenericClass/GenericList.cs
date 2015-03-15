@@ -55,6 +55,16 @@
 
                 return this.elements[currentIndex];
             }
+
+            set
+            {
+                if (currentIndex < 0 || currentIndex >= this.Count)
+                {
+                    throw new IndexOutOfRangeException("Index is out of range");
+                }
+
+                this.elements[currentIndex] = value;
+            }
         }
 
         public void Add(T element)
@@ -124,11 +134,7 @@
 
         public override string ToString()
         {
-            T[] temp = new T[this.Count];
-            for (int i = 0; i < this.Count; i++)
-            {
-                temp[i] = this.elements[i];
-            }
+            T[] temp = this.GetTempValues(); 
 
             return string.Join(", ", temp);
         }
