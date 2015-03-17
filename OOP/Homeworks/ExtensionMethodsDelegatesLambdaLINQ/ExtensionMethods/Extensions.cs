@@ -34,7 +34,8 @@ namespace ExtensionMethods
             return result;
         }
 
-        public static T Sum<T>(this IEnumerable<T> currentCollection) where T : struct, IComparable
+        public static T Sum<T>(this IEnumerable<T> currentCollection) 
+            where T : struct,IComparable, IConvertible, IComparable<T>, IEquatable<T>, IFormattable
         {
             if (currentCollection.Count() == 0)
             {
@@ -51,7 +52,8 @@ namespace ExtensionMethods
             return sum;
         }
 
-        public static T Product<T>(this IEnumerable<T> currentCollection) where T : struct, IComparable
+        public static T Product<T>(this IEnumerable<T> currentCollection) 
+            where T : struct,IComparable, IConvertible, IComparable<T>, IEquatable<T>, IFormattable
         {
             if (currentCollection.Count() == 0)
             {
@@ -68,7 +70,8 @@ namespace ExtensionMethods
             return result;
         }
 
-        public static T Min<T>(this IEnumerable<T> currentCollection) where T : struct, IComparable
+        public static T Min<T>(this IEnumerable<T> currentCollection) 
+            where T : struct,IComparable, IConvertible, IComparable<T>, IEquatable<T>, IFormattable
         {
             if (currentCollection.Count() == 0)
             {
@@ -88,7 +91,8 @@ namespace ExtensionMethods
             return min;
         }
 
-        public static T Max<T>(this IEnumerable<T> currentCollection) where T : struct, IComparable
+        public static T Max<T>(this IEnumerable<T> currentCollection) 
+            where T : struct,IComparable, IConvertible, IComparable<T>, IEquatable<T>, IFormattable
         {
             if (currentCollection.Count() == 0)
             {
@@ -108,7 +112,8 @@ namespace ExtensionMethods
             return max;
         }
 
-        public static double Average<T>(this IEnumerable<T> currentCollection) where T : struct, IComparable
+        public static double Average<T>(this IEnumerable<T> currentCollection) 
+            where T : struct,IComparable, IConvertible, IComparable<T>, IEquatable<T>, IFormattable
         {
             if (currentCollection.Count() == 0)
             {

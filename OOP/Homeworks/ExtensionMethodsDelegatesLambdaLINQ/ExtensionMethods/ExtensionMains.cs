@@ -15,8 +15,8 @@
             Console.WriteLine("Collection values: 25, 10, 5");
 
             var list = new List<int>();
-            list.Add(25);
             list.Add(10);
+            list.Add(15);
             list.Add(5);
             Console.WriteLine("Test sum method:");
             Console.WriteLine(list.Sum());
