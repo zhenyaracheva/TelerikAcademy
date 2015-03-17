@@ -1,19 +1,19 @@
 ﻿namespace VersionAttributeTask
 {
     using System;
-    using System.Reflection;
 
-    [Version("2.11")]
     public class AttributesMain
     {
         public static void Main()
         {
-            Type type = typeof(AttributesMain);
-            var attributes = type.GetCustomAttributes<VersionAttribute>();
+            var newVersion = new VersionTest("2.11");
+
+            Type type = typeof(VersionTest);
+            var attributes = type.GetProperties();
 
             foreach (var attribute in attributes)
             {
-                Console.WriteLine(attribute.Version);
+                Console.WriteLine(attribute.Name + ": " + attribute.GetValue(newVersion));
             }
         }
     }
