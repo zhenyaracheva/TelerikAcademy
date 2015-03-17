@@ -76,7 +76,7 @@
         {
             foreach (var student in students)
             {
-                Console.WriteLine("{0} {1} - {2}", student.FirstName, student.LastName, student.Age);
+                Console.WriteLine(student);
             }
         }
     }

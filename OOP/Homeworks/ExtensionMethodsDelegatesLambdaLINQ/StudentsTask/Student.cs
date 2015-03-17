@@ -83,5 +83,10 @@ namespace StudentsTask
                 this.age = value;
             }
         }
+
+        public override string ToString()
+        {
+            return string.Format("{0} {1} - {2}", this.FirstName, this.LastName, this.Age);
+        }
     }
 }

@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtensionMethods", "ExtensionMethods\ExtensionMethods.csproj", "{CB6801F5-F91D-491B-9A57-2D9AC73E3F4F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01-02.ExtensionMethods", "ExtensionMethods\01-02.ExtensionMethods.csproj", "{CB6801F5-F91D-491B-9A57-2D9AC73E3F4F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentsTask", "StudentsTask\StudentsTask.csproj", "{F0BB580D-B241-4809-B212-88C6A7BE7A74}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03-05.StudentsTask", "StudentsTask\03-05.StudentsTask.csproj", "{F0BB580D-B241-4809-B212-88C6A7BE7A74}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.DivisibleBy7And3", "DivisibleBy7And3\06.DivisibleBy7And3.csproj", "{627BB6F7-D9C2-4567-91E0-DE1C71C3472A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{F0BB580D-B241-4809-B212-88C6A7BE7A74}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F0BB580D-B241-4809-B212-88C6A7BE7A74}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F0BB580D-B241-4809-B212-88C6A7BE7A74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{627BB6F7-D9C2-4567-91E0-DE1C71C3472A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{627BB6F7-D9C2-4567-91E0-DE1C71C3472A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{627BB6F7-D9C2-4567-91E0-DE1C71C3472A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{627BB6F7-D9C2-4567-91E0-DE1C71C3472A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
