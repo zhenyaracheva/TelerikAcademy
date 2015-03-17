@@ -3,7 +3,7 @@
     using System;
     using System.Text;
 
-    public class Matrix<T> where T : struct, IComparable
+    public class Matrix<T> where T : struct,IComparable, IConvertible, IComparable<T>, IEquatable<T>, IFormattable
     {
         private T[,] matrix;
         private int rowsCount;
