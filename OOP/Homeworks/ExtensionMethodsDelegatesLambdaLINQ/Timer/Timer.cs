@@ -6,7 +6,7 @@ namespace Timer
     using System;
     using System.Threading;
 
-    public delegate void TimerRepeat(DateTime time);
+    public delegate void RepeatTimer(DateTime time);
 
     public class Timer
     {
@@ -16,7 +16,7 @@ namespace Timer
             int seconds = int.Parse(Console.ReadLine());
             Console.WriteLine(DateTime.Now);
 
-            TimerRepeat temp = new TimerRepeat(PrintDateTime);
+            RepeatTimer temp = new RepeatTimer(PrintDateTime);
             {
                 while (true)
                 {
