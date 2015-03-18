@@ -73,7 +73,7 @@
 
             for (int i = 1; i < number.Length; i++)
             {
-                if (!char.IsDigit(number[1]))
+                if (!char.IsDigit(number[i]))
                 {
                     return false;
                 }

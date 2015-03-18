@@ -39,11 +39,12 @@
 
         public static IEnumerable<Student> FirstBeforeLastName(IEnumerable<Student> students)
         {
-            var ordered = students.Where(s => s.FirstName.First() < s.LastName.First())
-                                  .OrderBy(x => x.FirstName)
-                                  .ThenBy(s => s.LastName);
+            var ordered = from student in students
+                          where student.FirstName.CompareTo(student.LastName) <= 0
+                          orderby student.FirstName, student.LastName
+                          select student;
 
-            return ordered.ToList();
+            return ordered;
         }
 
         public static IEnumerable<Student> AgeRange(IEnumerable<Student> students, int minAge, int maxAge)
