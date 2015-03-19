@@ -42,6 +42,7 @@
             this.FN = initialFN;
             this.Group = initialGroup;
         }
+
         public string FirstName
         {
             get

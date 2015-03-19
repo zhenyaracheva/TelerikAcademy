@@ -31,23 +31,28 @@
             students[0].AddStudentMark(4);
 
             Console.WriteLine("Students ordered by name using LINQ query:");
-            var orderedByName = OrderByNameLinq(students);
+            var orderedByName = OrderByNameLinqQuery(students);
             PrintStudents(orderedByName);
             Console.WriteLine();
 
-            Console.WriteLine("Students ordered by group using LINQ query:");
+            Console.WriteLine("Students selected by group 2 using LINQ query:");
             var orderedByGroup = GroupByGroupNumberLinq(students);
             PrintStudents(orderedByGroup);
             Console.WriteLine();
 
-            Console.WriteLine("Students ordered by name using extension methods:");
-            var orderedByNameExtension = OrderByName(students);
-            PrintStudents(orderedByNameExtension);
+            Console.WriteLine("Students ordered by name using LINQ query:");
+            var orderedByNameExtensionLinqQuery = OrderByNameLinqQuery(students);
+            PrintStudents(orderedByNameExtensionLinqQuery);
             Console.WriteLine();
 
             Console.WriteLine("Students ordered by group using extension methods:");
             var orderedByGroupExtension = GroupByGroupNumber(students);
             PrintStudents(orderedByGroupExtension);
+            Console.WriteLine();
+
+            Console.WriteLine("Students ordered by name using extension methods:");
+            var orderedByNameExtension = OrderByName(students);
+            PrintStudents(orderedByNameExtension);
             Console.WriteLine();
 
             Console.WriteLine("Group students by e-mail in abv.bg using LINQ query:");
@@ -131,7 +136,7 @@
             return ordered;
         }
 
-        public static IEnumerable<Student> OrderByNameLinq(IEnumerable<Student> students)
+        public static IEnumerable<Student> OrderByNameLinqQuery(IEnumerable<Student> students)
         {
             var ordered = from student in students
                           orderby student.FirstName, student.LastName
@@ -145,6 +150,16 @@
             var ordered = students.Where(st => st.GroupNumber == 2)
                                   .OrderBy(st => st.FirstName)
                                   .ThenBy(st => st.LastName);
+
+            return ordered.ToList();
+        }
+
+        public static IEnumerable<Student> GroupByGroupNumberLinqQuery(List<Student> students)
+        {
+            var ordered = from student in students
+                          where student.GroupNumber == 2
+                          orderby student.FirstName, student.LastName
+                          select student;
 
             return ordered.ToList();
         }
