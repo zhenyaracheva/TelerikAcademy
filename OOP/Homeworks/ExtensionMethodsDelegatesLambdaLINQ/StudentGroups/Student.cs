@@ -17,6 +17,7 @@
         private string email;
         private List<int> marks;
         private int groupNumber;
+        private Group group;
 
         public Student(string initialFirstName, string initialLastName, string initialFN, int initialGroupNumber)
         {
@@ -34,6 +35,13 @@
             this.Email = initialEmail;
         }
 
+        public Student(string initialFirstName, string initialLastName, string initialFN, Group initialGroup)
+        {
+            this.FirstName = initialFirstName;
+            this.LastName = initialLastName;
+            this.FN = initialFN;
+            this.Group = initialGroup;
+        }
         public string FirstName
         {
             get
@@ -167,6 +175,24 @@
                 }
 
                 this.groupNumber = value;
+            }
+        }
+
+        public Group Group
+        {
+            get
+            {
+                return this.group;
+            }
+
+            set
+            {
+                if (value == null)
+                {
+                    throw new ArgumentNullException("Group cannot be null");
+                }
+
+                this.group = value;
             }
         }
 
