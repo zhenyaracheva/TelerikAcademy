@@ -4,31 +4,27 @@
 namespace Timer
 {
     using System;
+    using System.Globalization;
     using System.Threading;
-
-    public delegate void RepeatTimer(DateTime time);
 
     public class Timer
     {
         public static void Main()
         {
+            Thread.CurrentThread.CurrentCulture = CultureInfo.GetCultureInfo("en-US");
+
             Console.Write("Please, enter interval in seconds: ");
             int seconds = int.Parse(Console.ReadLine());
             Console.WriteLine(DateTime.Now);
 
-            RepeatTimer temp = new RepeatTimer(PrintDateTime);
+            Action<string> temp = Console.WriteLine;
             {
                 while (true)
                 {
                     Thread.Sleep(seconds * 1000);
-                    temp(DateTime.Now);
+                    temp(DateTime.Now.ToString());
                 }
             }
-        }
-
-        public static void PrintDateTime(DateTime date)
-        {
-            Console.WriteLine("{0}", DateTime.Now);
         }
     }
 }

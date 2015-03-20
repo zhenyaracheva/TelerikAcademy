@@ -4,6 +4,8 @@
     using System.Collections.Generic;
     using System.Text;
 
+    using ExtensionMethods.Extensions;
+
     public class ExtensionMains
     {
         public static void Main()

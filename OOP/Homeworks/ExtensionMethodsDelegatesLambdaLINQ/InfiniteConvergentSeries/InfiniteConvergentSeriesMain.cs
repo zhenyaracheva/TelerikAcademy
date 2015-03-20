@@ -13,44 +13,44 @@ namespace InfiniteConvergentSeries
 
     public class InfiniteConvergentSeriesMain
     {
-        public delegate double InfiniteSeries(int precision);
-        public delegate void InfiniteSeriesPrint(int precision);
-
         public static void Main()
         {
-            var dlgSum = new InfiniteSeries(GetSum);
-            var dlgFactorial = new InfiniteSeries(SumFactorial);
-            var dlgSumAndMinus = new InfiniteSeries(GetSumAndMinus);
+            Func<long, double> getSum = GetSum;
+            Func<long, double> getSumAndMinus = GetSumAndMinus;
+            Func<long, double> getFactorial = SumFactorial;
 
             Console.Write("Please enter integer precision: ");
-            int precision = CheckValidN();
+            long precision = CheckValidN();
             Console.WriteLine("1 + 1 / 2 + 1 / 4 + 1 / 8 + 1 / 16...");
-            Console.WriteLine("{0} -> {1:F2}", precision, dlgSum(precision));
+            Console.WriteLine("Precision: {0}", precision);
+            Console.WriteLine("Result: {0:F2}", getSum(precision));
             Console.WriteLine();
             Console.WriteLine("1 + 1 / 2! + 1 / 3! + 1 / 4! + 1 / 5!...");
-            Console.WriteLine("{0} -> {1:F2}", precision, dlgFactorial(precision));
+            Console.WriteLine("Precision: {0}", precision);
+            Console.WriteLine("Result: {0:F2}", getFactorial(precision));
             Console.WriteLine();
             Console.WriteLine("1 + 1 / 2 - 1 / 4 + 1 / 8 - 1 / 16...");
-            Console.WriteLine("{0} -> {1:F2}", precision, dlgSumAndMinus(precision));
+            Console.WriteLine("Precision: {0}", precision);
+            Console.WriteLine("Result: {0:F2}", getSumAndMinus(precision));
         }
 
-        private static int CheckValidN()
+        private static long CheckValidN()
         {
-            int precision = int.Parse(Console.ReadLine());
+            long precision = long.Parse(Console.ReadLine());
 
             while (precision < 0)
             {
                 Console.Write("Invalid input! Precision cannot be smaller than 0! Try again: ");
-                precision = int.Parse(Console.ReadLine());
+                precision = long.Parse(Console.ReadLine());
             }
 
             return precision;
         }
 
-        private static double GetSum(int n)
+        private static double GetSum(long n)
         {
             double sum = 0.0;
-            for (int i = 1, j = 1; j <= n; j++, i *= 2)
+            for (long i = 1, j = 1; j <= n; j++, i *= 2)
             {
                 sum += 1.0 / i;
             }
@@ -58,14 +58,14 @@ namespace InfiniteConvergentSeries
             return sum;
         }
 
-        private static double SumFactorial(int n)
+        private static double SumFactorial(long n)
         {
             double sum = 0;
 
-            for (int i = 1; i <= n; i++)
+            for (long i = 1; i <= n; i++)
             {
                 double factorial = 1;
-                for (int j = 1; j <= i; j++)
+                for (long j = 1; j <= i; j++)
                 {
                     factorial *= j;
                 }
@@ -76,7 +76,7 @@ namespace InfiniteConvergentSeries
             return sum;
         }
 
-        private static double GetSumAndMinus(int n)
+        private static double GetSumAndMinus(long n)
         {
             if (n == 0)
             {
@@ -85,7 +85,7 @@ namespace InfiniteConvergentSeries
 
             double sum = 1.0;
 
-            for (int i = 2, j = 2; j <= n; j++, i *= 2)
+            for (long i = 2, j = 2; j <= n; j++, i *= 2)
             {
                 if (j % 2 == 0)
                 {

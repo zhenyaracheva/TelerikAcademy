@@ -3,39 +3,16 @@
 /// new StringBuilder and has the same functionality as Substring in the class String.
 /// Problem 2. IEnumerable extensions
 /// Implement a set of extension methods for IEnumerable<T> that implement the following group functions: sum, product, min, max, average.
-namespace ExtensionMethods
+namespace ExtensionMethods.Extensions
 {
     using System;
     using System.Collections.Generic;
     using System.Linq;
-    using System.Text;
 
-    public static class Extensions
+    public static class IEnumerableExtensions
     {
-        public static StringBuilder Substring(this StringBuilder sb, int index, int length)
-        {
-            if (index > sb.Length)
-            {
-                throw new ArgumentOutOfRangeException("Index is out of range.");
-            }
-
-            if (index + length > sb.Length)
-            {
-                throw new ArgumentOutOfRangeException("Lenght is out of range.");
-            }
-
-            var result = new StringBuilder();
-
-            for (int i = index; i < index + length; i++)
-            {
-                result.Append(sb[i]);
-            }
-
-            return result;
-        }
-
-        public static T Sum<T>(this IEnumerable<T> currentCollection) 
-            where T : struct,IComparable, IConvertible, IComparable<T>, IEquatable<T>, IFormattable
+        public static T Sum<T>(this IEnumerable<T> currentCollection)
+            where T : struct, IComparable, IConvertible, IComparable<T>, IEquatable<T>, IFormattable
         {
             if (currentCollection.Count() == 0)
             {
@@ -53,7 +30,7 @@ namespace ExtensionMethods
         }
 
         public static T Product<T>(this IEnumerable<T> currentCollection)
-            where T : struct,IComparable, IConvertible, IComparable<T>, IEquatable<T>, IFormattable
+            where T : struct, IComparable, IConvertible, IComparable<T>, IEquatable<T>, IFormattable
         {
             if (currentCollection.Count() == 0)
             {
@@ -71,7 +48,7 @@ namespace ExtensionMethods
         }
 
         public static T Min<T>(this IEnumerable<T> currentCollection)
-            where T : struct,IComparable, IConvertible, IComparable<T>, IEquatable<T>, IFormattable
+            where T : struct, IComparable, IConvertible, IComparable<T>, IEquatable<T>, IFormattable
         {
             if (currentCollection.Count() == 0)
             {
@@ -92,7 +69,7 @@ namespace ExtensionMethods
         }
 
         public static T Max<T>(this IEnumerable<T> currentCollection)
-            where T : struct,IComparable, IConvertible, IComparable<T>, IEquatable<T>, IFormattable
+            where T : struct, IComparable, IConvertible, IComparable<T>, IEquatable<T>, IFormattable
         {
             if (currentCollection.Count() == 0)
             {
@@ -113,7 +90,7 @@ namespace ExtensionMethods
         }
 
         public static double Average<T>(this IEnumerable<T> currentCollection)
-            where T : struct,IComparable, IConvertible, IComparable<T>, IEquatable<T>, IFormattable
+            where T : struct, IComparable, IConvertible, IComparable<T>, IEquatable<T>, IFormattable
         {
             if (currentCollection.Count() == 0)
             {
