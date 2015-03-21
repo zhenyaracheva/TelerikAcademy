@@ -147,7 +147,6 @@
             }
         }
 
-
         public Group Group
         {
             get

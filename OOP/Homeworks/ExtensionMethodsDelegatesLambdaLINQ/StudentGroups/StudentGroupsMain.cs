@@ -107,8 +107,7 @@
             groups.Add(new Group(1, "Computer sience"));
             groups.Add(new Group(2, "Mathematics"));
             groups.Add(new Group(3, "Music"));
-
-
+            
             var studentsFromMathDepartment = from mathGroup in groups
                                              where mathGroup.GroupNumber == 2
                                              join student in students on mathGroup.GroupNumber equals student.Group.GroupNumber
