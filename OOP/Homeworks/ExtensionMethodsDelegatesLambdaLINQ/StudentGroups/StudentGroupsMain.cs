@@ -9,23 +9,23 @@
         public static void Main()
         {
             var students = new List<Student>();
-            students.Add(new Student("Pesho", "Peshov", "103684", "0898123123", "pesho.reshov@abv.bg", 2));
+            students.Add(new Student("Pesho", "Peshov", "103684", "0898123123", "pesho.reshov@abv.bg", new Group(2, "Mathematics")));
             students[0].AddStudentMark(6);
             students[0].AddStudentMark(4);
             students[0].AddStudentMark(3);
-            students.Add(new Student("Gosho", "Peshov", "158484", "02/123 456", "gebesh@gmail.com", 1));
+            students.Add(new Student("Gosho", "Peshov", "158484", "02/123 456", "gebesh@gmail.com", new Group(1, "Computer sience")));
             students[1].AddStudentMark(2);
             students[1].AddStudentMark(4);
-            students.Add(new Student("Petrana", "Stamatova", "007364", "0897456456", "petranova@abv.bg", 2));
+            students.Add(new Student("Petrana", "Stamatova", "007364", "0897456456", "petranova@abv.bg", new Group(2, "Mathematics")));
             students[2].AddStudentMark(6);
             students[2].AddStudentMark(6);
             students[2].AddStudentMark(5);
-            students.Add(new Student("Silana", "Asova", "705481", "(02)123456", "bad_kitty@yahoo.com", 1));
+            students.Add(new Student("Silana", "Asova", "705481", "(02)123456", "bad_kitty@yahoo.com", new Group(1, "Computer sience")));
             students[3].AddStudentMark(5);
             students[3].AddStudentMark(4);
-            students.Add(new Student("Katq", "Gigova", "103685", "0884159357", "kattina@abv.bg", 2));
+            students.Add(new Student("Katq", "Gigova", "103685", "0884159357", "kattina@abv.bg", new Group(2, "Mathematics")));
             students[4].AddStudentMark(6);
-            students.Add(new Student("Grigor", "Shumaherov", "123684", "02-456789", "mashine@abv.bg", 3));
+            students.Add(new Student("Grigor", "Shumaherov", "123684", "02-456789", "mashine@abv.bg", new Group(3, "Music")));
             students[0].AddStudentMark(4);
             students[0].AddStudentMark(4);
             students[0].AddStudentMark(4);
@@ -108,9 +108,10 @@
             groups.Add(new Group(2, "Mathematics"));
             groups.Add(new Group(3, "Music"));
 
+
             var studentsFromMathDepartment = from mathGroup in groups
                                              where mathGroup.GroupNumber == 2
-                                             join student in students on mathGroup.GroupNumber equals student.GroupNumber
+                                             join student in students on mathGroup.GroupNumber equals student.Group.GroupNumber
                                              orderby student.FirstName, student.LastName
                                              select new
                                              {
@@ -129,7 +130,7 @@
         public static IEnumerable<Student> GroupByGroupNumberLinq(List<Student> students)
         {
             var ordered = from student in students
-                          where student.GroupNumber == 2
+                          where student.Group.GroupNumber == 2
                           orderby student.FirstName, student.LastName
                           select student;
 
@@ -147,7 +148,7 @@
 
         public static IEnumerable<Student> GroupByGroupNumber(List<Student> students)
         {
-            var ordered = students.Where(st => st.GroupNumber == 2)
+            var ordered = students.Where(st => st.Group.GroupNumber == 2)
                                   .OrderBy(st => st.FirstName)
                                   .ThenBy(st => st.LastName);
 
@@ -157,7 +158,7 @@
         public static IEnumerable<Student> GroupByGroupNumberLinqQuery(List<Student> students)
         {
             var ordered = from student in students
-                          where student.GroupNumber == 2
+                          where student.Group.GroupNumber == 2
                           orderby student.FirstName, student.LastName
                           select student;
 
@@ -194,7 +195,7 @@
             foreach (var student in students)
             {
                 string name = student.FirstName + " " + student.LastName;
-                Console.WriteLine("{0,-3}| {1,-20} | {2,-6} | {3,-10} | {4,-20} | {5,-2}", index, name, student.FN, student.PhoneNumber, student.Email, student.GroupNumber);
+                Console.WriteLine("{0,-3}| {1,-20} | {2,-6} | {3,-10} | {4,-20} | {5,-2}", index, name, student.FN, student.PhoneNumber, student.Email, student.Group.GroupNumber);
                 index++;
             }
         }

@@ -15,32 +15,23 @@
         private string fn;
         private string phoneNumber;
         private string email;
-        private List<int> marks;
-        private int groupNumber;
+        private ICollection<int> marks;
         private Group group;
-
-        public Student(string initialFirstName, string initialLastName, string initialFN, int initialGroupNumber)
-        {
-            this.FirstName = initialFirstName;
-            this.LastName = initialLastName;
-            this.FN = initialFN;
-            this.Marks = new List<int>();
-            this.GroupNumber = initialGroupNumber;
-        }
-
-        public Student(string initialFirstName, string initialLastName, string initialFN, string initialPhoneNumber, string initialEmail, int initialGroupNumber)
-            : this(initialFirstName, initialLastName, initialFN, initialGroupNumber)
-        {
-            this.PhoneNumber = initialPhoneNumber;
-            this.Email = initialEmail;
-        }
 
         public Student(string initialFirstName, string initialLastName, string initialFN, Group initialGroup)
         {
             this.FirstName = initialFirstName;
             this.LastName = initialLastName;
             this.FN = initialFN;
+            this.marks = new List<int>();
             this.Group = initialGroup;
+        }
+
+        public Student(string initialFirstName, string initialLastName, string initialFN, string initialPhoneNumber, string initialEmail, Group initialGroup)
+            : this(initialFirstName, initialLastName, initialFN, initialGroup)
+        {
+            this.PhoneNumber = initialPhoneNumber;
+            this.Email = initialEmail;
         }
 
         public string FirstName
@@ -152,32 +143,10 @@
         {
             get
             {
-                return this.marks;
-            }
-
-            private set
-            {
-                this.marks = new List<int>();
+                return new List<int>(this.marks);
             }
         }
 
-        public int GroupNumber
-        {
-            get
-            {
-                return this.groupNumber;
-            }
-
-            set
-            {
-                if (value <= 0)
-                {
-                    throw new ArgumentOutOfRangeException("Group cannot be negativeor 0.");
-                }
-
-                this.groupNumber = value;
-            }
-        }
 
         public Group Group
         {
@@ -199,7 +168,7 @@
 
         public void AddStudentMark(int mark)
         {
-            this.Marks.Add(mark);
+            this.marks.Add(mark);
         }
 
         private bool ValidEmail(string text)
