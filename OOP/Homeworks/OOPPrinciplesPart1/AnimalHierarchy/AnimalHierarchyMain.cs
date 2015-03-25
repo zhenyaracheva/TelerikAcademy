@@ -32,7 +32,7 @@ namespace AnimalHierarchy
             animals.Add(new Dog("MArley", 5, Gender.Female));
             animals.Add(new Frog("Kurmit", 4, Gender.Male));
 
-            double averageAgeKitten = animals.Where(x => x is Kitten).Average(x => x.Age);
+            double averageAgeKitten = animals.OfType<Kitten>().Cast<Kitten>().Average(x => x.Age);
             double averageAgeTomcat = animals.Where(x => x is Tomcat).Average(x => x.Age);
             double averageAgeDog = animals.Where(x => x is Dog).Average(x => x.Age);
             double averageAgeFrog = animals.Where(x => x is Frog).Average(x => x.Age);
