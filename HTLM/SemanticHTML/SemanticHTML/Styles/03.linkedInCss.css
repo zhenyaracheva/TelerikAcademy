@@ -1,0 +1,11 @@
+﻿ul {
+    list-style-type: disc;
+}
+
+.emptyCircle {
+    list-style-type: circle;
+}
+
+fieldset {
+    border: 1px solid #DADAD8;
+}

@@ -1,0 +1,17 @@
+﻿td {
+    border: ridge;
+    text-align: center;
+    width: 27px;
+}
+
+.rightAlign {
+    text-align: right;
+}
+
+.leftAlign {
+    text-align: left;
+}
+
+#bottomAlign {
+    vertical-align: bottom;
+}

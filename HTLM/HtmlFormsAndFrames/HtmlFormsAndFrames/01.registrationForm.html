@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Registration form</title>
+    <link href="CSS/01.RegistrationFormCSS.css" rel="stylesheet" />
+</head>
+<body>
+    <table>
+        <tfoot>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" />
+                    <input type="reset" value="Clean This Form" />
+                </td>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr>
+                <th>
+                    Last name
+                </th>
+                <td>
+                    <input type="text" class="largeText" />
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Frist name
+                </th>
+                <td>
+                    <input type="text" class="largeText" />
+                </td>
+            </tr>
+            <tr>
+                <th id="addressSize">
+                    Address
+                </th>
+                <td id="address">
+                    <textarea id="textAreaSizes"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    City
+                </th>
+                <td>
+                    <input type="text" />
+                    State:
+                    <input type="text" class="smallText" />
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Zip/Postal code:
+                </th>
+                <td>
+                    <input type="text" id="zipCode" />
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Country
+                </th>
+                <td>
+                    <select>
+                        <option value="Bulgaria">Bulgaria</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Phone(country code, area code, number)
+                </th>
+                <td>
+                    (+<input type="text" class="smallText" />)
+                    <input type="text" class="smallText" />
+                    <input type="text" class="middleText" />
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Email:
+                </th>
+                <td>
+                    <input type="text" class="largeText" />
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Birth date:
+                </th>
+                <td>
+                    <input type="text" placeholder="дд.мм.гггг гг." />
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Gender
+                </th>
+                <td>
+                    <select>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Starting date
+                </th>
+                <td>
+                    <input type="radio" name="startDate" /> Spring 2015
+                    <input type="radio" name="startDate" /> Summer 2015
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Comments/Questions
+                </th>
+                <td id="commentTextArea">
+                    <textarea id="textAreaSizes"></textarea>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

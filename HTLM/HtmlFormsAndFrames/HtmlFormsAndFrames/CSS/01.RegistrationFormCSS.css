@@ -1,0 +1,54 @@
+﻿th {
+    width: 100px;
+}
+
+td {
+    width: 250px;
+}
+
+td, th {
+    border: 1px solid #777777;
+    padding: 2px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+tfoot {
+    text-align: center;
+}
+
+.smallText {
+    width: 15%;
+}
+
+.middleText {
+    width: 48%;
+}
+
+.largeText {
+    width: 95%;
+}
+
+#addressSize {
+    height: 60px;
+}
+
+#textAreaSizes {
+    margin-top: 2px;
+    height: 100%;
+    width: 90%;
+}
+
+#zipCode {
+    width: 25%;
+}
+
+#commentTextArea {
+    height: 100px;
+}
+
+tfoot {
+    background-color: #87CEEB;
+}
