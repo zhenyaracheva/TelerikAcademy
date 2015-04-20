@@ -1,0 +1,46 @@
+﻿body {
+    background-color: #A9A9A9;
+    font-size: 20px;
+}
+
+h1 {
+    color: #FAFAD1;
+}
+
+    h1#headTitle {
+        text-align: center;
+    }
+
+ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+nav > ul > li > a {
+    color: #FAFAD1;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+    a:hover {
+        background-color: #D3D3D3;
+    }
+
+nav > ul > li:last-child {
+    text-decoration: underline;
+}
+
+p {
+    text-align: justify;
+}
+
+footer > p {
+    font-size: 15px;
+}
+
+footer {
+    text-align: center;
+}

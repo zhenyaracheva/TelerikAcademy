@@ -1,0 +1,54 @@
+﻿table {
+    border-spacing: 13px;
+    font-family: Arial;
+    background-color: #595959;
+    color: #C2C0BD;
+}
+
+    table td {
+        padding: 5px;
+    }
+
+img {
+    height: 10px;
+}
+
+table tr td:first-child {
+    font-style: italic;
+    color: #F2FBFC;
+    width: 150px;
+}
+
+td.position {
+    text-align: left;
+    vertical-align: top;
+}
+
+td:last-child {
+    width: 250px;
+}
+
+td.yellowColor {
+    color: #ECE1A8;
+}
+
+td.orangeColor {
+    color: #DB663F;
+}
+
+#ticketStyle {
+    font-size: 25px;
+    font-style: normal;
+    color: #C2C0BD;
+}
+
+#linkstyle {
+    color: #ECE1A8;
+    font-style: normal;
+    vertical-align: text-top;
+}
+
+.redColor {
+    font-weight: 600;
+    color: #CE0300;
+}
