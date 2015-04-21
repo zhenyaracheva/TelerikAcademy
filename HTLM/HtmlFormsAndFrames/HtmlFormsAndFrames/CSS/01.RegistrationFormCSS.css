@@ -35,7 +35,7 @@ tfoot {
     height: 60px;
 }
 
-#textAreaSizes {
+.textAreaSizes {
     margin-top: 2px;
     height: 100%;
     width: 90%;

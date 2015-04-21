@@ -1,4 +1,4 @@
-﻿#centered {
+﻿.centered {
     text-align: center;
 }
 
@@ -12,12 +12,16 @@ table {
     font-size: 20px;
 }
 
-#innerTables {
+.innerTables {
     border: hidden;
 }
 
-#innerBox {
+#title {
     border: 1px solid black;
+}
+
+td.innerBox {
+    border-right: 1px solid black;
 }
 
 td {
