@@ -1,0 +1,41 @@
+div#container {
+    margin: 0px;
+    background-color: #EEEEEE;
+    border-radius: 10px;
+    width: 450px;
+    height: 510px;
+}
+
+header {
+    font-size: 10px;
+    font-family: sans-serif;
+    padding: 2px;
+    margin: 15px;
+}
+
+article {
+    width: 400px;
+    border: 1px solid #BFBFBF;
+    background-color: #FFFFFF;
+    display: block;
+    margin: 15px;
+ }
+
+img {
+    border: 1px solid #BFBFBF;
+    width: 140px;
+    height:80px;
+    float: left;
+    clear: both;
+    margin: 15px;
+}
+
+input[type=image] {
+    display: inline-block;
+    margin: 0;
+    color: white;
+    padding-top: 4px;
+    position:relative;
+    top: -5px;
+    left: 70px;
+}
