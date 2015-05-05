@@ -2,15 +2,40 @@ body {
     padding: 0;
     margin: 0;
     font-family: Verdana;
-    font-size: 11px;
+    font-size: 12px;
     display: inline-block;
     border: 1px solid black;
 }
 
+div nav h1 {
+    font-size: 14px;
+}
+
 input[type=image] {
     width: 98px;
-    height: 19px;
+    height: 20px;
     border:1px solid black;
+}
+
+input[type=search] {
+    width: 130px;
+}
+
+input[type=button]{
+    border-style: solid;
+    background-color: #CFECFC;
+    boder: 1px solid #3E81B2;
+    color: #18C4FE;
+    margin-top: 5px;
+    margin-left: 25%;
+    width: 50%;
+    height: 35px;
+    display: block;
+}
+
+#centeredDiv {
+    text-align: center;
+    border: none;
 }
 
 .prev {
@@ -42,30 +67,100 @@ body aside div {
     margin: 5px;
 }
 
+
+div#left nav ul {
+    padding-bottom: 15px;
+    color: #B55F5E;
+    font-weight: 600;
+}
+
+div#left nav ul li{
+    text-decoration: none;
+}
+
+div#left nav ul li a{
+    text-decoration: none;
+    font-weight: normal;
+    color: black;
+}
+
 #left {
-    width: 900px;
+    width: 890px;
     height: 100%;
     float: left;
     position: relative;
 }
-
 #right {
-    width:25%;
+    width:22%;
     float: right;
     border: 0;
     display: inline-block;
     position: absolute;
-    left: 74%;
-    top: 1%;
+    left: 78%;
+    top: 0%;
 }
 
 #central {
-    width: 57%;
+    width: 58%;
     display: inline-block;
     position: absolute;
-    left: 15%;
+    left: 17%;
     top: 1%;
     border: 1px solid #808080;
     background-color: #ffffff;
-    padding: 5px;
+    padding: 10px;
+    font-size: 12px;
+}
+
+.bold {
+    font-weight: 600;
+    font-size: 12px;
+}
+.h1Style{
+    background-color: #808080;
+    color: white;
+    font-size: 13px;
+}
+
+div section p a {
+    color:#9E2A28;
+}
+
+div section img {
+    float: left;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 0px;
+    margin-top: -10px;
+    margin-right: 25px;
+}
+
+aside div h1 {
+   text-align: center;
+    margin-top: 0px;
+}
+
+
+#paddedLink {
+    padding-bottom: 10px;
+    padding-left: 130px;
+}
+
+div#right aside ul li a,div#right div a{
+    color: #9C2725;
+    font-size: 12px;
+}
+
+div#right aside ul  {
+    margin-top: 3px;
+    margin-bottom: 3px;
+    padding: 0px;
+    text-align: center;
+}
+
+div#right aside div {
+    text-align: center;
+    margin-top: 0px;
+    padding-top: 2px;
+    padding-bottom: 2px;
 }

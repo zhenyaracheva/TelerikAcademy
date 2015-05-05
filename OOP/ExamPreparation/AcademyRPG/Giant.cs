@@ -7,8 +7,7 @@
 
     public class Giant : Character, IFighter, IGatherer
     {
-        private int attackPoints;
-        private bool isGathered;
+          
 
         public Giant(string name, Point position)
             : base(name, position, 0)
