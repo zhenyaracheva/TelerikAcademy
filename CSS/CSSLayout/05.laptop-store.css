@@ -1,0 +1,97 @@
+#container {
+    border: 1px solid black;
+    width: 630px;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+a {
+    font-size: 20px;
+}
+
+div nav ul li {
+    list-style: none;
+    display: inline-block;
+}
+
+div nav ul  {
+    padding-left: 0px;
+    text-align: center;
+}
+
+hr {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+fieldset {
+    width: 47%;
+    padding: 2px;
+    text-align: center;
+}
+
+#table {
+    display: table;
+}
+
+#inner-table {
+    border: 1px solid black;
+    width: 480px;
+    padding: 3px;
+    float: left;
+    margin-right: 10px;
+    display: table-cell;
+}
+
+img {
+    height: 80px;
+    width: 130px;
+    padding-right: 2px;
+
+}
+
+.firstCol, .secondCol {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 0;
+}
+
+.firstCol {
+    text-align: center;
+}
+
+.secondCol{
+    text-align: left;
+}
+
+.inner {
+    position: relative;
+    display: table-row;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    clear: right;
+    float: right;
+}
+
+.cell {
+    margin-top: 15px;
+    margin-right: 5px;
+}
+
+#aside {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 15px;
+    width: 230px;
+    font-weight: normal;
+}
+
+input[type=range] {
+    width: 85%;
+}
