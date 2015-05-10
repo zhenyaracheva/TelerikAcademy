@@ -1,0 +1,39 @@
+html, body, form, label,img {
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  background-color: white;
+  padding: 5px;
+
+  form {
+    width: 1300px;
+    position: relative;
+
+    input[type=radio] {
+      display: none;
+
+      &:checked + label img:last-of-type  {
+        display: block;
+        top: 160px;
+
+      }
+    }
+
+    label {
+
+        img:first-of-type{
+          width: 250px;
+          height: 150px;
+        }
+
+        img:last-of-type {
+          position: absolute;
+          width: 350px;
+          height: 250px;
+          display: none;
+        }
+      }
+  }
+}

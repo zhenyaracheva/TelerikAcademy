@@ -1,0 +1,137 @@
+.border {
+  border: 2px solid #50187B;
+}
+.aStyle {
+  text-decoration: none;
+  color: #BB67F5;
+}
+body {
+  background-image: url(images/gradient.png);
+  background-repeat: repeat-x;
+  background-size: contain;
+  font-family: Arial;
+}
+body header {
+  margin-left: 20px;
+}
+body header div#header-container {
+  position: relative;
+}
+body header div#header-container h1 a img {
+  height: 100px;
+  width: 400px;
+}
+body header div#reg-form-container form {
+  position: absolute;
+  right: 5%;
+  top: 0px;
+}
+body header div#reg-form-container form div label {
+  color: white;
+}
+body header div#reg-form-container form div input[type=text],
+body header div#reg-form-container form div input[type=password] {
+  border-radius: 10px;
+  background-color: #B35EF3;
+  border: 2px solid #914EC3;
+  margin: 5px;
+}
+body header div#reg-form-container form button {
+  border-radius: 10px;
+  border-bottom-color: #7E36B4;
+  border-right-color: #7E36B4;
+  background-color: #B35EF2;
+  color: white;
+  padding: 5px 10px 5px 10px;
+  font-weight: bold;
+}
+body header nav {
+  width: 70%;
+  border: 2px solid #50187B;
+  border-radius: 15px;
+  margin: 0px 0px 0px 0px;
+  margin-top: 50px;
+}
+body header nav ul {
+  list-style-type: none;
+}
+body header nav ul li {
+  display: inline-block;
+  padding-right: 15px;
+}
+body header nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+body header nav ul li ul {
+  display: none;
+}
+body section {
+  margin-top: 30px;
+  position: relative;
+}
+body section article {
+  border-radius: 15px;
+  border: 2px solid #50187B;
+  margin-bottom: 15px;
+  padding: 10px;
+  padding-bottom: 20px;
+  color: white;
+  width: 910px;
+}
+body section article h1 {
+  margin-top: 10px;
+  margin-left: 0px;
+  margin-bottom: 0px;
+  font-size: 15px;
+  padding: 0px;
+}
+body section article p {
+  font-size: 10px;
+}
+body section article footer {
+  float: right;
+  margin-top: -15px;
+}
+body section article footer p a {
+  text-decoration: none;
+  color: #BB67F5;
+}
+body aside {
+  position: absolute;
+  right: 100px;
+  top: 280px;
+  font-size: 10px;
+  color: white;
+}
+body aside ul {
+  width: 280px;
+  list-style-type: none;
+}
+body aside ul li {
+  border: 2px solid #50187B;
+  border-radius: 10px;
+  margin: 5px;
+  padding-left: 20px;
+  padding-right: 5px;
+  padding-bottom: 5px;
+}
+body aside ul li h2 {
+  padding-left: 0px;
+}
+body aside ul li p a {
+  text-decoration: none;
+  color: #BB67F5;
+}
+body aside ul li ul {
+  list-style-image: url("images/li-dot.png");
+}
+body aside ul li ul li {
+  border: none;
+  padding-left: 0px;
+}
+body footer {
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
