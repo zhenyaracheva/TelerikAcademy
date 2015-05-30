@@ -1,9 +1,11 @@
 function reverseNumber(number) {
+    var numAsString,
+        reversed;
 
-    if (typeof number === 'number'){
+    if (typeof number === 'number') {
 
-        var numAsString = number.toString();
-        var reversed = numAsString.split('').reverse().join('');
+        numAsString = number.toString();
+        reversed = numAsString.split('').reverse().join('');
 
         return Number(reversed);
 

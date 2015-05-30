@@ -1,21 +1,23 @@
-function minMax (input) {
+function minMax(input) {
 
-    var numbers = input.split(' ').map(Number),
+    var i,
+        len,
+        numbers = input.split(' ').map(Number),
         min = Number.MAX_VALUE,
         max = Number.MIN_VALUE;
 
-    for (var i = 0, len = numbers.length; i < len; i++) {
+    for (i = 0, len = numbers.length; i < len; i+=1) {
 
-        if (min>numbers[i]){
+        if (min > numbers[i]) {
             min = numbers[i];
         }
 
-        if (max<numbers[i]){
+        if (max < numbers[i]) {
             max = numbers[i];
         }
     }
 
-    return min+' '+max;
+    return min + ' ' + max;
 }
 
 console.log(minMax('6 5 4 55 4 7 6 2 4 8 7'));

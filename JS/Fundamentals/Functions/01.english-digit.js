@@ -1,27 +1,39 @@
 function lastDigitAsWord(number) {
+    var last;
 
-    if (typeof number=== 'number'){
-        var last = number%10;
+    if (typeof number === 'number') {
+        last = number % 10;
         return englishDigit(last);
 
-    } else{
+    } else {
         return 'not a digit';
     }
 }
 
 function englishDigit(digit) {
-    switch (digit){
-        case 0: return 'zero';
-        case 1: return 'one';
-        case 2: return 'two';
-        case 3: return 'three';
-        case 4: return 'four';
-        case 5: return 'five';
-        case 6: return 'six';
-        case 7: return 'seven';
-        case 8: return 'eight';
-        case 9 :return 'nine';
-        default : return 'not a digit';
+    switch (digit) {
+        case 0:
+            return 'zero';
+        case 1:
+            return 'one';
+        case 2:
+            return 'two';
+        case 3:
+            return 'three';
+        case 4:
+            return 'four';
+        case 5:
+            return 'five';
+        case 6:
+            return 'six';
+        case 7:
+            return 'seven';
+        case 8:
+            return 'eight';
+        case 9 :
+            return 'nine';
+        default :
+            return 'not a digit';
     }
 }
 

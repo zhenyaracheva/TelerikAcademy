@@ -1,21 +1,23 @@
-function numberAsWord (number) {
+function numberAsWord(number) {
     number = parseInt(number);
-    var word= '';
+    var word = '',
+        unitsMap,
+        tensMap;
 
-    if(number=== parseFloat(0) ){
+    if (number === parseFloat(0)) {
         return 'zero';
     }
 
-    if(number<0){
-        return word= 'minus ' + numberAsWord(Math.abs(number));
+    if (number < 0) {
+        return word = 'minus ' + numberAsWord(Math.abs(number));
     }
 
-    if ((number / 1000000) >=1) {
+    if ((number / 1000000) >= 1) {
         word += numberAsWord(number / 1000000) + ' million ';
         number %= 1000000;
     }
 
-     if ((number / 1000) >= 1){
+    if ((number / 1000) >= 1) {
         word += numberAsWord(number / 1000) + ' thousand ';
         number %= 1000;
     }
@@ -25,13 +27,13 @@ function numberAsWord (number) {
         number %= 100;
     }
 
-     if (number >= 1) {
+    if (number >= 1) {
         if (word != '') {
             word += 'and ';
         }
 
-        var unitsMap = [ 'zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen'];
-        var tensMap = ['zero', 'ten', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety'];
+        unitsMap = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen'];
+        tensMap = ['zero', 'ten', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety'];
 
         if (number < 20) {
             word += unitsMap[number];

@@ -1,18 +1,18 @@
-function findIndexInSortedArray (element,sortedArray) {
-
-    if (isSortedArray(sortedArray)){
-        var max = sortedArray.reduce(function(previous,current){
-            return previous > current ? previous:current
+function findIndexInSortedArray(element, sortedArray) {
+    var max;
+    if (isSortedArray(sortedArray)) {
+        max = sortedArray.reduce(function (previous, current) {
+            return previous > current ? previous : current
         });
 
-        return binarySearch(sortedArray,0, max, element);
+        return binarySearch(sortedArray, 0, max, element);
 
     } else {
         return 'Array is not sorted!'
     }
 }
 
-function binarySearch (sortedArray, lowBound, highBound, value) {
+function binarySearch(sortedArray, lowBound, highBound, value) {
 
     var mid;
     while (lowBound <= highBound) {
@@ -40,13 +40,15 @@ function binarySearch (sortedArray, lowBound, highBound, value) {
     return -1;
 }
 
-function isSortedArray (array) {
+function isSortedArray(array) {
 
-    var first =[].concat( array);
-    var sorted = array.sort(function(a, b){return a - b});
+    var first = [].concat(array);
+    var sorted = array.sort(function (a, b) {
+        return a - b
+    });
 
     for (var i = 0, len = array.length; i < len; i++) {
-        if(first[i]!== sorted[i]){
+        if (first[i] !== sorted[i]) {
             return false;
         }
     }
@@ -54,8 +56,8 @@ function isSortedArray (array) {
     return true;
 }
 
-console.log(findIndexInSortedArray( 5, [1,2,2,2,3,4,5,6,7,8,9]));
-console.log(findIndexInSortedArray( 1, [1,2,2,2,3,4,5,6,7,8,9]));
-console.log(findIndexInSortedArray( 500, [1,2,2,2,3,4,5,6,7,8,9]));
-console.log(findIndexInSortedArray( -1, [-50,-1,1,2,2,2,3,4,5,6,7,8,9]));
-console.log(findIndexInSortedArray( 0, [1,2,2,2,3,4,5,6,7,8,9,0]));
+console.log(findIndexInSortedArray(5, [1, 2, 2, 2, 3, 4, 5, 6, 7, 8, 9]));
+console.log(findIndexInSortedArray(1, [1, 2, 2, 2, 3, 4, 5, 6, 7, 8, 9]));
+console.log(findIndexInSortedArray(500, [1, 2, 2, 2, 3, 4, 5, 6, 7, 8, 9]));
+console.log(findIndexInSortedArray(-1, [-50, -1, 1, 2, 2, 2, 3, 4, 5, 6, 7, 8, 9]));
+console.log(findIndexInSortedArray(0, [1, 2, 2, 2, 3, 4, 5, 6, 7, 8, 9, 0]));

@@ -1,40 +1,41 @@
-function smallestAndLargestProperty (place) {
-    var smallest = 'zzz',
-        largerst = '';
+function smallestAndLargestProperty(place) {
+    var prop,
+        smallest = 'zzz',
+        largest = '';
 
-    if (place=== document){
+    if (place === document) {
 
-        for (var prop in document) {
+        for (prop in document) {
 
-            if (prop> largerst){
-                largerst = prop;
-            };
+            if (prop > largest) {
+                largest = prop;
+            }
 
-            if (prop < smallest){
+            if (prop < smallest) {
                 smallest = prop;
             }
         }
-    } else if (place=== window) {
+    } else if (place === window) {
 
-        for (var prop in window) {
+        for (prop in window) {
 
-            if (prop> largerst){
-                largerst = prop;
-            };
+            if (prop > largest) {
+                largest = prop;
+            }
 
-            if (prop < smallest){
+            if (prop < smallest) {
                 smallest = prop;
             }
         }
 
-    } else if (place=== navigator){
-        for (var prop in navigator) {
+    } else if (place === navigator) {
+        for (prop in navigator) {
 
-            if (prop> largerst){
-                largerst = prop;
-            };
+            if (prop > largest) {
+                largest = prop;
+            }
 
-            if (prop < smallest){
+            if (prop < smallest) {
                 smallest = prop;
             }
         }
@@ -43,7 +44,7 @@ function smallestAndLargestProperty (place) {
         return 'wrong input';
     }
 
-    return 'Smallest property: '+smallest+' Largest property: '+ largerst;
+    return 'Smallest property: ' + smallest + ' Largest property: ' + largest;
 }
 
 console.log(smallestAndLargestProperty(window));

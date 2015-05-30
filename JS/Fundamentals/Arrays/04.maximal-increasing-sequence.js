@@ -1,5 +1,7 @@
 function increasingSequence(array) {
-    var max = '',
+    var i,
+        len,
+        max = '',
         current = '',
         lastNumber,
         maxNumber;
@@ -11,22 +13,21 @@ function increasingSequence(array) {
         return array[0];
     } else {
 
-        current=array[0];
+        current = array[0];
         lastNumber = parseInt(array[0]);
-        maxNumber = lastNumber;
 
-        for (var i = 1, len = array.length; i < len; i++) {
+        for (i = 1, len = array.length; i < len; i += 1) {
             var currentNumber = parseInt(array[i]);
 
-            if (lastNumber+1 === currentNumber) {
-                current += ' '+ currentNumber ;
+            if (lastNumber + 1 === currentNumber) {
+                current += ' ' + currentNumber;
             } else {
 
                 if (max.length < current.length) {
                     max = current;
                 }
 
-               current = currentNumber;
+                current = currentNumber;
             }
 
             lastNumber = currentNumber;
@@ -41,6 +42,6 @@ function increasingSequence(array) {
 }
 
 console.log(increasingSequence([3, 2, 3, 4, 2, 2, 4]));
-console.log(increasingSequence([3, 2, 3, 4, 2, 2, 4,5, 6,7,8,9,10]));
+console.log(increasingSequence([3, 2, 3, 4, 2, 2, 4, 5, 6, 7, 8, 9, 10]));
 console.log(increasingSequence([]));
 console.log(increasingSequence([1]));

@@ -13,7 +13,7 @@ function largerThanNeighbours(array, position){
     }
 }
 
-console.log(largerThanNeighbours([1,20,1053,49,75,69,78,50,10,0],5));
+console.log(largerThanNeighbours([1, 20, 1053, 49, 75, 69, 78, 50, 10, 0],5));
 console.log(largerThanNeighbours([1,20,1053,49,75,69,78,50,10,0],50));
 console.log(largerThanNeighbours([100,20,1053,49,75,69,78,50,10,0],0));
 console.log(largerThanNeighbours([0,20,1053,49,75,69,78,50,10,0],0));

@@ -1,22 +1,24 @@
-function compareCharArrays (firstCharArray, secondCharArray) {
+function compareCharArrays(firstCharArray, secondCharArray) {
+    var i,
+        len;
 
-    if(firstCharArray.length!== secondCharArray.length){
-        return 'not equl';
+    if (firstCharArray.length !== secondCharArray.length) {
+        return false;
 
-    }else {
+    } else {
 
-    for (var i = 0, len = firstCharArray.length; i < len; i++) {
+        for (i = 0, len = firstCharArray.length; i < len; i += 1) {
 
-        if(firstCharArray[i] !== secondCharArray[i]){
-            return false;
+            if (firstCharArray[i] !== secondCharArray[i]) {
+                return false;
+            }
         }
-    }
 
-    return true;
+        return true;
     }
 }
 
-console.log(compareCharArrays(['a','b','c'],['c','b','a']));
-console.log(compareCharArrays(['a','b','c'],['a','b','c']));
-console.log(compareCharArrays(['a','b','c'],['a','b']));
-console.log(compareCharArrays(['b','c'],['a','b','c']));
+console.log(compareCharArrays(['a', 'b', 'c'], ['c', 'b', 'a']));
+console.log(compareCharArrays(['a', 'b', 'c'], ['a', 'b', 'c']));
+console.log(compareCharArrays(['a', 'b', 'c'], ['a', 'b']));
+console.log(compareCharArrays(['b', 'c'], ['a', 'b', 'c']));

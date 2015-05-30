@@ -1,31 +1,33 @@
-function maximalSequence (array){
+function maximalSequence(array) {
 
-    if(array.length >0){
-        var maxCount = 0,
-            currerntCount = 1,
+    if (array.length > 0) {
+        var i,
+            len,
+            maxCount = 0,
+            currentCount = 1,
             maxSymbol = array[0],
             lastSymbol = array[0];
 
-        for (var i = 0, len =array.length ; i < len; i++) {
+        for (i = 0, len = array.length; i < len; i += 1) {
             if (lastSymbol === array[i]) {
-                currerntCount++;
+                currentCount += 1;
             } else {
-                if (maxCount < currerntCount) {
-                    maxCount = currerntCount;
+                if (maxCount < currentCount) {
+                    maxCount = currentCount;
                     maxSymbol = lastSymbol;
                 }
 
-                currerntCount = 1;
+                currentCount = 1;
                 lastSymbol = array[i];
             }
         }
 
-        if (maxCount < currerntCount) {
-            maxCount = currerntCount;
+        if (maxCount < currentCount) {
+            maxCount = currentCount;
             maxSymbol = lastSymbol;
         }
 
-        return  Array(maxCount+1).join(maxSymbol+' ');
+        return Array(maxCount + 1).join(maxSymbol + ' ');
 
     } else {
         return 'Empty array'
@@ -33,4 +35,4 @@ function maximalSequence (array){
 }
 
 console.log(maximalSequence([2, 1, 1, 2, 3, 3, 2, 2, 2, 1]));
-console.log(maximalSequence([2, 1, 1,1,1,1,1,1,1, 2, 3, 3, 2, 2, 2, 1]));
+console.log(maximalSequence([2, 1, 1, 1, 1, 1, 1, 1, 1, 2, 3, 3, 2, 2, 2, 1]));

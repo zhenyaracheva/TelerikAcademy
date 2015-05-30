@@ -1,7 +1,8 @@
 function printNumbers(n) {
-    var output='';
+    var i,
+        output='';
     n = parseInt(n);
-    for (var i = 1; i <= n; i++) {
+    for ( i = 1; i <= n; i+=1) {
         output+= i+' '
     }
 
