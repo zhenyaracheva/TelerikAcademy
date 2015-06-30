@@ -5,15 +5,15 @@
 
     public class MinesweeperGameLogic
     {
-        private const int Max = 35;
+        private const int MaxCountEmptyCells = 35;
       
         public static void Start()
         {
             string command = string.Empty;
             char[,] gameField = CreateGameField();
-            char[,] bombs = CreateBombPositions();
+            char[,] bombsPositions = CreateBombPositions();
             int points = 0;
-            bool isGameEnd = false;
+            bool isGameOver = false;
             List<PlayerScore> bestScores = new List<PlayerScore>(6);
             int row = 0;
             int col = 0;
@@ -52,24 +52,24 @@
                         break;
                     case "restart":
                         gameField = CreateGameField();
-                        bombs = CreateBombPositions();
+                        bombsPositions = CreateBombPositions();
                         PrintGameField(gameField);
-                        isGameEnd = false;
+                        isGameOver = false;
                         printStartText = false;
                         break;
                     case "exit":
                         Console.WriteLine("Bye!");
                         break;
                     case "turn":
-                        if (bombs[row, col] != '*')
+                        if (bombsPositions[row, col] != '*')
                         {
-                            if (bombs[row, col] == '-')
+                            if (bombsPositions[row, col] == '-')
                             {
-                                OpenGameFieldPosition(gameField, bombs, row, col);
+                                OpenGameFieldPosition(gameField, bombsPositions, row, col);
                                 points++;
                             }
 
-                            if (MinesweeperGameLogic.Max == points)
+                            if (MinesweeperGameLogic.MaxCountEmptyCells == points)
                             {
                                 isPlayerWins = true;
                             }
@@ -80,7 +80,7 @@
                         }
                         else
                         {
-                            isGameEnd = true;
+                            isGameOver = true;
                         }
 
                         break;
@@ -89,9 +89,9 @@
                         break;
                 }
 
-                if (isGameEnd)
+                if (isGameOver)
                 {
-                    PrintGameField(bombs);
+                    PrintGameField(bombsPositions);
                     Console.Write("\nHrrrrrr! You lose {0} points. " + "Please enter your name: ", points);
                     string playerName = Console.ReadLine();
                     PlayerScore playerScore = new PlayerScore(playerName, points);
@@ -116,23 +116,23 @@
                     bestScores.Sort((PlayerScore r1, PlayerScore r2) => r2.Points.CompareTo(r1.Points));
                     PrintBestScores(bestScores);
                     gameField = CreateGameField();
-                    bombs = CreateBombPositions();
+                    bombsPositions = CreateBombPositions();
                     points = 0;
-                    isGameEnd = false;
+                    isGameOver = false;
                     printStartText = true;
                 }
 
                 if (isPlayerWins)
                 {
                     Console.WriteLine("\nCongrats! You Win!");
-                    PrintGameField(bombs);
+                    PrintGameField(bombsPositions);
                     Console.WriteLine("Please enter you name: ");
                     string playerName = Console.ReadLine();
                     PlayerScore playerResult = new PlayerScore(playerName, points);
                     bestScores.Add(playerResult);
                     PrintBestScores(bestScores);
                     gameField = CreateGameField();
-                    bombs = CreateBombPositions();
+                    bombsPositions = CreateBombPositions();
                     points = 0;
                     isPlayerWins = false;
                     printStartText = true;
