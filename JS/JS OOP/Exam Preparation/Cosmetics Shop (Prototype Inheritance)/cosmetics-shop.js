@@ -51,7 +51,7 @@ var cosmeticShop = (function () {
                 this.name = name;
                 this.brand = brand;
                 this.price = price;
-                this.gender = genderType[gender];
+                this.gender = genderType[gender.toUpperCase()];
                 return this
             }
         });
@@ -134,7 +134,7 @@ var cosmeticShop = (function () {
             value: function (name, brand, price, gender, milliliters, usage) {
                 this.milliliters = milliliters;
                 parent.init.call(this, name, brand, (price * milliliters), gender);
-                this.usage = usageType[usage];
+                this.usage = usageType[usage.toUpperCase()];
                 return this
             }
         });
@@ -163,12 +163,12 @@ var cosmeticShop = (function () {
                 return this._milliliters;
             },
             set: function (value) {
-                if (value <= 0) {
-                    throw new Error('Milliliters cannot be less or equal to 0!');
-                } else if (isNullOrUndefined(value)) {
+                if (isNullOrUndefined(value)) {
                     throw new Error('Milliliters cannot be null or undefined')
                 } else if (isString(value)) {
                     throw new Error('Milliliters cannot be string!')
+                } else if (value <= 0) {
+                    throw new Error('Milliliters cannot be less or equal to 0!');
                 }
 
                 this._milliliters = value;
@@ -221,12 +221,13 @@ var cosmeticShop = (function () {
 
                 if (isNullOrUndefined(value)) {
                     throw new Error('Ingredients cannot be null or undefined!');
+                } else if (isString(value)) {
+                    throw new Error('Ingredients cannot be string!');
                 } else if (value.length < 1) {
                     throw  new Error('Missing ingredients!')
                 } else if (!isValidIngredient(value)) {
                     throw new Error('Each ingredient must be string between ' + _minIngredientNameLength + ' and ' + _maxIngredientNameLength + ' symbols long!');
                 }
-
                 this._ingredients = value.join(', ');
             }
         });
@@ -290,10 +291,13 @@ var cosmeticShop = (function () {
             value: function () {
                 var i,
                     len,
-                    result = this.name + ' category - ' + _cosmetics.length + '\n',
-                    productsToReturn = _cosmetics.sort(function (a, b) {
-                        return compareAscending(a.brand, b.brand) || compareDescending(a.price, b.price)
-                    });
+                    result,
+                    productsToReturn;
+
+                result = this.name + ' category - ' + _cosmetics.length + '\n';
+                productsToReturn = _cosmetics.sort(function (a, b) {
+                    return compareAscending(a.brand, b.brand) || compareDescending(a.price, b.price)
+                });
 
                 for (i = 0, len = productsToReturn.length; i < len; i += 1) {
                     result += productsToReturn[i].print() + '\n';
