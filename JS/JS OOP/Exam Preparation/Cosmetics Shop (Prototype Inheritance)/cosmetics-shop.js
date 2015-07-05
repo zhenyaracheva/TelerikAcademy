@@ -273,7 +273,7 @@ var cosmeticShop = (function () {
         Object.defineProperty(category, 'addCosmetics', {
             value: function (cosmetic) {
                 _cosmetics.push(cosmetic);
-                return _cosmetics.splice();
+                return _cosmetics.slice();
             }
         });
         Object.defineProperty(category, 'removeCosmetics', {
@@ -284,7 +284,7 @@ var cosmeticShop = (function () {
                 }
 
                 _cosmetics.splice(index, 1);
-                return _cosmetics.splice();
+                return _cosmetics.slice();
             }
         });
         Object.defineProperty(category, 'print', {
@@ -344,7 +344,7 @@ var cosmeticShop = (function () {
                     _products.splice(index, 1);
                 }
 
-                return _products.splice();
+                return _products.slice();
             }
         });
         Object.defineProperty(shoppingCart, 'containsProduct', {

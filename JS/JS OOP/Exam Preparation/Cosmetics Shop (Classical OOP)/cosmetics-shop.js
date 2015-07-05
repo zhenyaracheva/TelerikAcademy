@@ -47,7 +47,6 @@ var CosmeticShop = (function () {
             return true;
         }
 
-
         function Product(name, brand, price, gender) {
             this.name = name;
             this.brand = brand;
@@ -269,7 +268,7 @@ var CosmeticShop = (function () {
             }
 
             _cosmetics.splice(index, 1);
-            return _cosmetics.splice();
+            return _cosmetics.slice();
         };
         Category.prototype.print = function () {
             var i,
@@ -322,7 +321,7 @@ var CosmeticShop = (function () {
                 _products.splice(index, 1);
             }
 
-            return _products.splice();
+            return _products.slice();
         };
 
         ShoppingCart.prototype.containsProduct = function (product) {
