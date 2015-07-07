@@ -113,8 +113,12 @@
                 var deleteArgs = cmdArgs.splice(1).join(' ');
                 switch (objectType) {
                     case 'Trainer':
-                        // TODO: implement "delete Trainer" command
-                        throw new Error('Command "delete Trainer" not implemented.');
+                        var index = _trainers.getIndexBy('username', deleteArgs);
+
+                        if (index === -1) {
+                            throw new Error('Cannot delete non-existing trainer!')
+                        }
+                        _trainers.splice(index, 1);
                         break;
                     default:
                         throw new Error('Unknown object to delete: ' + objectType);
@@ -129,6 +133,16 @@
 
             return trainingCenterEngine;
         }());
+
+        Array.prototype.getIndexBy = function (name, value) {
+            for (var i = 0; i < this.length; i++) {
+                if (this[i][name] == value) {
+                    return i;
+                }
+            }
+
+            return -1;
+        };
 
         function isString(value) {
             return typeof value === 'string';
@@ -164,7 +178,7 @@
                 this.email = email;
             }
 
-            Object.defineProperty(Trainer, 'username', {
+            Object.defineProperty(Trainer.prototype, 'username', {
                 get: function () {
                     return this._username;
                 },
@@ -178,7 +192,7 @@
                     this._username = value;
                 }
             });
-            Object.defineProperty(Trainer, 'firstName', {
+            Object.defineProperty(Trainer.prototype, 'firstName', {
                 get: function () {
                     return this._firstName;
                 },
@@ -195,7 +209,7 @@
                     this._firstName = value;
                 }
             });
-            Object.defineProperty(Trainer, 'lastName', {
+            Object.defineProperty(Trainer.prototype, 'lastName', {
                 get: function () {
                     return this._lastName;
                 },
@@ -209,7 +223,7 @@
                     this._lastName = value;
                 }
             });
-            Object.defineProperty(Trainer, 'email', {
+            Object.defineProperty(Trainer.prototype, 'email', {
                 get: function () {
                     return this._email;
                 },
@@ -254,7 +268,9 @@
 
         var Training = (function () {
             var MinDurationValue = 1,
-                MaxDurationValue = 99;
+                MaxDurationValue = 99,
+                MinStartDateValue = 2000,
+                MaxStartDateValue = 2020;
 
             function Training(name, description, trainer, startDate, duration) {
                 this.name = name;
@@ -264,19 +280,23 @@
                 this.duration = duration;
             }
 
-            Object.defineProperty(Training, 'name', {
+            Object.defineProperty(Training.prototype, 'name', {
                 get: function () {
                     return this._name;
                 },
                 set: function (value) {
                     if (!isString(value)) {
                         throw new Error('Training name must be string!');
+                    } else if (isNullOrUndefined(value)) {
+                        throw new Error('Training name cannot be undefined or null!')
+                    } else if (!value) {
+                        throw new Error('Training name cannot be empty string!');
                     }
 
                     this._name = value;
                 }
             });
-            Object.defineProperty(Training, 'description', {
+            Object.defineProperty(Training.prototype, 'description', {
                 get: function () {
                     return this._description;
                 },
@@ -293,7 +313,7 @@
                     this._description = value;
                 }
             });
-            Object.defineProperty(Training, 'trainer', {
+            Object.defineProperty(Training.prototype, 'trainer', {
                 get: function () {
                     return this._trainer;
                 },
@@ -307,19 +327,21 @@
                     this._trainer = value;
                 }
             });
-            Object.defineProperty(Training, 'startDate', {
+            Object.defineProperty(Training.prototype, 'startDate', {
                 get: function () {
                     return this._startDate;
                 },
                 set: function (value) {
                     if (!(value instanceof Date)) {
                         throw new Error('Training startDate must be instance of Date');
+                    } else if (value.getFullYear() < MinStartDateValue || value.getFullYear() > MaxStartDateValue) {
+                        throw new Error('Training start date must be in range [' + MinStartDateValue + '...' + MaxStartDateValue + ']');
                     }
 
                     this._startDate = value;
                 }
             });
-            Object.defineProperty(Training, 'duration', {
+            Object.defineProperty(Training.prototype, 'duration', {
                 get: function () {
                     return this._duration;
                 },
@@ -402,7 +424,7 @@
                 return result.join('') + ';location=' + this.location + ']'
             };
 
-            Object.defineProperty(RemoteCourse, 'location', {
+            Object.defineProperty(RemoteCourse.prototype, 'location', {
                 get: function () {
                     return this._location;
                 },
@@ -473,6 +495,21 @@
 }
 
 
+var test = [
+    'create Course {"name":"PHP Web Apps", "startDate":"3-May-2015", "trainer":"nakov"}',
+    'create Trainer {"username":"nakov", "firstName":"Svetlin", "lastName":"Nakov"}',
+    'create Seminar {"name":"JS for C# devs", "date":"15-Nov-2014", "trainer":"nakov", "description":"JS vs. C#"}',
+    'list',
+    'delete Trainer nakov',
+    'delete Trainer nakov',
+    'list',
+    'create RemoteCourse {"name":"Java Basics", "startDate":"22-Nov-2014", "trainer":"nakov", "location":"Varna"}',
+    'create Trainer {"username":"nakov", "lastName":"NAKOV"}',
+    'create RemoteCourse {"name":"Java Basics", "startDate":"22-Nov-2014", "trainer":"nakov", "location":"Varna"}',
+    'list'
+];
+
+console.log(processTrainingCenterCommands(test));
 // ------------------------------------------------------------
 // Read the input from the console as array and process it
 // Remove all below code before submitting to the judge system!
