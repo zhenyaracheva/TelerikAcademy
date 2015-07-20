@@ -1,4 +1,4 @@
-﻿namespace SumOfDifferences
+﻿namespace Exam.SumOfDifferences
 {
     using System;
     using System.Linq;

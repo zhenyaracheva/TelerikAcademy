@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5E3CD0CC-83D0-45CE-969F-70CB983D0877}</ProjectGuid>
+    <ProjectGuid>{DFF968E8-D789-46B4-BB01-299A455F46AC}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>SumOfDifferences</RootNamespace>
