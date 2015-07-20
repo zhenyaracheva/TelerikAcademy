@@ -21,10 +21,11 @@ var renderer = (function () {
     });
 
     Object.defineProperty(renderer, 'drawGameField', {
-        value: function (width, height, canvasContext) {
+        value: function (x, y, width, height, canvasContext) {
+            canvasContext.lineWidth = '1';
             canvasContext.fillStyle = '#1DE1D3';
-            canvasContext.fillRect(0, 0, width, height);
-            canvasContext.strokeRect(0, 0, width, height);
+            canvasContext.fillRect(x, y, width - x - 1, height - y - 1);
+            canvasContext.strokeRect(x, y, width - x - 1, height - y - 1);
         }
     });
 

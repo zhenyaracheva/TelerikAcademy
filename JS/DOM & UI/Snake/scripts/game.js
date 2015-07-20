@@ -5,11 +5,11 @@ var game = (function () {
         foodSize,
         game,
         gameRun,
-        h,
+        gameFieldHeight,
         level,
         render,
         snake,
-        w,
+        gameFieldWidth,
         CONSTANTS = {
             HIT_WALL_MIN_VALUE: 5,
             HIT_WALL_MAX_VALUE: 10,
@@ -19,7 +19,10 @@ var game = (function () {
             DOWN_ARROW: 40,
             SPEED_UPDATE: 10,
             LEVEL_UPDATE: 5,
-
+            WIDTH: (3 * window.innerWidth / 4) + 10,
+            HEIGHT: window.innerHeight - 37,
+            START_CANVAS_X: 6,
+            START_CANVAS_Y: 7
         };
 
 
@@ -27,19 +30,19 @@ var game = (function () {
     canvasContext = canvas.getContext('2d');
     game = Object.create({});
     foodSize = Object.create(gameObjects.food).init().size;
-    h = window.innerHeight - foodSize;
-    w = window.innerWidth - foodSize;
-    food = Object.create(gameObjects.food).init(getRandom(w - foodSize), getRandom(h - foodSize));
+    gameFieldHeight = CONSTANTS.HEIGHT;
+    gameFieldWidth = CONSTANTS.WIDTH;
+    food = Object.create(gameObjects.food).init(getRandom(CONSTANTS.START_CANVAS_X, gameFieldWidth - foodSize), getRandom(CONSTANTS.START_CANVAS_Y, gameFieldHeight - foodSize));
     level = 1;
     render = Object.create(renderer);
     snake = Object.create(gameObjects.snake).init();
 
-    canvas.height = h;
-    canvas.width = w;
+    canvas.height = CONSTANTS.HEIGHT;
+    canvas.width = CONSTANTS.WIDTH;
 
     function isHitWall(x, y) {
-        if (0 > x || x + CONSTANTS.HIT_WALL_MAX_VALUE > w ||
-            0 > y - CONSTANTS.HIT_WALL_MAX_VALUE || y + CONSTANTS.HIT_WALL_MIN_VALUE > h) {
+        if (0 > x - CONSTANTS.START_CANVAS_X || x + CONSTANTS.HIT_WALL_MAX_VALUE > canvas.width ||
+            0 > y - CONSTANTS.HIT_WALL_MAX_VALUE || y + CONSTANTS.HIT_WALL_MIN_VALUE > canvas.height) {
             return true;
         }
 
@@ -64,8 +67,8 @@ var game = (function () {
         return false
     }
 
-    function getRandom(endRange) {
-        return (Math.random() * endRange) | 0;
+    function getRandom(startRange, endRange) {
+        return (Math.random() * (endRange - startRange + 1) + startRange) | 0;
     }
 
     function collisionWindowSides(snake) {
@@ -80,21 +83,27 @@ var game = (function () {
         var appleIndented,
             head,
             foodX,
-            foodY;
+            foodY,
+            foodSize;
 
         head = snake.tail[snake.head];
-        appleIndented = snake.tail[0].radius / 2;
+        appleIndented = snake.tail[0].radius;
+        foodSize = food.size / 2;
 
-        if ((head.x >= food.x - appleIndented) && (food.x + food.size + appleIndented) >= head.x &&
-            (head.y >= food.y - appleIndented) && (food.y + food.size + appleIndented) >= head.y) {
+        // first try
+        //if ((head.x >= food.x - appleIndented) && (food.x + food.size + appleIndented) >= head.x &&
+        //    (head.y >= food.y - appleIndented) && (food.y + food.size + appleIndented) >= head.y) {
+
+        if ((head.x >= food.x ) && (food.x + food.size ) >= head.x &&
+            (head.y >= food.y ) && (food.y + food.size ) >= head.y) {
 
             snake.foodEaten += 1;
-            foodX = getRandom(w - foodSize);
-            foodY = getRandom(h - foodSize);
+            foodX = getRandom(CONSTANTS.START_CANVAS_X, gameFieldWidth - foodSize * 2);
+            foodY = getRandom(CONSTANTS.START_CANVAS_Y, gameFieldHeight - foodSize * 2);
 
             while (checkValidFoodPosition(foodX, foodY, snake, appleIndented, food.size)) {
-                foodX = getRandom(w - foodSize);
-                foodY = getRandom(h - foodSize);
+                foodX = getRandom(CONSTANTS.START_CANVAS_X, gameFieldWidth - foodSize);
+                foodY = getRandom(CONSTANTS.START_CANVAS_Y, gameFieldHeight - foodSize);
             }
 
             food = Object.create(food).init(foodX, foodY);
@@ -104,10 +113,10 @@ var game = (function () {
         }
     }
 
-    function checkValidFoodPosition(x, y, snake, appleIndented, foodSize) {
+    function checkValidFoodPosition(foodX, foodY, snake, foodSize) {
         snake.tail.some(function (tailMember) {
-            return (x >= tailMember.x - appleIndented * 2 - foodSize) && (tailMember.x + foodSize + appleIndented * 2) >= x &&
-                (y >= tailMember.y - appleIndented * 2 - foodSize) && (tailMember.y + foodSize + appleIndented * 2) >= y
+            return (foodX > tailMember.x ) && foodX < (tailMember.x + foodSize) &&
+                (foodY > tailMember.y ) && foodY < tailMember.y + foodSize;
         });
     }
 
@@ -146,14 +155,15 @@ var game = (function () {
 
     function animation() {
         if (snake.isAlive) {
+            render.drawGameField(CONSTANTS.START_CANVAS_X, CONSTANTS.START_CANVAS_Y, canvas.width, canvas.height, canvasContext);
             snake.move();
-            collisionWindowSides(snake, canvasContext, w, h);
-            render.drawGameField(w, h, canvasContext);
             render.drawFoodAndStone(food, canvasContext);
             render.drawSnake(snake, canvasContext);
+            collisionWindowSides(snake, canvasContext, gameFieldWidth, gameFieldHeight);
             handleUserControl(game);
             collisionFood(snake);
             levelController(snake);
+
         } else {
             stopGame();
         }
@@ -161,7 +171,7 @@ var game = (function () {
 
     function stopGame() {
         clearInterval(gameRun);
-        render.drawGameOver(w, h, canvasContext, snake);
+        render.drawGameOver(canvas.width, canvas.height, canvasContext, snake);
 
     }
 

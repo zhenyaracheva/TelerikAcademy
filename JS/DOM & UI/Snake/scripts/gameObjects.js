@@ -2,14 +2,14 @@ var gameObjects = (function () {
     var snake = (function () {
         var snake = Object.create({}),
             CONSTANTS = {
-                X: (window.innerWidth - 100) / 2,
-                Y: (window.innerHeight - 100) / 2,
+                X: ( (3 * window.innerWidth / 4)) / 2,
+                Y: (window.innerHeight ) / 2,
                 R: 10,
                 START_ANGLE: 5,
                 END_ANGLE: 2 * Math.PI,
                 IS_CIRCLE: true,
                 START_NODES_LENGTH: 5,
-                SNAKE_SPEED: 90,
+                SNAKE_SPEED: 70,
                 SNAKE_START_DIRECTION: 'right',
                 CHANGE_DIRECTION_VALUE: 15
             };
