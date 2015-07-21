@@ -16,22 +16,23 @@
             int col = 0;
             long sum = 0;
 
-            for (int i = 0; i < commands.Count; i++)
+            for (int commandIndex = 0; commandIndex < commands.Count; commandIndex++)
             {
-                string[] current = commands[i].Split(' ');
-                string direction = current[0];
-                int move = int.Parse(current[1]);
+                string[] currentCommand = commands[commandIndex].Split(' ');
+                string direction = currentCommand[0];
+                int move = int.Parse(currentCommand[1]);
 
                 for (int j = 0; j < move - 1; j++)
                 {
-                    sum += SumDirection(board, ref row, ref col, direction, visited);
+                    Move(board, direction, ref row, ref col);
+                    sum += SumDirection(board, row, col, visited);
                 }
             }
 
             Console.WriteLine(sum);
         }
 
-        private static int SumDirection(int[,] matrix, ref int row, ref int col, string direction, bool[,] visited)
+        private static void Move(int[,] matrix, string direction, ref int row, ref int col)
         {
             if (direction == "UR" || direction == "RU")
             {
@@ -65,7 +66,10 @@
                     col--;
                 }
             }
+        }
 
+        private static int SumDirection(int[,] matrix, int row, int col, bool[,] visited)
+        {
             if (!visited[row, col])
             {
                 visited[row, col] = true;
