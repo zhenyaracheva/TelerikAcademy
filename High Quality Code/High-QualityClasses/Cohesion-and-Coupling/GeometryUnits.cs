@@ -2,7 +2,7 @@
 {
     using System;
 
-    public static class GeometryUnits
+    internal static class GeometryUnits
     {
         public static double CalcVolume(double width, double heigth, double depth)
         {

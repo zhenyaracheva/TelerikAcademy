@@ -6,7 +6,7 @@
 
     using InheritanceAndPolymorphism.Interfaces;
 
-    public class OffsiteCourse : Course, IOffsiteCourse, ICourse
+    internal class OffsiteCourse : Course, IOffsiteCourse, ICourse
     {
         private string town;
 

@@ -1,6 +1,6 @@
 ﻿namespace CohesionAndCoupling
 {
-    public static class FileUtils
+    internal static class FileUtils
     {
         private const string NoExtension = "no extension";
 

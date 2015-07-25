@@ -4,7 +4,7 @@
 
     using Abstraction.Interfaces;
 
-    public class Rectangle : Figure, IFigure
+    internal class Rectangle : Figure, IFigure
     {
         private double width;
         private double height;

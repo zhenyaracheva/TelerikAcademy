@@ -6,7 +6,7 @@
 
     using InheritanceAndPolymorphism.Interfaces;
 
-    public class LocalCourse : Course, ILocalCourse, ICourse
+    internal class LocalCourse : Course, ILocalCourse, ICourse
     {
         private string lab;
 

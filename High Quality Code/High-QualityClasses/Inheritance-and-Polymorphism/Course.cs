@@ -7,7 +7,7 @@
 
     using InheritanceAndPolymorphism.Interfaces;
 
-    public abstract class Course : ICourse
+    internal abstract class Course : ICourse
     {
         private const int MinNameLength = 2;
 

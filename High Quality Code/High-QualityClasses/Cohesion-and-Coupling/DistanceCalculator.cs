@@ -2,7 +2,7 @@
 {
     using System;
 
-    public class DistanceCalculator
+    internal class DistanceCalculator
     {
         public static double Distance2D(double x1, double y1, double x2, double y2)
         {

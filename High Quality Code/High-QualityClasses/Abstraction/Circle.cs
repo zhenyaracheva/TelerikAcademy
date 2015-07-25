@@ -4,7 +4,7 @@
 
     using Abstraction.Interfaces;
 
-    public class Circle : Figure, IFigure
+    internal class Circle : Figure, IFigure
     {
         private double radius;
 

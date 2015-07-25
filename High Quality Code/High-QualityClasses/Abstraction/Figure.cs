@@ -4,7 +4,7 @@
 
     using Abstraction.Interfaces;
 
-    public abstract class Figure : IFigure
+    internal abstract class Figure : IFigure
     {
         public abstract double CalculatePerimeter();
 
