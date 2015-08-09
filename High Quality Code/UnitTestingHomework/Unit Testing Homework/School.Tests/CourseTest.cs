@@ -19,13 +19,15 @@
             this.school = new School();
             this.firstTestStudent = new Student("John", this.school);
             this.secondTestStudent = new Student("Johnana", this.school);
-            this.thirdTestStudent = new Student("Jahne", this.school); 
+            this.thirdTestStudent = new Student("Jahne", this.school);
+
         }
 
         [TestMethod]
         public void CreateCourseInitialeStudentsLengthTest()
         {
-            Assert.AreEqual(this.course.Students.Count, 0);
+            var expected = 0;
+            Assert.AreEqual(expected, this.course.Students.Count);
         }
 
         [TestMethod]
@@ -34,7 +36,8 @@
             this.course.AddStudent(this.firstTestStudent);
             this.course.AddStudent(this.secondTestStudent);
             this.course.AddStudent(this.thirdTestStudent);
-            Assert.AreEqual(this.course.Students.Count, 3);
+            var expected = 3;
+            Assert.AreEqual(expected, this.course.Students.Count);
         }
 
         [TestMethod]
@@ -43,7 +46,8 @@
             this.course.AddStudent(this.firstTestStudent);
             this.course.AddStudent(this.secondTestStudent);
             this.course.RemoveStudent(this.firstTestStudent);
-            Assert.AreEqual(this.course.Students.Count, 1);
+            var expected = 1;
+            Assert.AreEqual(expected, this.course.Students.Count);
         }
 
         [TestMethod]

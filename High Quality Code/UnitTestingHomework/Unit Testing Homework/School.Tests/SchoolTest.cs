@@ -17,15 +17,15 @@
         [TestMethod]
         public void GetStudentSchoolIdFirstId()
         {
-            var firstId = 10000;
+            var expected = 10000;
             var id = this.school.GetStudentSchoolId();
-            Assert.AreEqual(id, firstId);
+            Assert.AreEqual(expected, id);
         }
 
         [TestMethod]
         public void Test5StudentId()
         {
-            var idFive = 10004;
+            var expected = 10004;
             var id = 0;
 
             for (int i = 0; i < 5; i++)
@@ -33,7 +33,7 @@
                 id = this.school.GetStudentSchoolId();
             }
 
-            Assert.AreEqual(id, idFive);
+            Assert.AreEqual(expected, id);
         }
 
         [TestMethod]
@@ -48,7 +48,7 @@
                 id = this.school.GetStudentSchoolId();
             }
 
-            Assert.AreEqual(id, expectedId);
+            Assert.AreEqual(expectedId, id);
         }
 
         [TestMethod]

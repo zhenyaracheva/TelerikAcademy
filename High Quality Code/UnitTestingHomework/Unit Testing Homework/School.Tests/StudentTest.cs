@@ -10,8 +10,9 @@
         public void CreatingStudentsTest()
         {
             var student = new Student("John", new School());
-            Assert.AreEqual(student.ToString(), "John: 10000");
-        }        
+            var expected = "John: 10000";
+            Assert.AreEqual(expected, student.ToString());
+        }
 
         [TestMethod]
         [ExpectedException(typeof(ArgumentNullException))]

@@ -32,7 +32,7 @@
                 deckCards.Add(deck.GetNextCard());
             }
 
-            Assert.AreEqual(deckCards.Count, count);
+            Assert.AreEqual(count, deckCards.Count);
         }
 
 
@@ -55,7 +55,7 @@
             var deck = new Deck();
             Card testCard = new Card(CardSuit.Spade, CardType.Ace);
             deck.ChangeTrumpCard(testCard);
-            Assert.AreEqual(deck.GetTrumpCard, testCard);
+            Assert.AreEqual(testCard, deck.GetTrumpCard);
         }
 
         [TestCase(1, 23)]
@@ -71,7 +71,7 @@
                 deck.GetNextCard();
             }
 
-            Assert.AreEqual(deck.CardsLeft, expectedCardsCount);
+            Assert.AreEqual(expectedCardsCount,deck.CardsLeft);
         }
     }
 }
