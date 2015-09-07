@@ -7,21 +7,15 @@
  *   **Use underscore.js for all operations**
  */
 
-// function solve(){
-//   return
-function solve(animals) {
-    if (!Array.isArray(animals)) {
-        throw new Error('Invalid input');
+function solve() {
+    return function (animals) {
+
+        var totalLegs = _.reduce(animals, function (legs, animal) {
+            return legs + animal.legsCount;
+        }, 0);
+
+        console.log('Total number of legs: ' + totalLegs);
     }
-
-    var totalLegs = _.reduce(animals, function (memo, item) {
-        return memo + item.legsCount;
-    }, 0);
-
-    return 'Total number of legs: ' + totalLegs;
 }
-// }
-// module.exports = solve;
-var animals = [];
 
-console.log(solve(animals));
+module.exports = solve;

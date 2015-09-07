@@ -1,4 +1,4 @@
-/* 
+/*
  Create a function that:
  *   **Takes** a collection of books
  *   Each book has propeties `title` and `author`
@@ -10,69 +10,32 @@
  *   **Use underscore.js for all operations**
  */
 
-// function solve() {
-//     return
-function solve(books) {
+function solve() {
+    return function (books) {
+        var groupedByAuthor = _.chain(books)
+            .map(function (book) {
+                book.author.fullname = book.author.firstName + ' ' + book.author.lastName;
+                return book;
+            })
+            .groupBy(function (book) {
+                return book.author.fullname;
+            })
+            .value();
 
-    var grouped = _.chain(books)
-        .map(function (item) {
-            item.author.fullName = item.author.firstName + ' ' + item.author.lastName;
-            item.authorName = item.author.fullName;
-            return item;
-        })
-        .sortBy('authorName')
-        .groupBy('authorName')
-        .value();
+        var maxBooks = _.max(groupedByAuthor, 'length').length;
+        var authorsWithMaxBooks = _.chain(groupedByAuthor)
+            .filter(function (books) {
+                return books.length === maxBooks;
+            })
+            .sortBy(function (books) {
+                return books[0].author.fullname;
+            })
+            .value();
 
-    var maxCount = _.chain(grouped)
-        .map(function (item) {
-            return item.length
-        })
-        .sort(function (item) {
-            return +item;
-        })
-        .max(function (item) {
-            return item
-        })
-        .value();
-
-    var result = _.chain(grouped)
-        .filter(function (item) {
-            return item.length === maxCount;
-        }).value()
-        .map(function (item) {
-            return item[0].authorName;
+        _.each(authorsWithMaxBooks, function (books) {
+            console.log(books[0].author.fullname);
         });
-
-    return result;
+    };
 }
-// }
-// module.exports = solve;
 
-var books = [{
-    title: 'Book1',
-    author: {
-        firstName: 'ASanjay',
-        lastName: 'Wilfrith'
-    }
-}, {
-    title: 'Book27',
-    author: {
-        firstName: 'Sanjay',
-        lastName: 'Wilfrith'
-    }
-}, {
-    title: 'Book3',
-    author: {
-        firstName: 'ASanjay',
-        lastName: 'Wilfrith'
-    }
-}, {
-    title: 'Book3',
-    author: {
-        firstName: 'Sanjay',
-        lastName: 'Wilfrith'
-    }
-}];
-console.log(solve(books));
-//solve(books);
+module.exports = solve;

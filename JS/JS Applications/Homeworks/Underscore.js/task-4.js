@@ -7,7 +7,6 @@
  *   **sorts** them ascending by `legsCount`
  *	if two animals have the same number of legs sort them by name
  *   **prints** them to the console in the format:
-
  ```
  ----------- (number of dashes is equal to the length of the GROUP_1_NAME + 1)
  GROUP_1_NAME:
@@ -25,60 +24,31 @@
  *   **Use underscore.js for all operations**
  */
 
-// function solve(){
-//   return
-function solve(animals) {
-    if (!Array.isArray(animals)) {
-        throw new Error('Invalid input');
-    }
+function solve(){
+    return function (animals) {
+        var grouped = _.chain(animals)
+            .sortBy('species')
+            .reverse()
+            .groupBy('species')
+            .value();
 
+        _.each(grouped, function (groupedAnimals, group) {
+            var sortedAnimals = _.chain(groupedAnimals)
+                .sortBy('legsCount')
+                .sortBy(sortedAnimals, 'name')
+                .value();
 
-    var sortedBySpecies = _.sortBy(animals, function (item) {
-        return item.species;
-    }).reverse();
+            console.log(Array(group.length + 2).join('-'));
+            console.log(group + ':');
+            console.log(Array(group.length + 2).join('-'));
 
-    var groups = _.groupBy(sortedBySpecies, 'species');
-    for (var group in groups) {
-
-        groups[group].sort(function (a, b) {
-            var x = a.legsCount;
-            var y = b.legsCount;
-            return x === y ? 0 : x < y ? -1 : 1;
+            _.each(sortedAnimals, function (animal) {
+                console.log(animal.name + ' has ' + animal.legsCount + ' legs');
+            })
         });
-    }
-
-    var res = [];
-    for (var group in groups) {
-        res.push('---------');
-        res.push(group);
-        res.push('---------');
-
-        for (var i = 0; i < groups[group].length; i += 1) {
-            res.push(groups[group][i].name + ' has ' + groups[group][i].legsCount+' legs');
-        }
-    }
-
-    return res;
+    };
 }
-// }
-// module.exports = solve;
 
-var animals = [
-    {
-        name: 'Zlatev',
-        species: 'Mosquito',
-        legsCount: 2
-    }, {
-        name: 'Minkov',
-        species: 'Mosquito',
-        legsCount: 2
-    }, {
-        name: 'Doncho',
-        species: 'Mosquito',
-        legsCount: 2
-    }, {
-        name: 'Komara',
-        species: 'Mosquito',
-        legsCount: 4
-    }];
-console.log(solve(animals));
+
+module.exports = solve;
+

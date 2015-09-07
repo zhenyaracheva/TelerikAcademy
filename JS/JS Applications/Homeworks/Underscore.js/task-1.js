@@ -1,4 +1,4 @@
-/*
+/* 
  Create a function that:
  *   Takes an array of students
  *   Each student has a `firstName` and `lastName` properties
@@ -9,30 +9,27 @@
  *   **Use underscore.js for all operations**
  */
 
-//function solve() {
-//    return
-function solve(students) {
-    if (!Array.isArray(students)) {
-        throw new Error("Student must nw array!");
-    }
-    var firstNameBeforelastName = _.filter(students, function (item) {
-        return item.firstName < item.lastName;
-    });
+function solve() {
+    return function (students) {
+        var sortedByAscending = _.chain(students)
+            .filter(function (student) {
+                return student.firstName < student.lastName;
+            })
+            .map(function (student) {
+                student.fullname = student.firstName + ' ' + student.lastName;
+                return student;
+            })
+            .sortBy(function (student) {
+                return student.fullname;
+            })
+            .value();
 
-    var sorted = _.sortBy(firstNameBeforelastName, function (item) {
-        return item.firstName + ' ' + item.lastName;
-    }).reverse();
+        var sortedByDescending = _.chain(sortedByAscending)
+            .reverse()
+            .forEach(function (student) {
+                console.log(student.fullname);
+            });
+    };
+}
 
-    var asString = _.map(sorted, function (item) {
-        return item.firstName + ' ' + item.lastName;
-    });
-
-    return asString;
-};
-//}
-//module.exports = solve;
-
-var students = [];
-
-var sorted = solve(students);
-console.log(sorted);
+module.exports = solve;

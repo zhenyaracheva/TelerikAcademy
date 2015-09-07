@@ -10,40 +10,25 @@
  *   **Use underscore.js for all operations**
  */
 
-// function solve() {
-//     return
-function solve(students) {
-    if (!Array.isArray(students)) {
-        throw new Error('students must be Array!');
-    }
+function solve() {
+    return function (students) {
+        var bestStudent = _.chain(students)
+            .map(function (student) {
+                var sumOfMarks = _.reduce(student.marks, function (memo, mark) {
+                    return memo + mark;
+                }, 0);
 
-    var studentsWithAverage = _.map(students, function (item) {
-        var sum = _.reduce(item.marks, function (memo, num) {
-            return memo + num;
-        }, 0);
+                var averageMark = sumOfMarks / student.marks.length;
+                student.averageMark = averageMark;
+                return student;
+            })
+            .max(function (student) {
+                return student.averageMark;
+            })
+            .value();
 
-        return {
-            firstName: item.firstName,
-            lastName: item.lastName,
-            age: item.age,
-            average: sum / item.marks.length
-        }
-    });
+        console.log(bestStudent.firstName + ' ' + bestStudent.lastName + ' has an average score of ' + bestStudent.averageMark);
+    };
+}
 
-    var sorted = _.sortBy(studentsWithAverage, function (item) {
-        return item.average
-    });
-
-    var smartest = _.last(sorted);
-
-    return smartest.firstName + ' ' + smartest.lastName + ' has an average score of ' + smartest.average;
-};
-// }
-// module.exports = solve;
-var students = [{
-    firstName: 'Nikita',
-    lastName: 'Anath',
-    age: 14,
-    marks: [6]
-}];
-console.log(solve(students));
+module.exports = solve;
