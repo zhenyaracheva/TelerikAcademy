@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="AbstractFactoryPattern.BeerFactory.BeerFactory">
+    <Position X="11.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAAAAAAIAAAAAAAEAAAABAAAAAAAA=</HashCode>
+      <FileName>BeerFactory\BeerFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="AbstractFactoryPattern.BeerFactory.KasmetnizaBeerFactory">
+    <Position X="10.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAgAAAAAAAAIAAAAAEAAIAAAAAAAEAAAABAIAAAAIA=</HashCode>
+      <FileName>BeerFactory\KasmetnizaBeerFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AbstractFactoryPattern.BeerFactory.StolichanskoBeerFactory">
+    <Position X="12.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAgAAAAAAAAIAAAAAEAAIAAAAAAAEAAAABAIAAAAIA=</HashCode>
+      <FileName>BeerFactory\StolichanskoBeerFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AbstractFactoryPattern.Products.Beer" Collapsed="true">
+    <Position X="5.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Products\Beer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AbstractFactoryPattern.Products.DarkBeer">
+    <Position X="4.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Products\DarkBeer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AbstractFactoryPattern.Products.LightBeer">
+    <Position X="6.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Products\LightBeer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AbstractFactoryPattern.Products.NoAlcoholBeer">
+    <Position X="8.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Products\NoAlcoholBeer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AbstractFactoryPattern.Products.WeissBeer">
+    <Position X="3" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Products\WeissBeer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AbstractFactoryPattern.BeerFunPlace">
+    <Position X="8.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAgAAAEAAAAAAAAAIAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BeerFunPlace.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="AbstractFactoryPattern.BeerFactory.Contracts.IBeerFactory" Collapsed="true">
+    <Position X="11.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAAAAAAIAAAAAAAEAAAABAAAAAAAA=</HashCode>
+      <FileName>BeerFactory\Contracts\IBeerFactory.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

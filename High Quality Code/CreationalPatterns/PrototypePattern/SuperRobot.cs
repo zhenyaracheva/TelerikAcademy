@@ -1,0 +1,6 @@
+﻿namespace PrototypePattern
+{
+    class SuperRobot
+    {
+    }
+}
