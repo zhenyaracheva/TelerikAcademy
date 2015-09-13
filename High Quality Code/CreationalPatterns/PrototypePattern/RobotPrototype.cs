@@ -2,6 +2,6 @@
 {
     public abstract class RobotPrototype
     {
-        public abstract Robot CloneAnimal();
+        public abstract Robot Clone();
     }
 }

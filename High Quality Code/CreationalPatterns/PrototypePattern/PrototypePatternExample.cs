@@ -8,7 +8,7 @@
         {
             var robby = new Robot("Robby");
             Console.WriteLine(robby.ToString());
-            var wolly = robby.CloneAnimal();
+            var wolly = robby.Clone();
             wolly.Name = "Wolly";
             Console.WriteLine(wolly.ToString());
         }

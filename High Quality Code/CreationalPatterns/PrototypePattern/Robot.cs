@@ -14,7 +14,7 @@
             return "I'm " + this.GetType().Name + ", my name is " + this.Name;
         }
 
-        public override Robot CloneAnimal()
+        public override Robot Clone()
         {
             return this.MemberwiseClone() as Robot;
         }
