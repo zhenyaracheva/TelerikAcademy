@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="BridgePattern.RemoteControls.MuteRemoteControl">
+    <Position X="8.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>RemoteControls\MuteRemoteControl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BridgePattern.RemoteControls.PauseRemoteControl">
+    <Position X="6" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>RemoteControls\PauseRemoteControl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BridgePattern.RemoteControls.RemoteControl" Collapsed="true">
+    <Position X="7.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAgEAAAAABgAAAAAAAAAAAAAQAAAAAQAQA=</HashCode>
+      <FileName>RemoteControls\RemoteControl.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BridgePattern.EntertainmentDevices.EntertainmentDevice">
+    <Position X="11.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAQEAEAAAIAAAAAAAAAAQAAAAAAAAAkACA=</HashCode>
+      <FileName>EntertainmentDevices\EntertainmentDevice.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="BridgePattern.RemoteControls.IRemoteControl" Collapsed="true">
+    <Position X="7.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAgEAAAAABAAAAAAAAAAAAAAQAAAAAQAAA=</HashCode>
+      <FileName>RemoteControls\IRemoteControl.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

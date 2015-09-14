@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompositePattern", "CompositePattern\CompositePattern.csproj", "{846A5B82-5053-4AD0-873D-9993738CD9F4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DecoratorPattern", "DecoratorPattern\DecoratorPattern.csproj", "{96485499-A8E4-412F-AAE3-752EF7C3816A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BridgePattern", "BridgePattern\BridgePattern.csproj", "{5E02A384-26D8-448B-8DD0-54BBF7DDE8AD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{846A5B82-5053-4AD0-873D-9993738CD9F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{846A5B82-5053-4AD0-873D-9993738CD9F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{846A5B82-5053-4AD0-873D-9993738CD9F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{846A5B82-5053-4AD0-873D-9993738CD9F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96485499-A8E4-412F-AAE3-752EF7C3816A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96485499-A8E4-412F-AAE3-752EF7C3816A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96485499-A8E4-412F-AAE3-752EF7C3816A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96485499-A8E4-412F-AAE3-752EF7C3816A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E02A384-26D8-448B-8DD0-54BBF7DDE8AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E02A384-26D8-448B-8DD0-54BBF7DDE8AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E02A384-26D8-448B-8DD0-54BBF7DDE8AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E02A384-26D8-448B-8DD0-54BBF7DDE8AD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
