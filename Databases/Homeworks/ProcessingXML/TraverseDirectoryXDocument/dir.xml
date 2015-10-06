@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PowerCollections>
+  <dir path="C:\Users\Racheva\Desktop\PowerCollections\PowerCollections">
+    <dir path="C:\Users\Racheva\Desktop\PowerCollections\PowerCollections\Binaries">
+      <file name="License" extension=".txt" />
+      <file name="PowerCollections" extension=".dll" />
+      <file name="PowerCollections" extension=".XML" />
+    </dir>
+    <dir path="C:\Users\Racheva\Desktop\PowerCollections\PowerCollections\Documentation">
+      <file name="PowerCollections" extension=".chm" />
+    </dir>
+    <dir path="C:\Users\Racheva\Desktop\PowerCollections\PowerCollections\Source">
+      <dir path="C:\Users\Racheva\Desktop\PowerCollections\PowerCollections\Source\Backup">
+        <dir path="C:\Users\Racheva\Desktop\PowerCollections\PowerCollections\Source\Backup\PowerCollections">
+          <file name="Algorithms" extension=".cs" />
+          <file name="app" extension=".config" />
+          <file name="AssemblyInfo" extension=".cs" />
+          <file name="Bag" extension=".cs" />
+          <file name="BigList" extension=".cs" />
+          <file name="CollectionBase" extension=".cs" />
+          <file name="Comparers" extension=".cs" />
+          <file name="Deque" extension=".cs" />
+          <file name="DictionaryBase" extension=".cs" />
+          <file name="Hash" extension=".cs" />
+          <file name="ListBase" extension=".cs" />
+          <file name="MultiDictionary" extension=".cs" />
+          <file name="MultiDictionaryBase" extension=".cs" />
+          <file name="OrderedBag" extension=".cs" />
+          <file name="OrderedDictionary" extension=".cs" />
+          <file name="OrderedMultiDictionary" extension=".cs" />
+          <file name="OrderedSet" extension=".cs" />
+          <file name="Pair" extension=".cs" />
+          <file name="PowerCollections" extension=".csproj" />
+          <file name="ReadOnlyCollectionBase" extension=".cs" />
+          <file name="ReadOnlyDictionaryBase" extension=".cs" />
+          <file name="ReadOnlyListBase" extension=".cs" />
+          <file name="ReadOnlyMultiDictionaryBase" extension=".cs" />
+          <file name="RedBlack" extension=".cs" />
+          <file name="Set" extension=".cs" />
+          <file name="Strings" extension=".cs" />
+          <file name="Triple" extension=".cs" />
+          <file name="Util" extension=".cs" />
+        </dir>
+        <dir path="C:\Users\Racheva\Desktop\PowerCollections\PowerCollections\Source\Backup\UnitTests">
+          <file name="AlgorithmsTests" extension=".cs" />
+          <file name="AssemblyInfo" extension=".cs" />
+          <file name="BagTests" extension=".cs" />
+          <file name="BigListTests" extension=".cs" />
+          <file name="CollectionBaseTests" extension=".cs" />
+          <file name="ComparersTests" extension=".cs" />
+          <file name="DequeTests" extension=".cs" />
+          <file name="DictionaryBaseTests" extension=".cs" />
+          <file name="HashTests" extension=".cs" />
+          <file name="InterfaceTests" extension=".cs" />
+          <file name="ListBaseTests" extension=".cs" />
+          <file name="MainProgram" extension=".cs" />
+          <file name="MultiDictionaryBaseTests" extension=".cs" />
+          <file name="MultiDictionaryTests" extension=".cs" />
+          <file name="OrderedBagTests" extension=".cs" />
+          <file name="OrderedDictionaryTests" extension=".cs" />
+          <file name="OrderedMultiDictionaryTests" extension=".cs" />
+          <file name="OrderedSetTests" extension=".cs" />
+          <file name="PairTests" extension=".cs" />
+          <file name="RedBlackTests" extension=".cs" />
+          <file name="SetTests" extension=".cs" />
+          <file name="TripleTests" extension=".cs" />
+          <file name="UnitTests" extension=".csproj" />
+          <file name="UtilTests" extension=".cs" />
+        </dir>
+        <file name="PowerCollections" extension=".sln" />
+      </dir>
+      <dir path="C:\Users\Racheva\Desktop\PowerCollections\PowerCollections\Source\PowerCollections">
+        <dir path="C:\Users\Racheva\Desktop\PowerCollections\PowerCollections\Source\PowerCollections\bin">
+          <dir path="C:\Users\Racheva\Desktop\PowerCollections\PowerCollections\Source\PowerCollections\bin\Debug" />
+        </dir>
+        <dir path="C:\Users\Racheva\Desktop\PowerCollections\PowerCollections\Source\PowerCollections\obj">
+          <dir path="C:\Users\Racheva\Desktop\PowerCollections\PowerCollections\Source\PowerCollections\obj\Debug">
+            <dir path="C:\Users\Racheva\Desktop\PowerCollections\PowerCollections\Source\PowerCollections\obj\Debug\TempPE" />
+            <file name="DesignTimeResolveAssemblyReferencesInput" extension=".cache" />
+            <file name="TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92" extension=".cs" />
+            <file name="TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1" extension=".cs" />
+            <file name="TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3" extension=".cs" />
+          </dir>
+        </dir>
+        <dir path="C:\Users\Racheva\Desktop\PowerCollections\PowerCollections\Source\PowerCollections\Properties" />
+        <dir path="C:\Users\Racheva\Desktop\PowerCollections\PowerCollections\Source\PowerCollections\UnusedCode" />
+        <file name="Algorithms" extension=".cs" />
+        <file name="app" extension=".config" />
+        <file name="AssemblyInfo" extension=".cs" />
+        <file name="Bag" extension=".cs" />
+        <file name="BigList" extension=".cs" />
+        <file name="CollectionBase" extension=".cs" />
+        <file name="Comparers" extension=".cs" />
+        <file name="Deque" extension=".cs" />
+        <file name="DictionaryBase" extension=".cs" />
+        <file name="Hash" extension=".cs" />
+        <file name="ListBase" extension=".cs" />
+        <file name="MultiDictionary" extension=".cs" />
+        <file name="MultiDictionaryBase" extension=".cs" />
+        <file name="OrderedBag" extension=".cs" />
+        <file name="OrderedDictionary" extension=".cs" />
+        <file name="OrderedMultiDictionary" extension=".cs" />
+        <file name="OrderedSet" extension=".cs" />
+        <file name="Pair" extension=".cs" />
+        <file name="PowerCollections" extension=".csproj" />
+        <file name="PowerCollections.csproj" extension=".user" />
+        <file name="ReadOnlyCollectionBase" extension=".cs" />
+        <file name="ReadOnlyDictionaryBase" extension=".cs" />
+        <file name="ReadOnlyListBase" extension=".cs" />
+        <file name="ReadOnlyMultiDictionaryBase" extension=".cs" />
+        <file name="RedBlack" extension=".cs" />
+        <file name="Set" extension=".cs" />
+        <file name="Strings" extension=".cs" />
+        <file name="Triple" extension=".cs" />
+        <file name="Util" extension=".cs" />
+      </dir>
+      <dir path="C:\Users\Racheva\Desktop\PowerCollections\PowerCollections\Source\UnitTests">
+        <dir path="C:\Users\Racheva\Desktop\PowerCollections\PowerCollections\Source\UnitTests\bin">
+          <dir path="C:\Users\Racheva\Desktop\PowerCollections\PowerCollections\Source\UnitTests\bin\Debug" />
+        </dir>
+        <dir path="C:\Users\Racheva\Desktop\PowerCollections\PowerCollections\Source\UnitTests\obj">
+          <dir path="C:\Users\Racheva\Desktop\PowerCollections\PowerCollections\Source\UnitTests\obj\Debug">
+            <dir path="C:\Users\Racheva\Desktop\PowerCollections\PowerCollections\Source\UnitTests\obj\Debug\TempPE" />
+            <file name="DesignTimeResolveAssemblyReferencesInput" extension=".cache" />
+            <file name="TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92" extension=".cs" />
+            <file name="TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1" extension=".cs" />
+            <file name="TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3" extension=".cs" />
+          </dir>
+        </dir>
+        <dir path="C:\Users\Racheva\Desktop\PowerCollections\PowerCollections\Source\UnitTests\Properties" />
+        <file name="AlgorithmsTests" extension=".cs" />
+        <file name="app" extension=".config" />
+        <file name="AssemblyInfo" extension=".cs" />
+        <file name="BagTests" extension=".cs" />
+        <file name="BigListTests" extension=".cs" />
+        <file name="CollectionBaseTests" extension=".cs" />
+        <file name="ComparersTests" extension=".cs" />
+        <file name="DequeTests" extension=".cs" />
+        <file name="DictionaryBaseTests" extension=".cs" />
+        <file name="HashTests" extension=".cs" />
+        <file name="InterfaceTests" extension=".cs" />
+        <file name="ListBaseTests" extension=".cs" />
+        <file name="MainProgram" extension=".cs" />
+        <file name="MultiDictionaryBaseTests" extension=".cs" />
+        <file name="MultiDictionaryTests" extension=".cs" />
+        <file name="OrderedBagTests" extension=".cs" />
+        <file name="OrderedDictionaryTests" extension=".cs" />
+        <file name="OrderedMultiDictionaryTests" extension=".cs" />
+        <file name="OrderedSetTests" extension=".cs" />
+        <file name="PairTests" extension=".cs" />
+        <file name="RedBlackTests" extension=".cs" />
+        <file name="SetTests" extension=".cs" />
+        <file name="TripleTests" extension=".cs" />
+        <file name="UnitTests" extension=".csproj" />
+        <file name="UnitTests.csproj" extension=".user" />
+        <file name="UtilTests" extension=".cs" />
+      </dir>
+      <file name="License" extension=".txt" />
+      <file name="PowerCollections" extension=".sln" />
+      <file name="PowerCollections.v12" extension=".suo" />
+      <file name="UpgradeLog" extension=".htm" />
+    </dir>
+    <file name="License" extension=".txt" />
+  </dir>
+</PowerCollections>

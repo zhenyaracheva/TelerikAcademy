@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="catalog.xsl"?>
+  <catalog>
+    <album>
+        <name>Album1</name>
+        <artist>Artist1</artist>
+        <year>1990</year>
+        <producer>Producer1</producer>
+        <price>50</price>
+        <songs>
+            <song>
+                <title>Song Tittle 1</title>
+                <duration>3</duration>
+            </song>
+            <song>
+                <title>Song Tittle 2</title>
+                <duration>4</duration>
+            </song>
+            <song>
+                <title>Song Tittle 3</title>
+                <duration>5</duration>
+            </song>
+            <song>
+                <title>Song Tittle 4</title>
+                <duration>4</duration>
+            </song>
+        </songs>
+    </album>
+    <album>
+        <name>Album2</name>
+        <artist>Artist2</artist>
+        <year>2010</year>
+        <producer>Producer2</producer>
+        <price>10</price>
+        <songs>
+            <song>
+                <title>Song Tittle 5</title>
+                <duration>3</duration>
+            </song>
+            <song>
+                <title>Song Tittle 6</title>
+                <duration>4</duration>
+            </song>
+            <song>
+                <title>Song Tittle 7</title>
+                <duration>5</duration>
+            </song>
+            <song>
+                <title>Song Tittle 8</title>
+                <duration>4</duration>
+            </song>
+        </songs>
+    </album>
+    <album>
+        <name>Album3</name>
+        <artist>Artist3</artist>
+        <year>2015</year>
+        <producer>Producer</producer>
+        <price>20</price>
+        <songs>
+            <song>
+                <title>Song Tittle 9</title>
+                <duration>3</duration>
+            </song>
+            <song>
+                <title>Song Tittle 10</title>
+                <duration>4</duration>
+            </song>
+            <song>
+                <title>Song Tittle 11</title>
+                <duration>5</duration>
+            </song>
+            <song>
+                <title>Song Tittle 12</title>
+                <duration>4</duration>
+            </song>
+        </songs>
+    </album>
+    <album>
+        <name>Album3</name>
+        <artist>Artist3</artist>
+        <year>1998</year>
+        <producer>Producer3</producer>
+        <price>5</price>
+        <songs>
+            <song>
+                <title>Song Tittle 13</title>
+                <duration>3</duration>
+            </song>
+            <song>
+                <title>Song Tittle 14</title>
+                <duration>4</duration>
+            </song>
+            <song>
+                <title>Song Tittle 15</title>
+                <duration>5</duration>
+            </song>
+            <song>
+                <title>Song Tittle 16</title>
+                <duration>4</duration>
+            </song>
+        </songs>
+    </album>
+    <album>
+        <name>Album1</name>
+        <artist>Artist1</artist>
+        <year>1990</year>
+        <producer>Producer1</producer>
+        <price>50</price>
+        <songs>
+            <song>
+                <title>Song Tittle 1</title>
+                <duration>3</duration>
+            </song>
+            <song>
+                <title>Song Tittle 2</title>
+                <duration>4</duration>
+            </song>
+            <song>
+                <title>Song Tittle 3</title>
+                <duration>5</duration>
+            </song>
+            <song>
+                <title>Song Tittle 4</title>
+                <duration>4</duration>
+            </song>
+        </songs>
+    </album>
+</catalog>

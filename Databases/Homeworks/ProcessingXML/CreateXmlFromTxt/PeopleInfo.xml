@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<people>
+	<person>
+		<name>Jone Doe</name>
+		<phone>123456789</phone>
+		<address>some address</address>
+	</person>
+	<person>
+		<name>Jane Doe</name>
+		<phone>987654321</phone>
+		<address>another address</address>
+	</person>
+</people>

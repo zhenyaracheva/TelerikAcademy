@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XML>
+	<dir name=".idea" path="C:\Users\Racheva\Desktop\XML\.idea">
+		<file name="misc" extension=".xml" />
+		<file name="modules" extension=".xml" />
+		<file name="vcs" extension=".xml" />
+		<file name="workspace" extension=".xml" />
+	</dir>
+	<file name="students" extension=".xml" />
+	<file name="students" extension=".xsd" />
+	<file name="students" extension=".xsl" />
+</XML>
