@@ -106,10 +106,10 @@ SELECT e.FirstName+ ' ' + e.LastName AS 'Employ Name', m.FirstName + ' ' + m.Las
 	FULL OUTER JOIN dbo.Employees m
 		ON e.ManagerID = m.EmployeeID;
 
-SELECT e.FirstName+ ' ' + e.LastName AS 'Employ Name',d.Name, e.HireDate
-	FROM dbo.Employees e
-	INNER JOIN dbo.Departments d
-	ON e.DepartmentID = d.DepartmentID
-WHERE (d.Name= 'Sales' OR d.Name='Finance') AND
-		( e.HireDate > '1995' AND
-		e.HireDate< '2005')
+SELECT e.FirstName, e.LastName, d.Name,  e.HireDate
+FROM Employees e
+	INNER JOIN Departments d
+	ON e.DepartmentID= d.DepartmentID
+WHERE (d.Name = 'Sales' OR d.Name= 'Finance') AND
+		DATEPART(YEAR,e.HireDate) BETWEEN 1995 AND 2005
+ORDER BY e.FirstName, e.LastName
