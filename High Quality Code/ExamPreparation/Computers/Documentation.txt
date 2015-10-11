@@ -1,0 +1,41 @@
+Design pattern: Simple Factory
+	* ManufacturerFactory is simple factury pattern
+
+Design pattern: Strategy
+	* 
+
+Design pattern: Template Method
+	* Absrtact classs VideoCard let its inheritance to set color on ther Draw method
+
+Design pattern: Abstract factory
+	* IManufacturer and its child classes implement abstract factory pattern
+
+Design pattern: Composite
+	* 
+
+Design pattern: Mediator
+	* 
+
+Found bottlenecks:
+	* 
+	* 
+
+Found bugs:
+	* set videoCard in constructor 
+	* fixed bug cont printing "Invalid command!" when user enter wrong command
+	* 
+
+Single responsibility principle
+	* 
+
+Open/closed principle
+	* 
+
+Liskov substitution principle
+	* 
+
+Interface segregation principle
+	* 
+
+Dependency inversion principle
+	* 
