@@ -4,38 +4,27 @@
 
     using ComputersLogic.VideoCardTypes;
 
-    public class Cpu : IMotherboardComponent
+    public abstract class Cpu : IMotherboardComponent
     {
         private const string NumberTooLowMessage = "Number too low.";
         private const string NumberTooHighMessage = "Number too high.";
         private const string SquareFormat = "Square of {0} is {1}.";
         private static readonly Random Random = new Random();
 
-        private readonly byte numberOfBits;
         private IMotherboard motherboard;
 
-        internal Cpu(byte numberOfCores, byte numberOfBits)
+        public Cpu(int numberOfCores)
         {
-            this.numberOfBits = numberOfBits;
             this.NumberOfCores = numberOfCores;
         }
 
-        public byte NumberOfCores { get; set; }
+        public int NumberOfCores { get; set; }
+
+        public abstract int MaxBitValue { get; }
 
         public void SquareNumber()
         {
-            if (this.numberOfBits == 32)
-            {
-                this.SquareNumber(500);
-            }
-            else if (this.numberOfBits == 64)
-            {
-                this.SquareNumber(1000);
-            }
-            else if (this.numberOfBits == 128)
-            {
-                this.SquareNumber(2000);
-            }
+           this.SquareNumber(this.MaxBitValue);
         }
 
         public void Rand(int minValue, int maxValue)

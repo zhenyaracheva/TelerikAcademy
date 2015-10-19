@@ -1,8 +1,8 @@
 ﻿namespace ComputersLogic.Manufacturers
 {
     using System.Collections.Generic;
-
     using ComputersLogic.ComputerTypes;
+    using ComputersLogic.Cpus;
     using ComputersLogic.HardDriveTypes;
     using ComputersLogic.VideoCardTypes;
 
@@ -14,7 +14,7 @@
             var videoCard = new ColorfulVideoCard();
 
             var pc = new PersonalComputer(
-                new Cpu(2, 32),
+                new Cpu32(2),
                 ram,
                 new Hdd(500),
                 videoCard);
@@ -26,7 +26,7 @@
             var ram = new Ram(4);
             var videoCard = new ColorfulVideoCard();
             var laptop = new Laptop(
-                 new Cpu(2, 64),
+                 new Cpu64(2),
                  ram,
                  new Hdd(500),
                  videoCard,
@@ -41,7 +41,7 @@
             var videoCard = new MonochromeVideoCard();
 
             var server = new Server(
-                new Cpu(4, 32),
+                new Cpu32(4),
                 ram,
                 new RaidArray(new List<IHardDrive> { new Hdd(1000), new Hdd(1000) }),
                 videoCard);
