@@ -9,7 +9,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.GirlsGoneWild", "GirlsGo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.OnlineMarket", "OnlineMarket\03.OnlineMarket.csproj", "{852BA7B3-34FB-4199-AAFB-7089BBA0D1D8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Towns", "Towns\Towns.csproj", "{8FF061BB-DD26-4691-9BDD-702E7BD3F862}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.Towns", "Towns\04.Towns.csproj", "{8FF061BB-DD26-4691-9BDD-702E7BD3F862}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.Sorting", "Sorting\05.Sorting.csproj", "{706E2C9F-726A-4808-8F06-1E4F162D564A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{8FF061BB-DD26-4691-9BDD-702E7BD3F862}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8FF061BB-DD26-4691-9BDD-702E7BD3F862}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8FF061BB-DD26-4691-9BDD-702E7BD3F862}.Release|Any CPU.Build.0 = Release|Any CPU
+		{706E2C9F-726A-4808-8F06-1E4F162D564A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{706E2C9F-726A-4808-8F06-1E4F162D564A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{706E2C9F-726A-4808-8F06-1E4F162D564A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{706E2C9F-726A-4808-8F06-1E4F162D564A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
