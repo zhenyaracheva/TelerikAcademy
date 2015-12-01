@@ -6,14 +6,16 @@
     public class Startup
     {
         private static int count;
+        private static bool isChanged = false;
 
         public static void Main()
         {
             var generations = int.Parse(Console.ReadLine());
             var matrixSize = Console.ReadLine().Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
             var matrix = new int[int.Parse(matrixSize[0]), int.Parse(matrixSize[1])];
+
             count = 0;
-            
+
             for (int row = 0; row < matrix.GetLength(0); row++)
             {
                 var line = Console.ReadLine().Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
@@ -36,14 +38,20 @@
             for (int gen = 0; gen < generations; gen++)
             {
                 matrix = TrasformGeneration(matrix);
+                if (!isChanged)
+                {
+                    break;
+                }
+
             }
-            
+
             Console.WriteLine(count);
         }
-        
+
         private static int[,] TrasformGeneration(int[,] matrix)
         {
             var transformation = new int[matrix.GetLength(0), matrix.GetLength(1)];
+            isChanged = false;
 
             for (int row = 0; row < matrix.GetLength(0); row++)
             {
@@ -57,6 +65,7 @@
                         {
                             transformation[row, col] = 1;
                             count++;
+                            isChanged = true;
                         }
                         else
                         {
@@ -73,6 +82,7 @@
                         {
                             transformation[row, col] = 0;
                             count--;
+                            isChanged = true;
                         }
                     }
                 }
@@ -98,6 +108,12 @@
                             {
                                 count++;
                             }
+
+                            if (count > 3)
+                            {
+                                return 4;
+                            }
+
                         }
                     }
                 }

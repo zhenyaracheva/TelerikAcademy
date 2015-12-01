@@ -2,86 +2,79 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.Linq;
     using System.Text;
 
     public class Startup
     {
-        private static List<string> comb = new List<string>();
-        private static string[] numbers;
-        private static int n;
-        private static List<string> result = new List<string>();
+        private static SortedSet<string> result = new SortedSet<string>();
 
 
         public static void Main()
         {
-            n = int.Parse(Console.ReadLine());
-            numbers = new string[n];
+            var n = int.Parse(Console.ReadLine());
+            var frames = new string[n];
 
             for (int i = 0; i < n; i++)
             {
-                var num = Console.ReadLine().Split(new[] { " " }, StringSplitOptions.RemoveEmptyEntries);
-
-                numbers[i] = "(" + string.Join(", ", num) + ")";
+                frames[i] = Console.ReadLine();
             }
-            Array.Sort(numbers);
-            CombReps(new string[n], 0, 0);
-            
-            for (int i = 0; i < numbers.Length; i++)
+
+            Perm(frames, 0);
+
+            var output = new StringBuilder();
+
+            output.AppendLine(result.Count.ToString());
+
+            foreach (var item in result)
             {
-                for (int j = 0; j < comb.Count; j++)
-                {
-
-
-                    if (!comb[j].Contains(numbers[i]))
-                    {
-                        var buider = new StringBuilder();
-                        buider.Append(numbers[i]);
-                        buider.Append(" | " + comb[j]);
-                        result.Add(buider.ToString());
-                    }
-
-
-                }
+                output.AppendLine(item);
             }
 
-            Console.WriteLine(result.Count);
-            Console.WriteLine(string.Join("\n", result));
+            Console.WriteLine(output.ToString().Trim());
         }
 
-
-        static void CombReps(string[] arr, int index, int start)
+        static void Perm(string[] arr, int k)
         {
-            if (index >= n - 1)
+            if (k >= arr.Length)
             {
-                comb.Add(string.Join(" | ", arr));
+                var test = new StringBuilder();
+                for (int i = 0; i < arr.Length; i++)
+                {
+                    var num = arr[i].Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+
+                    test.Append(string.Format("({0}, {1}) | ", num[0], num[1]));
+                }
+
+                test.Length -= 3;
+
+                result.Add(test.ToString());
             }
             else
-                for (int i = 0; i < n; i++)
-                {
-                    arr[index] = numbers[i];
-                    CombReps(arr, index + 1, i);
-                }
-        }
-
-        private static void PermuteRep(string[] arr, int start, int n)
-        {
-            comb.Add(string.Join(" | ", arr));
-
-            for (int left = n - 2; left >= start; left--)
             {
-                for (int right = left + 1; right < n; right++)
-                    if (arr[left] != arr[right])
-                    {
-                        var oldValue = arr[left];
-                        arr[left] = arr[right];
-                        arr[right] = oldValue;
-                        PermuteRep(arr, left + 1, n);
-                    }
-                var firstElement = arr[left];
-                for (int i = left; i < n - 1; i++)
-                    arr[i] = arr[i + 1];
-                arr[n - 1] = firstElement;
+                Perm(arr, k + 1);
+                arr[k] = string.Join("", arr[k].Reverse());
+                Perm(arr, k + 1);
+                arr[k] = string.Join("", arr[k].Reverse());
+
+                for (int i = k + 1; i < arr.Length; i++)
+                {
+                    Swap(ref arr[k], ref arr[i]);
+
+                    Perm(arr, k + 1);
+                    arr[k] = string.Join("", arr[k].Reverse());
+                    Perm(arr, k + 1);
+                    arr[k] = string.Join("", arr[k].Reverse());
+
+                    Swap(ref arr[k], ref arr[i]);
+                }
             }
+        }
+        static void Swap<T>(ref T first, ref T second)
+        {
+            T oldFirst = first;
+            first = second;
+            second = oldFirst;
         }
     }
 }
