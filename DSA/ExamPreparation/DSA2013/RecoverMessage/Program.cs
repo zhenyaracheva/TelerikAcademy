@@ -3,44 +3,108 @@
     using System;
     using System.Collections.Generic;
     using System.Linq;
-    using System.Text;
 
     public class Program
     {
+        private static SortedDictionary<char, Node> graph = new SortedDictionary<char, Node>();
+
+
         public static void Main()
         {
             var n = int.Parse(Console.ReadLine());
 
             var words = new string[n];
-            var maxLenght = 0;
 
             for (int i = 0; i < n; i++)
             {
-                words[i] = Console.ReadLine();
+                var word = Console.ReadLine();
+                words[i] = word;
 
-                if (maxLenght < words[i].Length)
+                if (word.Length == 1)
                 {
-                    maxLenght = words[i].Length;
+                    var currentNode = GetNode(word[0]);
                 }
-            }
-
-            var output = new StringBuilder();
-
-            for (int i = 0; i < maxLenght; i++)
-            {
-                var letters = new SortedSet<char>();
-                for (int j = 0; j < words.Length; j++)
+                else
                 {
-                    if (words[j].Length > i && !output.ToString().Contains(words[j][i]))
+                    for (int j = 1; j < word.Length; j++)
                     {
-                        letters.Add(words[j][i]);
+                        var prevNode = GetNode(word[j - 1]);
+                        var currentNode = GetNode(word[j]);
+
+                        currentNode.Parents.Add(prevNode);
+                        prevNode.Children.Add(currentNode);
                     }
                 }
-
-                output.Append(string.Join("", letters));
             }
 
-            Console.WriteLine(output);
+            var message = GetMessage();
+            Console.WriteLine(message);
+
         }
+
+        private static string GetMessage()
+        {
+            var result = new List<char>();
+            var noParents = new List<char>();
+
+            foreach (var item in graph)
+            {
+                if (item.Value.Parents.Count == 0)
+                {
+                    noParents.Add(item.Value.Letter);
+                }
+            }
+
+            while (noParents.Count > 0)
+            {
+                var current = noParents.Min();
+                noParents.Remove(current);
+                result.Add(current);
+
+                var node = GetNode(current);
+                var children = node.Children;
+
+                foreach (var child in children)
+                {
+                    child.Parents.Remove(node);
+                    if (child.Parents.Count == 0)
+                    {
+                        noParents.Add(child.Letter);
+                    }
+                }
+            }
+
+            return string.Join("", result);
+        }
+
+        private static Node GetNode(char symbol)
+        {
+            if (graph.ContainsKey(symbol))
+            {
+                return graph[symbol];
+            }
+            else
+            {
+                var node = new Node(symbol);
+                graph.Add(symbol, node);
+                return node;
+            }
+        }
+    }
+
+    public class Node
+    {
+        public Node(char letter)
+        {
+            this.Letter = letter;
+            this.Children = new List<Node>();
+            this.Parents = new List<Node>();
+        }
+
+        public char Letter { get; set; }
+
+        public ICollection<Node> Children { get; set; }
+
+        public ICollection<Node> Parents { get; set; }
     }
 }
